@@ -29,3 +29,68 @@ dist-ssr/
 *.njsproj
 *.sln
 *.sw?
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Machine Learning datasets
+ml/data/raw/*
+!ml/data/raw/.gitkeep
+
+ml/data/interim/*
+!ml/data/interim/.gitkeep
+
+ml/data/processed/*
+!ml/data/processed/.gitkeep
+
+# Trained model artifacts
+ml/models/*
+!ml/models/.gitkeep
+
+# Experiment outputs
+ml/experiments/*
+!ml/experiments/.gitkeep
+
+# Generated reports
+ml/reports/*
+!ml/reports/.gitkeep
+
+# OS files
+.DS_Store
+
+# ML generated files
+ml/data/interim/*
+!ml/data/interim/.gitkeep
+
+ml/data/processed/*
+!ml/data/processed/.gitkeep
+
+ml/models/*
+!ml/models/.gitkeep
+
+ml/experiments/*
+!ml/experiments/.gitkeep
+
+ml/reports/*
+!ml/reports/.gitkeep
