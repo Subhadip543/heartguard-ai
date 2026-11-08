@@ -1,0 +1,412 @@
+
+/* =========================================
+   HEARTCARE - HEART ASSESSMENT PAGE
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.assessment-page {
+  min-height: 100vh;
+  background: #f3f8f9;
+  color: #243746;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.assessment-header {
+  width: 100%;
+  min-height: 75px;
+  padding: 15px 7%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e3eeee;
+  box-shadow: 0 2px 10px rgba(20, 70, 80, 0.04);
+}
+
+.assessment-header h1 {
+  margin: 0;
+  color: #087f8c;
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.assessment-header a {
+  text-decoration: none;
+  color: #087f8c;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 18px;
+  border: 1px solid #087f8c;
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.assessment-header a:hover {
+  background: #087f8c;
+  color: #ffffff;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.assessment-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 35px auto;
+  padding: 0 20px 50px;
+}
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.assessment-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.assessment-heading h2 {
+  margin: 0 0 10px;
+  color: #123d4a;
+  font-size: 30px;
+  font-weight: 750;
+}
+
+.assessment-heading p {
+  margin: 0;
+  color: #71838b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   EMERGENCY WARNING
+========================================= */
+
+.emergency-warning {
+  padding: 17px 20px;
+  margin-bottom: 25px;
+  background: #fff6f3;
+  border: 1px solid #ffd4c9;
+  border-left: 5px solid #e65b43;
+  border-radius: 10px;
+}
+
+.emergency-warning strong {
+  display: block;
+  color: #c33c2b;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.emergency-warning p {
+  margin: 0;
+  color: #76534d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   ASSESSMENT FORM
+========================================= */
+
+.assessment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.assessment-section {
+  background: #ffffff;
+  padding: 27px 30px;
+  border: 1px solid #e4eeee;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(20, 70, 80, 0.045);
+}
+
+.assessment-section h3 {
+  color: #087f8c;
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0 0 22px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #e8f0f1;
+}
+
+.section-description {
+  color: #71838b;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: -10px 0 20px;
+}
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.assessment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-group label {
+  color: #344d58;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid #d5e1e4;
+  border-radius: 8px;
+  outline: none;
+  background: #fbfdfd;
+  color: #263f49;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0796a3;
+  box-shadow: 0 0 0 3px rgba(7, 150, 163, 0.12);
+  background: #ffffff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a2b1b6;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* =========================================
+   SYMPTOM CHECKBOXES
+========================================= */
+
+.symptom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.symptom-option {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 52px;
+  padding: 13px 15px;
+  background: #f8fbfc;
+  border: 1px solid #e0eaec;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.symptom-option:hover {
+  background: #eefafa;
+  border-color: #8acbd0;
+}
+
+.symptom-option input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: #078b98;
+  cursor: pointer;
+}
+
+.symptom-option span {
+  color: #405762;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   DISCLAIMER
+========================================= */
+
+.assessment-disclaimer {
+  padding: 18px 20px;
+  background: #edf7fa;
+  border: 1px solid #d2eaf0;
+  border-radius: 10px;
+}
+
+.assessment-disclaimer strong {
+  display: block;
+  color: #176a7b;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.assessment-disclaimer p {
+  margin: 0;
+  color: #54717b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.assessment-error {
+  padding: 13px 16px;
+  color: #b42318;
+  background: #fff1f0;
+  border: 1px solid #ffc9c4;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.assessment-submit {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 5px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 9px;
+  background: #078b98;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(7, 139, 152, 0.18);
+  transition: all 0.25s ease;
+}
+
+.assessment-submit:hover:not(:disabled) {
+  background: #066d79;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(7, 139, 152, 0.23);
+}
+
+.assessment-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.assessment-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .assessment-header {
+    padding: 14px 5%;
+  }
+
+  .assessment-container {
+    margin-top: 25px;
+  }
+
+  .assessment-heading h2 {
+    font-size: 25px;
+  }
+
+  .assessment-section {
+    padding: 22px 20px;
+  }
+
+  .assessment-grid,
+  .symptom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 480px) {
+  .assessment-header {
+    min-height: 65px;
+  }
+
+  .assessment-header h1 {
+    font-size: 21px;
+  }
+
+  .assessment-header a {
+    padding: 8px 11px;
+    font-size: 12px;
+  }
+
+  .assessment-container {
+    padding: 0 13px 35px;
+    margin-top: 22px;
+  }
+
+  .assessment-heading h2 {
+    font-size: 23px;
+  }
+
+  .assessment-heading p {
+    font-size: 13px;
+  }
+
+  .assessment-section {
+    padding: 19px 15px;
+    border-radius: 11px;
+  }
+
+  .assessment-section h3 {
+    font-size: 17px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 13px;
+  }
+
+  .symptom-option {
+    padding: 12px;
+  }
+
+  .assessment-submit {
+    font-size: 14px;
+  }
+}

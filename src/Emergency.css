@@ -1,0 +1,355 @@
+
+/* =================================
+   HEARTCARE EMERGENCY PAGE
+================================= */
+
+.emergency-page {
+  min-height: 100vh;
+  background: #f5f8fa;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #183b42;
+}
+
+/* Header */
+
+.emergency-header {
+  height: 75px;
+  padding: 0 7%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8eeee;
+}
+
+.emergency-header h2 {
+  color: #0d8179;
+  font-size: 25px;
+  margin: 0;
+  font-weight: 750;
+}
+
+.emergency-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #536b70;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.emergency-back:hover {
+  color: #0d9488;
+}
+
+/* Main container */
+
+.emergency-container {
+  max-width: 1050px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 45px 0;
+}
+
+/* Hero */
+
+.emergency-hero {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.emergency-alert-icon {
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 18px;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emergency-hero h1 {
+  font-size: 34px;
+  color: #a61f2b;
+  margin: 0 0 12px;
+}
+
+.emergency-hero p {
+  color: #718096;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto 18px;
+}
+
+.emergency-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #b42318;
+  background: #fff1f0;
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #dc2626;
+  border-radius: 50%;
+}
+
+/* Emergency cards */
+
+.emergency-call-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.emergency-card {
+  padding: 30px;
+  border-radius: 17px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #edf0f2;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
+  transition: 0.3s ease;
+}
+
+.emergency-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.emergency-card-red {
+  border-top: 4px solid #dc2626;
+}
+
+.emergency-card-orange {
+  border-top: 4px solid #ea580c;
+}
+
+.emergency-card-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emergency-card-red .emergency-card-icon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.emergency-card-orange .emergency-card-icon {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.emergency-card h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  color: #25464c;
+}
+
+.emergency-card p {
+  color: #829096;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 44px;
+}
+
+.emergency-number {
+  display: block;
+  font-size: 38px;
+  margin: 15px 0 20px;
+  letter-spacing: 2px;
+  color: #b91c1c;
+}
+
+.emergency-card-orange .emergency-number {
+  color: #c2410c;
+}
+
+/* Call buttons */
+
+.emergency-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  color: #ffffff;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.red-action {
+  background: #dc2626;
+}
+
+.red-action:hover {
+  background: #b91c1c;
+}
+
+.orange-action {
+  background: #ea580c;
+}
+
+.orange-action:hover {
+  background: #c2410c;
+}
+
+/* Information cards */
+
+.emergency-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e8eeee;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.025);
+}
+
+.info-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0f2f1;
+  color: #0d9488;
+  border-radius: 13px;
+}
+
+.emergency-info-content h2 {
+  font-size: 19px;
+  color: #23464c;
+  margin: 2px 0 9px;
+}
+
+.emergency-info-content p {
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 13px;
+}
+
+.hospital-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 17px;
+  background: #0d9488;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 650;
+  transition: 0.3s ease;
+}
+
+.hospital-map-btn:hover {
+  background: #0f766e;
+}
+
+.contact-note {
+  background: #f1f7f7;
+  padding: 11px;
+  border-radius: 7px;
+  font-size: 13px !important;
+}
+
+/* Medical warning */
+
+.emergency-warning-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #fff1f2;
+  border: 1px solid #fecaca;
+  border-left: 5px solid #dc2626;
+  color: #b91c1c;
+  padding: 22px;
+  border-radius: 12px;
+  margin-top: 28px;
+}
+
+.emergency-warning-card svg {
+  min-width: 25px;
+}
+
+.emergency-warning-card h2 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.emergency-warning-card p {
+  color: #7f1d1d;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Footer */
+
+.emergency-footer {
+  text-align: center;
+  color: #98a6a9;
+  font-size: 13px;
+  padding: 30px 0 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 650px) {
+  .emergency-header {
+    padding: 0 5%;
+  }
+
+  .emergency-container {
+    width: 92%;
+    padding: 30px 0;
+  }
+
+  .emergency-hero h1 {
+    font-size: 27px;
+  }
+
+  .emergency-call-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-card {
+    padding: 25px 20px;
+  }
+
+  .emergency-info-card {
+    gap: 13px;
+    padding: 18px;
+  }
+
+  .emergency-info-content h2 {
+    font-size: 17px;
+  }
+
+  .emergency-warning-card {
+    padding: 17px;
+  }
+}

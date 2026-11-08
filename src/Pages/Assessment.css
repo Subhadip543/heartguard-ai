@@ -1,0 +1,603 @@
+
+/* =========================================
+   HEARTCARE - ASSESSMENT RESULT PAGE
+========================================= */
+
+/* Main Page */
+.result-page {
+  min-height: 100vh;
+  background: #f3f8f8;
+  color: #243746;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.result-header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e3eeee;
+  box-shadow: 0 3px 15px rgba(20, 70, 75, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.result-header-content {
+  max-width: 1150px;
+  min-height: 72px;
+  margin: 0 auto;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.result-logo {
+  color: #087f83;
+  font-size: 25px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.7px;
+}
+
+.result-back-link {
+  color: #087f83;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  padding: 10px 17px;
+  border: 1px solid #b9dddd;
+  border-radius: 9px;
+  transition: 0.25s ease;
+}
+
+.result-back-link:hover {
+  background: #e9f6f5;
+  border-color: #087f83;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.result-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 38px 25px 55px;
+}
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.result-title-section {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.result-title-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #d9f3eb;
+  color: #07845f;
+  font-size: 30px;
+  font-weight: 800;
+  box-shadow: 0 5px 15px rgba(7, 132, 95, 0.08);
+}
+
+.result-title-section h1 {
+  color: #174d50;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+.result-title-section p {
+  color: #718187;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =========================================
+   GENERAL RESULT CARDS
+========================================= */
+
+.result-card {
+  background: #ffffff;
+  border: 1px solid #e2eeee;
+  border-radius: 16px;
+  padding: 26px 29px;
+  margin-bottom: 22px;
+  box-shadow: 0 5px 20px rgba(28, 72, 77, 0.045);
+  transition: box-shadow 0.25s ease;
+}
+
+.result-card:hover {
+  box-shadow: 0 8px 25px rgba(28, 72, 77, 0.075);
+}
+
+.result-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 17px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e9f0f0;
+}
+
+.result-card-heading h2 {
+  color: #174d50;
+  font-size: 20px;
+  font-weight: 750;
+  margin: 0;
+}
+
+/* =========================================
+   PATIENT DETAILS
+========================================= */
+
+.result-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.result-detail {
+  min-width: 0;
+  padding: 13px 15px;
+  background: #f6fafa;
+  border: 1px solid #edf3f3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.result-detail span {
+  color: #7b8c91;
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-detail strong {
+  color: #264b50;
+  font-size: 15px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   REPORTED SYMPTOMS
+========================================= */
+
+.result-symptoms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.symptom-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 15px;
+  background: #e9f6f5;
+  border: 1px solid #cce9e6;
+  color: #087477;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.result-card > p {
+  color: #718187;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.result-other-symptoms {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f7fafa;
+  border-radius: 10px;
+  border-left: 4px solid #149b9a;
+}
+
+.result-other-symptoms strong {
+  color: #174d50;
+  font-size: 14px;
+}
+
+.result-other-symptoms p {
+  color: #65777b;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 7px 0 0;
+}
+
+/* =========================================
+   AI REPORT CARD
+========================================= */
+
+.ai-result-card {
+  border-top: 4px solid #078b8c;
+}
+
+.ai-label {
+  display: inline-block;
+  color: #078b8c;
+  background: #e6f6f4;
+  padding: 6px 11px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 9px;
+}
+
+.ai-response {
+  color: #43575c;
+  font-size: 15px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.report-section-heading {
+  color: #08777a;
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.5;
+  margin: 23px 0 10px;
+  padding-left: 12px;
+  border-left: 4px solid #16a2a0;
+}
+
+.report-paragraph {
+  color: #506369;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 8px 0 13px;
+}
+
+.report-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 9px 0;
+  padding-left: 8px;
+  color: #506369;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.bullet-dot {
+  color: #079596;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.report-space {
+  height: 7px;
+}
+
+.result-empty {
+  color: #ad5555;
+  background: #fff4f4;
+  padding: 15px;
+  border-radius: 9px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   EMERGENCY NOTICE
+========================================= */
+
+.ai-emergency {
+  background: #fff2f0;
+  border: 1px solid #f5b8b1;
+  border-left: 5px solid #d93636;
+  border-radius: 13px;
+  padding: 22px 25px;
+  margin-bottom: 23px;
+  box-shadow: 0 5px 18px rgba(180, 48, 48, 0.06);
+}
+
+.ai-emergency h2 {
+  color: #b42323;
+  font-size: 19px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.ai-emergency p {
+  color: #763c3c;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 8px 0;
+}
+
+.ai-emergency strong {
+  color: #a51e1e;
+}
+
+/* =========================================
+   MEDICAL DISCLAIMER
+========================================= */
+
+.ai-disclaimer {
+  background: #edf5ff;
+  border: 1px solid #d4e4f8;
+  border-left: 4px solid #4789ce;
+  border-radius: 12px;
+  padding: 21px 24px;
+  margin-bottom: 25px;
+}
+
+.ai-disclaimer h3 {
+  color: #265d91;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+.ai-disclaimer p {
+  color: #526b82;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 7px 0;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 13px;
+  margin: 30px 0 15px;
+}
+
+.result-actions button {
+  min-height: 46px;
+  padding: 12px 22px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.result-primary-btn {
+  color: #ffffff;
+  background: #087f83;
+  border: 1px solid #087f83;
+  box-shadow: 0 4px 12px rgba(8, 127, 131, 0.15);
+}
+
+.result-primary-btn:hover {
+  background: #066568;
+  border-color: #066568;
+  transform: translateY(-2px);
+}
+
+.result-secondary-btn {
+  color: #08777a;
+  background: #ffffff;
+  border: 1px solid #a9d5d4;
+}
+
+.result-secondary-btn:hover {
+  background: #e9f6f5;
+  border-color: #087f83;
+  transform: translateY(-2px);
+}
+
+/* Keyboard Accessibility */
+.result-actions button:focus-visible,
+.result-back-link:focus-visible,
+.result-logo:focus-visible {
+  outline: 3px solid #65c8c3;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.result-footer {
+  padding: 22px 15px;
+  background: #ffffff;
+  border-top: 1px solid #e2eeee;
+  text-align: center;
+}
+
+.result-footer p {
+  color: #829397;
+  font-size: 12px;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+  .result-container {
+    padding: 30px 18px 40px;
+  }
+
+  .result-title-section h1 {
+    font-size: 27px;
+  }
+
+  .result-card {
+    padding: 22px;
+  }
+
+  .result-card-heading h2 {
+    font-size: 18px;
+  }
+
+  .result-details-grid {
+    gap: 13px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 520px) {
+  .result-header-content {
+    min-height: 64px;
+    padding: 0 15px;
+  }
+
+  .result-logo {
+    font-size: 21px;
+  }
+
+  .result-back-link {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .result-container {
+    padding: 25px 13px 35px;
+  }
+
+  .result-title-section {
+    margin-bottom: 25px;
+  }
+
+  .result-title-section h1 {
+    font-size: 24px;
+  }
+
+  .result-title-section p {
+    font-size: 13px;
+  }
+
+  .result-title-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 25px;
+  }
+
+  .result-card {
+    padding: 19px 16px;
+    border-radius: 12px;
+    margin-bottom: 17px;
+  }
+
+  .result-card-heading {
+    margin-bottom: 15px;
+    padding-bottom: 13px;
+  }
+
+  .result-card-heading h2 {
+    font-size: 17px;
+  }
+
+  .result-details-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .result-detail {
+    padding: 12px;
+  }
+
+  .symptom-tag {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .ai-response {
+    font-size: 14px;
+  }
+
+  .report-section-heading {
+    font-size: 16px;
+  }
+
+  .report-paragraph,
+  .report-bullet {
+    font-size: 13px;
+  }
+
+  .ai-emergency,
+  .ai-disclaimer {
+    padding: 18px 16px;
+  }
+
+  .ai-emergency h2 {
+    font-size: 17px;
+  }
+
+  .result-actions {
+    flex-direction: column;
+  }
+
+  .result-actions button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   PRINT REPORT
+========================================= */
+
+@media print {
+  .result-page {
+    background: #ffffff;
+  }
+
+  .result-header,
+  .result-actions,
+  .result-footer {
+    display: none !important;
+  }
+
+  .result-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .result-card,
+  .ai-emergency,
+  .ai-disclaimer {
+    box-shadow: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .result-card {
+    border: 1px solid #cccccc;
+  }
+
+  .result-title-section {
+    margin-top: 10px;
+  }
+
+  .ai-response {
+    color: #000000;
+  }
+}

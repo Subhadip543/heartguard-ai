@@ -1,0 +1,605 @@
+
+/* ==========================================
+   HEARTCARE HOME PAGE - COMPLETE CSS
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #183b42;
+  background: #ffffff;
+}
+
+/* ==========================================
+   1. NAVIGATION BAR
+========================================== */
+
+.navbar {
+  width: 100%;
+  min-height: 78px;
+  padding: 14px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8eeee;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.035);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #087f86;
+  font-size: 27px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.logo-icon {
+  color: #e95768;
+  font-size: 30px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-links a {
+  color: #526a70;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #0d9488;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-btn,
+.register-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.login-btn {
+  color: #0d9488;
+  background: #ffffff;
+  border: 1px solid #0d9488;
+}
+
+.login-btn:hover {
+  background: #e8f7f5;
+}
+
+.register-btn {
+  color: #ffffff;
+  background: #0d9488;
+  border: 1px solid #0d9488;
+}
+
+.register-btn:hover {
+  background: #0b766e;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   2. HERO SECTION
+========================================== */
+
+.hero {
+  width: 100%;
+  min-height: 570px;
+  padding: 75px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 55px;
+  background: linear-gradient(
+    120deg,
+    #effaf9,
+    #f8fcfc 55%,
+    #e7f6f5
+  );
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 590px;
+}
+
+.tagline {
+  display: inline-block;
+  padding: 9px 16px;
+  margin-bottom: 23px;
+  border-radius: 30px;
+  color: #0d8179;
+  background: #dff4f0;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  color: #173e46;
+  font-size: clamp(36px, 4vw, 50px);
+  font-weight: 750;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.hero-content h1 span {
+  display: block;
+  color: #0d9488;
+}
+
+.hero-content > p {
+  max-width: 550px;
+  margin-bottom: 28px;
+  color: #647b80;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  color: #ffffff;
+  background: #0d9488;
+  box-shadow: 0 5px 15px rgba(13, 148, 136, 0.15);
+}
+
+.primary-btn:hover {
+  background: #0b766e;
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  color: #0d8179;
+  background: #ffffff;
+  border: 1px solid #b9e2dc;
+}
+
+.secondary-btn:hover {
+  background: #e6f6f3;
+  border-color: #0d9488;
+}
+
+.trust-info {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 30px;
+  color: #71878b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.trust-info span {
+  color: #e95768;
+  font-size: 19px;
+}
+
+/* Hero Image */
+
+.hero-image {
+  flex: 1;
+  max-width: 470px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  height: 360px;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+/* ==========================================
+   3. FEATURES SECTION
+========================================== */
+
+.features {
+  width: 100%;
+  padding: 80px 7%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.features > h2 {
+  color: #173e46;
+  font-size: 32px;
+  font-weight: 750;
+  margin-bottom: 12px;
+}
+
+.section-description {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  color: #7b8e92;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Feature Grid */
+
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Feature Cards */
+
+.feature-card {
+  min-width: 0;
+  min-height: 285px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e0ebeb;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Entire card is clickable */
+
+.feature-link {
+  display: flex;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.feature-link:hover {
+  transform: translateY(-8px);
+  border-color: #0d9488;
+  box-shadow: 0 13px 30px rgba(13, 148, 136, 0.12);
+}
+
+.feature-link:focus-visible {
+  outline: 3px solid #0d9488;
+  outline-offset: 5px;
+}
+
+/* Feature Icons */
+
+.feature-icon {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 21px;
+  border-radius: 19px;
+  color: #0d9488;
+  background: #e8f7f4;
+  font-size: 35px;
+  transition: all 0.3s ease;
+}
+
+.feature-link:hover .feature-icon {
+  background: #d5f0ea;
+  transform: scale(1.06);
+}
+
+/* Feature Titles */
+
+.feature-card h3 {
+  color: #183e47;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+/* Feature Description */
+
+.feature-card p {
+  max-width: 330px;
+  color: #71858a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Feature Action */
+
+.feature-action {
+  display: inline-block;
+  margin-top: 19px;
+  color: #0d9488;
+  font-size: 14px;
+  font-weight: 750;
+  transition: color 0.25s ease;
+}
+
+.feature-link:hover .feature-action {
+  color: #0b766e;
+}
+
+/* ==========================================
+   4. ABOUT SECTION
+========================================== */
+
+.about {
+  padding: 75px 10%;
+  text-align: center;
+  background: #eff8f7;
+}
+
+.about h2 {
+  color: #173e46;
+  font-size: 30px;
+  font-weight: 750;
+  margin-bottom: 22px;
+}
+
+.about p {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #687f84;
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* ==========================================
+   5. FOOTER
+========================================== */
+
+.home-page footer {
+  width: 100%;
+  padding: 25px 15px;
+  color: #d8e9e9;
+  background: #123f46;
+  text-align: center;
+}
+
+.home-page footer p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   6. TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 60px 6%;
+    gap: 30px;
+  }
+
+  .hero-image img {
+    height: 310px;
+  }
+
+  .feature-container {
+    gap: 17px;
+  }
+
+  .feature-card {
+    padding: 27px 17px;
+  }
+
+  .feature-card h3 {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================
+   7. MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .nav-buttons {
+    gap: 8px;
+  }
+
+  .login-btn,
+  .register-btn {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 55px 7%;
+    gap: 35px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content > p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .trust-info {
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .hero-image img {
+    height: 270px;
+  }
+
+  .features {
+    padding: 60px 6%;
+  }
+
+  .features > h2 {
+    font-size: 27px;
+  }
+
+  .section-description {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .feature-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    min-height: 250px;
+    padding: 30px 22px;
+  }
+
+  .feature-card h3 {
+    font-size: 20px;
+  }
+
+  .about {
+    padding: 55px 7%;
+  }
+
+  .about h2 {
+    font-size: 26px;
+  }
+
+  .about p {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   8. SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+  .logo {
+    font-size: 21px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-image img {
+    height: 220px;
+  }
+
+  .features > h2 {
+    font-size: 24px;
+  }
+}
