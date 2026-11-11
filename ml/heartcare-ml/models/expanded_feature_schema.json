@@ -1,0 +1,72 @@
+{
+    "schema_name": "HeartCare Expanded Model Input",
+    "schema_version": "1.0",
+    "features": {
+        "age": {
+            "type": "number",
+            "nullable": true,
+            "observed_min": 28.0,
+            "observed_max": 77.0
+        },
+        "sex": {
+            "type": "categorical_number",
+            "nullable": true,
+            "allowed_categories": [
+                0.0,
+                1.0
+            ]
+        },
+        "cp": {
+            "type": "categorical_number",
+            "nullable": true,
+            "allowed_categories": [
+                1.0,
+                2.0,
+                3.0,
+                4.0
+            ]
+        },
+        "trestbps": {
+            "type": "number",
+            "nullable": true,
+            "observed_min": 80.0,
+            "observed_max": 200.0
+        },
+        "restecg": {
+            "type": "categorical_number",
+            "nullable": true,
+            "allowed_categories": [
+                0.0,
+                1.0,
+                2.0
+            ]
+        },
+        "thalach": {
+            "type": "number",
+            "nullable": true,
+            "observed_min": 60.0,
+            "observed_max": 202.0
+        },
+        "exang": {
+            "type": "categorical_number",
+            "nullable": true,
+            "allowed_categories": [
+                0.0,
+                1.0
+            ]
+        },
+        "oldpeak": {
+            "type": "number",
+            "nullable": true,
+            "observed_min": -2.6,
+            "observed_max": 6.2
+        }
+    },
+    "target": {
+        "name": "target_binary",
+        "classes": {
+            "0": "No disease recorded",
+            "1": "Disease recorded"
+        }
+    }
+}

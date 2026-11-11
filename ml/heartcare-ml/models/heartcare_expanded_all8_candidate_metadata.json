@@ -1,0 +1,57 @@
+{
+    "project": "HeartCare",
+    "model_name": "All 8 Features",
+    "algorithm": "Logistic Regression",
+    "dataset": "UCI Heart Disease Four-Site Collection",
+    "dataset_records": 920,
+    "hospital_sources": [
+        "Cleveland",
+        "Hungarian",
+        "Long Beach VA",
+        "Switzerland"
+    ],
+    "input_features": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak"
+    ],
+    "numeric_features": [
+        "age",
+        "trestbps",
+        "thalach",
+        "oldpeak"
+    ],
+    "categorical_features": [
+        "sex",
+        "cp",
+        "restecg",
+        "exang"
+    ],
+    "target_column": "target_binary",
+    "target_mapping": {
+        "0": "No disease recorded",
+        "1": "Disease recorded"
+    },
+    "classification_threshold": 0.5,
+    "imputation": {
+        "numeric": "median",
+        "categorical": "most_frequent"
+    },
+    "scaling": "StandardScaler",
+    "categorical_encoding": "OneHotEncoder",
+    "unknown_categories": "Ignored by encoder",
+    "site_column_used_as_input": false,
+    "model_file": "heartcare_expanded_all8_candidate.joblib",
+    "python_version": "3.14.6",
+    "sklearn_version": "1.9.1",
+    "clinical_diagnosis": false,
+    "clinical_validation": false,
+    "probability_calibration_validated": false,
+    "purpose": "Educational ML research prototype",
+    "important_note": "The model predicts a binary UCI dataset label. It does not diagnose a specific heart disease."
+}

@@ -1,0 +1,58 @@
+{
+    "model_name": "Logistic Regression",
+    "dataset": "UCI Heart Disease Dataset",
+    "dataset_id": 45,
+    "input_features": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "chol",
+        "fbs",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak",
+        "slope",
+        "ca",
+        "thal"
+    ],
+    "numeric_features": [
+        "age",
+        "trestbps",
+        "chol",
+        "thalach",
+        "oldpeak"
+    ],
+    "categorical_features": [
+        "sex",
+        "cp",
+        "fbs",
+        "restecg",
+        "exang",
+        "slope",
+        "ca",
+        "thal"
+    ],
+    "target_column": "num",
+    "target_mapping": {
+        "0": "No disease recorded",
+        "1": "Disease recorded (original target values 1 to 4)"
+    },
+    "training_records": 303,
+    "purpose": "Educational ML research prototype",
+    "clinical_diagnosis": false,
+    "cross_validation_results": {
+        "cv_roc_auc": 0.9024779568257829,
+        "cv_sensitivity": 0.8098814229249012,
+        "cv_balanced_accuracy": 0.8512370077587468,
+        "test_accuracy": 0.8688524590163934,
+        "test_balanced_accuracy": 0.8733766233766234,
+        "test_precision": 0.8125,
+        "test_sensitivity": 0.9285714285714286,
+        "test_specificity": 0.8181818181818182,
+        "test_f1": 0.8666666666666667,
+        "test_roc_auc": 0.9664502164502166
+    },
+    "model_file": "heartcare_model.joblib"
+}

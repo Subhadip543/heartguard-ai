@@ -1,0 +1,21 @@
+{
+    "dataset": "UCI Statlog Heart",
+    "dataset_records": 270,
+    "model": "Logistic Regression",
+    "accuracy": 0.8777777777777778,
+    "balanced_accuracy": 0.875,
+    "precision": 0.8717948717948718,
+    "sensitivity": 0.85,
+    "specificity": 0.9,
+    "f1_score": 0.8607594936708861,
+    "roc_auc": 0.9402222222222222,
+    "brier_score": 0.09266962897867001,
+    "log_loss": 0.31030025103265946,
+    "true_negatives": 135,
+    "false_positives": 15,
+    "false_negatives": 18,
+    "true_positives": 102,
+    "classification_threshold": 0.5,
+    "retrained_during_validation": false,
+    "clinical_validation": false
+}

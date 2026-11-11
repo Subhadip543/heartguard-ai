@@ -1,0 +1,50 @@
+site,feature,category,records,percentage
+Cleveland,sex,1.0,206,67.98679867986799
+Cleveland,sex,0.0,97,32.01320132013201
+Cleveland,cp,4.0,144,47.524752475247524
+Cleveland,cp,3.0,86,28.38283828382838
+Cleveland,cp,2.0,50,16.5016501650165
+Cleveland,cp,1.0,23,7.590759075907591
+Cleveland,restecg,0.0,151,49.834983498349835
+Cleveland,restecg,2.0,148,48.84488448844885
+Cleveland,restecg,1.0,4,1.3201320132013201
+Cleveland,exang,0.0,204,67.32673267326733
+Cleveland,exang,1.0,99,32.67326732673268
+Hungarian,sex,1.0,213,72.44897959183673
+Hungarian,sex,0.0,81,27.55102040816326
+Hungarian,cp,4.0,123,41.83673469387755
+Hungarian,cp,2.0,106,36.054421768707485
+Hungarian,cp,3.0,54,18.367346938775512
+Hungarian,cp,1.0,11,3.741496598639456
+Hungarian,restecg,0.0,235,79.93197278911565
+Hungarian,restecg,1.0,52,17.687074829931973
+Hungarian,restecg,2.0,6,2.0408163265306123
+Hungarian,restecg,MISSING,1,0.3401360544217687
+Hungarian,exang,0.0,204,69.38775510204081
+Hungarian,exang,1.0,89,30.272108843537417
+Hungarian,exang,MISSING,1,0.3401360544217687
+Long Beach VA,sex,1.0,194,97.0
+Long Beach VA,sex,0.0,6,3.0
+Long Beach VA,cp,4.0,131,65.5
+Long Beach VA,cp,3.0,47,23.5
+Long Beach VA,cp,2.0,14,7.000000000000001
+Long Beach VA,cp,1.0,8,4.0
+Long Beach VA,restecg,1.0,93,46.5
+Long Beach VA,restecg,0.0,80,40.0
+Long Beach VA,restecg,2.0,27,13.5
+Long Beach VA,exang,1.0,95,47.5
+Long Beach VA,exang,MISSING,53,26.5
+Long Beach VA,exang,0.0,52,26.0
+Switzerland,sex,1.0,113,91.869918699187
+Switzerland,sex,0.0,10,8.130081300813007
+Switzerland,cp,4.0,98,79.67479674796748
+Switzerland,cp,3.0,17,13.821138211382115
+Switzerland,cp,1.0,4,3.2520325203252036
+Switzerland,cp,2.0,4,3.2520325203252036
+Switzerland,restecg,0.0,85,69.10569105691057
+Switzerland,restecg,1.0,30,24.390243902439025
+Switzerland,restecg,2.0,7,5.691056910569105
+Switzerland,restecg,MISSING,1,0.8130081300813009
+Switzerland,exang,0.0,68,55.28455284552846
+Switzerland,exang,1.0,54,43.90243902439025
+Switzerland,exang,MISSING,1,0.8130081300813009

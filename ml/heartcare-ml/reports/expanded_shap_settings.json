@@ -1,0 +1,23 @@
+{
+    "model": "Logistic Regression",
+    "feature_configuration": "All 8 Features",
+    "feature_names": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak"
+    ],
+    "validation_method": "Leave-One-Site-Out",
+    "number_of_hospitals": 4,
+    "explained_records_per_hospital": 10,
+    "background_records": 30,
+    "permutation_cycles": 5,
+    "max_evaluations": 90,
+    "explained_class": 1,
+    "clinical_diagnosis": false,
+    "note": "SHAP values explain model behaviour. They do not establish medical causes."
+}

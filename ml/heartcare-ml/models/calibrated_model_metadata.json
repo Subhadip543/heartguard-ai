@@ -1,0 +1,31 @@
+{
+    "model_name": "Logistic Regression",
+    "calibration_method": "sigmoid",
+    "calibration_cross_validation": 5,
+    "input_features": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "chol",
+        "fbs",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak",
+        "slope",
+        "ca",
+        "thal"
+    ],
+    "target_column": "num",
+    "target_mapping": {
+        "0": "No disease recorded",
+        "1": "Disease recorded (original values 1 to 4)"
+    },
+    "purpose": "Educational research prototype",
+    "clinical_diagnosis": false,
+    "clinical_probability_validated": false,
+    "test_split": "80/20",
+    "random_state": 42,
+    "sklearn_version": "1.9.1"
+}
