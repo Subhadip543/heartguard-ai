@@ -1,0 +1,1841 @@
+site,model,actual_class,predicted_class,positive_class_score
+Cleveland,Logistic Regression,0,1,0.6990858502997728
+Cleveland,Logistic Regression,1,1,0.9256084488350406
+Cleveland,Logistic Regression,1,1,0.9489525936613723
+Cleveland,Logistic Regression,0,0,0.43222042225300217
+Cleveland,Logistic Regression,0,0,0.022485817556900593
+Cleveland,Logistic Regression,0,0,0.12435684254905108
+Cleveland,Logistic Regression,1,1,0.6639982771991143
+Cleveland,Logistic Regression,0,1,0.5845675777944035
+Cleveland,Logistic Regression,1,1,0.7339942604704266
+Cleveland,Logistic Regression,1,1,0.9080090666821847
+Cleveland,Logistic Regression,0,1,0.6398773462792001
+Cleveland,Logistic Regression,0,0,0.046088320525153104
+Cleveland,Logistic Regression,1,1,0.555958402744233
+Cleveland,Logistic Regression,0,0,0.05794543118894051
+Cleveland,Logistic Regression,0,0,0.284961101239949
+Cleveland,Logistic Regression,0,0,0.4359301167919887
+Cleveland,Logistic Regression,1,0,0.1113870316160635
+Cleveland,Logistic Regression,0,1,0.671963130005832
+Cleveland,Logistic Regression,0,0,0.10607350503288156
+Cleveland,Logistic Regression,0,0,0.09173668734048168
+Cleveland,Logistic Regression,0,1,0.8514440429471689
+Cleveland,Logistic Regression,0,0,0.21224318812283496
+Cleveland,Logistic Regression,1,0,0.17711831408067474
+Cleveland,Logistic Regression,1,1,0.5683463677865849
+Cleveland,Logistic Regression,1,1,0.9231856407073493
+Cleveland,Logistic Regression,0,0,0.1763862294097442
+Cleveland,Logistic Regression,0,0,0.10869205439150292
+Cleveland,Logistic Regression,0,1,0.6371079685876629
+Cleveland,Logistic Regression,0,1,0.5685934463013733
+Cleveland,Logistic Regression,1,1,0.841314700972983
+Cleveland,Logistic Regression,0,0,0.49309677293736587
+Cleveland,Logistic Regression,1,1,0.8893121441046032
+Cleveland,Logistic Regression,1,0,0.36410844586962915
+Cleveland,Logistic Regression,0,1,0.6437942783573386
+Cleveland,Logistic Regression,0,0,0.39927333556297434
+Cleveland,Logistic Regression,0,0,0.37049017390545474
+Cleveland,Logistic Regression,1,1,0.8761240313120793
+Cleveland,Logistic Regression,1,1,0.8393633816312296
+Cleveland,Logistic Regression,1,1,0.8826071144406481
+Cleveland,Logistic Regression,0,1,0.7215267464779155
+Cleveland,Logistic Regression,1,0,0.4960190311560274
+Cleveland,Logistic Regression,0,1,0.6192594042313118
+Cleveland,Logistic Regression,0,0,0.06667966662778381
+Cleveland,Logistic Regression,0,0,0.49702807194265197
+Cleveland,Logistic Regression,1,0,0.24094937000311814
+Cleveland,Logistic Regression,1,1,0.513755680790416
+Cleveland,Logistic Regression,0,0,0.3955406448418787
+Cleveland,Logistic Regression,1,1,0.7662664892204064
+Cleveland,Logistic Regression,0,0,0.16227962521049388
+Cleveland,Logistic Regression,0,0,0.3350005532863873
+Cleveland,Logistic Regression,0,0,0.01732804882970459
+Cleveland,Logistic Regression,0,1,0.7357540698863763
+Cleveland,Logistic Regression,1,0,0.38414051614810124
+Cleveland,Logistic Regression,0,0,0.03668683290252114
+Cleveland,Logistic Regression,1,1,0.9012815262320065
+Cleveland,Logistic Regression,1,1,0.9145519285735297
+Cleveland,Logistic Regression,1,0,0.2881273070452375
+Cleveland,Logistic Regression,1,0,0.34492286102562436
+Cleveland,Logistic Regression,0,0,0.27513403990773166
+Cleveland,Logistic Regression,0,1,0.7619512847626395
+Cleveland,Logistic Regression,1,1,0.6360639115056967
+Cleveland,Logistic Regression,0,0,0.23039429470902062
+Cleveland,Logistic Regression,1,1,0.910562731676003
+Cleveland,Logistic Regression,0,0,0.09270274749953396
+Cleveland,Logistic Regression,1,1,0.7856502999348433
+Cleveland,Logistic Regression,1,1,0.927816757367901
+Cleveland,Logistic Regression,1,1,0.6034014866216688
+Cleveland,Logistic Regression,0,0,0.3509774286699469
+Cleveland,Logistic Regression,1,1,0.9410275527457477
+Cleveland,Logistic Regression,1,1,0.6212774944749748
+Cleveland,Logistic Regression,0,0,0.2198067388582008
+Cleveland,Logistic Regression,1,1,0.686394577802036
+Cleveland,Logistic Regression,1,1,0.9495263645036285
+Cleveland,Logistic Regression,1,1,0.6569333270562526
+Cleveland,Logistic Regression,1,0,0.33246489021188363
+Cleveland,Logistic Regression,0,0,0.1648960443570813
+Cleveland,Logistic Regression,1,1,0.9309422205936135
+Cleveland,Logistic Regression,0,0,0.14807346112729772
+Cleveland,Logistic Regression,0,0,0.050752186262726755
+Cleveland,Logistic Regression,1,1,0.8582027384737578
+Cleveland,Logistic Regression,0,1,0.8851666643654641
+Cleveland,Logistic Regression,0,0,0.2605239077097423
+Cleveland,Logistic Regression,0,0,0.1043291884722741
+Cleveland,Logistic Regression,1,1,0.737546194745621
+Cleveland,Logistic Regression,0,0,0.08717214420400121
+Cleveland,Logistic Regression,0,0,0.12767253664116618
+Cleveland,Logistic Regression,0,0,0.17314813650836874
+Cleveland,Logistic Regression,0,0,0.10885930517761792
+Cleveland,Logistic Regression,0,0,0.19596545399252718
+Cleveland,Logistic Regression,0,0,0.09319116425957537
+Cleveland,Logistic Regression,0,1,0.6555794230167102
+Cleveland,Logistic Regression,1,1,0.8837409060847152
+Cleveland,Logistic Regression,0,1,0.5871522978224425
+Cleveland,Logistic Regression,0,0,0.08247646053668876
+Cleveland,Logistic Regression,0,0,0.09614566040337973
+Cleveland,Logistic Regression,1,1,0.7406875513769822
+Cleveland,Logistic Regression,1,1,0.859842582358639
+Cleveland,Logistic Regression,1,1,0.5322650622055521
+Cleveland,Logistic Regression,0,0,0.12399210139900968
+Cleveland,Logistic Regression,0,0,0.3456240190826743
+Cleveland,Logistic Regression,0,0,0.32278216648624597
+Cleveland,Logistic Regression,0,0,0.16150677972551344
+Cleveland,Logistic Regression,0,0,0.22869070861316365
+Cleveland,Logistic Regression,0,0,0.1887912121500019
+Cleveland,Logistic Regression,1,0,0.49737422412176197
+Cleveland,Logistic Regression,0,0,0.10109729620518816
+Cleveland,Logistic Regression,1,1,0.7875316238281453
+Cleveland,Logistic Regression,1,0,0.29367608736904766
+Cleveland,Logistic Regression,1,1,0.966486129253965
+Cleveland,Logistic Regression,1,1,0.5797943988083513
+Cleveland,Logistic Regression,1,1,0.6218112164799412
+Cleveland,Logistic Regression,1,1,0.8376424711175671
+Cleveland,Logistic Regression,0,0,0.2599332992156774
+Cleveland,Logistic Regression,1,1,0.6941536211621446
+Cleveland,Logistic Regression,1,0,0.33910219663321844
+Cleveland,Logistic Regression,0,0,0.07231104702361807
+Cleveland,Logistic Regression,0,0,0.23276761057937487
+Cleveland,Logistic Regression,0,0,0.19963297662653182
+Cleveland,Logistic Regression,1,1,0.9109525532769205
+Cleveland,Logistic Regression,1,1,0.875312678285934
+Cleveland,Logistic Regression,1,1,0.6605861012097725
+Cleveland,Logistic Regression,1,1,0.7215766050810917
+Cleveland,Logistic Regression,0,1,0.6608558876808862
+Cleveland,Logistic Regression,1,1,0.9866738559834433
+Cleveland,Logistic Regression,1,1,0.5698210655907253
+Cleveland,Logistic Regression,0,0,0.017713462523499705
+Cleveland,Logistic Regression,1,1,0.8507568678467866
+Cleveland,Logistic Regression,1,1,0.9447509774262561
+Cleveland,Logistic Regression,0,0,0.05952691789700069
+Cleveland,Logistic Regression,0,0,0.32746540057328327
+Cleveland,Logistic Regression,0,0,0.2770173052210012
+Cleveland,Logistic Regression,0,1,0.5000765087506333
+Cleveland,Logistic Regression,0,0,0.017477260726972133
+Cleveland,Logistic Regression,0,1,0.6056656956365997
+Cleveland,Logistic Regression,0,0,0.07086768321444943
+Cleveland,Logistic Regression,0,0,0.043486405071999856
+Cleveland,Logistic Regression,1,1,0.9663008573319803
+Cleveland,Logistic Regression,1,0,0.2657740739659578
+Cleveland,Logistic Regression,1,1,0.8042979817379756
+Cleveland,Logistic Regression,0,0,0.42067749683121397
+Cleveland,Logistic Regression,0,0,0.24289371032521836
+Cleveland,Logistic Regression,1,0,0.3866929305711334
+Cleveland,Logistic Regression,0,0,0.07083823321905584
+Cleveland,Logistic Regression,1,1,0.8270203044493463
+Cleveland,Logistic Regression,0,1,0.560123488493385
+Cleveland,Logistic Regression,1,0,0.24032842610845717
+Cleveland,Logistic Regression,1,1,0.6738006255652963
+Cleveland,Logistic Regression,0,0,0.158815659374506
+Cleveland,Logistic Regression,0,0,0.04518906214578842
+Cleveland,Logistic Regression,0,0,0.13333833652031982
+Cleveland,Logistic Regression,0,0,0.473528468242524
+Cleveland,Logistic Regression,0,0,0.2396731643454846
+Cleveland,Logistic Regression,0,0,0.23931696778705802
+Cleveland,Logistic Regression,1,1,0.7911101893771306
+Cleveland,Logistic Regression,1,1,0.9488562033785914
+Cleveland,Logistic Regression,1,1,0.8954890616373956
+Cleveland,Logistic Regression,1,1,0.8368348518022541
+Cleveland,Logistic Regression,1,0,0.47938653851744567
+Cleveland,Logistic Regression,1,1,0.6354124472356603
+Cleveland,Logistic Regression,0,1,0.5489082828521835
+Cleveland,Logistic Regression,0,0,0.07539915556785362
+Cleveland,Logistic Regression,1,1,0.8550382351617122
+Cleveland,Logistic Regression,0,0,0.2051231878575759
+Cleveland,Logistic Regression,0,0,0.4280194304506558
+Cleveland,Logistic Regression,0,0,0.20443165393370585
+Cleveland,Logistic Regression,0,1,0.7657436158435114
+Cleveland,Logistic Regression,0,0,0.238509285262555
+Cleveland,Logistic Regression,0,0,0.05729074260033833
+Cleveland,Logistic Regression,1,1,0.5180547661177871
+Cleveland,Logistic Regression,0,0,0.026653829445852737
+Cleveland,Logistic Regression,1,1,0.9209873969489644
+Cleveland,Logistic Regression,0,1,0.7728015013121583
+Cleveland,Logistic Regression,1,1,0.5563719535024897
+Cleveland,Logistic Regression,0,0,0.3924777798777862
+Cleveland,Logistic Regression,1,1,0.8112220726491005
+Cleveland,Logistic Regression,1,1,0.922908287508079
+Cleveland,Logistic Regression,0,1,0.5726631478740155
+Cleveland,Logistic Regression,1,1,0.9190385439457883
+Cleveland,Logistic Regression,0,0,0.36638585167594323
+Cleveland,Logistic Regression,0,0,0.1885831304220828
+Cleveland,Logistic Regression,1,0,0.44706548611125424
+Cleveland,Logistic Regression,1,1,0.6683653830052051
+Cleveland,Logistic Regression,0,0,0.2639950455694604
+Cleveland,Logistic Regression,0,1,0.8275211507248736
+Cleveland,Logistic Regression,1,0,0.23751078674923495
+Cleveland,Logistic Regression,0,0,0.035957997734838716
+Cleveland,Logistic Regression,0,0,0.19761602057993383
+Cleveland,Logistic Regression,1,0,0.38640589426171756
+Cleveland,Logistic Regression,1,0,0.04590075171466378
+Cleveland,Logistic Regression,1,1,0.5997333213733458
+Cleveland,Logistic Regression,0,0,0.23681593467620074
+Cleveland,Logistic Regression,1,1,0.966541541108415
+Cleveland,Logistic Regression,1,1,0.6381565372759027
+Cleveland,Logistic Regression,1,1,0.6692924109310207
+Cleveland,Logistic Regression,0,0,0.32239820830372734
+Cleveland,Logistic Regression,1,1,0.8990403917127927
+Cleveland,Logistic Regression,0,1,0.5487299096151145
+Cleveland,Logistic Regression,0,0,0.35469179590226124
+Cleveland,Logistic Regression,0,0,0.042815964981312175
+Cleveland,Logistic Regression,1,0,0.4468188562816677
+Cleveland,Logistic Regression,0,0,0.18627591555673811
+Cleveland,Logistic Regression,0,1,0.5791742956416605
+Cleveland,Logistic Regression,0,0,0.2855579935707432
+Cleveland,Logistic Regression,0,0,0.19408070289111728
+Cleveland,Logistic Regression,0,0,0.43314781244540457
+Cleveland,Logistic Regression,1,1,0.6332318490299335
+Cleveland,Logistic Regression,1,1,0.937747813572582
+Cleveland,Logistic Regression,1,1,0.7992808707649879
+Cleveland,Logistic Regression,0,0,0.10196259240204283
+Cleveland,Logistic Regression,1,1,0.7234653856595209
+Cleveland,Logistic Regression,0,0,0.04908050333877467
+Cleveland,Logistic Regression,1,1,0.8248172817986059
+Cleveland,Logistic Regression,0,0,0.27723698792001494
+Cleveland,Logistic Regression,1,1,0.6856339877689432
+Cleveland,Logistic Regression,1,1,0.5283108193115224
+Cleveland,Logistic Regression,0,1,0.5725018036926321
+Cleveland,Logistic Regression,0,0,0.020495582210988447
+Cleveland,Logistic Regression,0,0,0.34249741980113624
+Cleveland,Logistic Regression,0,1,0.6679953275721517
+Cleveland,Logistic Regression,0,0,0.45752712775363985
+Cleveland,Logistic Regression,0,0,0.10512562658517369
+Cleveland,Logistic Regression,0,0,0.07458110817125292
+Cleveland,Logistic Regression,0,0,0.051340604398682856
+Cleveland,Logistic Regression,1,1,0.9361859186304425
+Cleveland,Logistic Regression,1,1,0.75614104427565
+Cleveland,Logistic Regression,0,0,0.014062619362295694
+Cleveland,Logistic Regression,0,1,0.5284680050803438
+Cleveland,Logistic Regression,0,0,0.1432615871363519
+Cleveland,Logistic Regression,1,1,0.7950440916990454
+Cleveland,Logistic Regression,1,1,0.841965465786971
+Cleveland,Logistic Regression,0,0,0.06744080790756311
+Cleveland,Logistic Regression,1,1,0.8698340497689987
+Cleveland,Logistic Regression,1,0,0.3157467292755278
+Cleveland,Logistic Regression,0,0,0.18499968023730018
+Cleveland,Logistic Regression,0,0,0.09432478399151877
+Cleveland,Logistic Regression,1,1,0.941879984205835
+Cleveland,Logistic Regression,1,1,0.9014414158529627
+Cleveland,Logistic Regression,1,1,0.5161199525677188
+Cleveland,Logistic Regression,0,0,0.024099702999921875
+Cleveland,Logistic Regression,0,0,0.059113087916478214
+Cleveland,Logistic Regression,0,0,0.0627168995469695
+Cleveland,Logistic Regression,0,0,0.01745934574720601
+Cleveland,Logistic Regression,0,0,0.218375300175213
+Cleveland,Logistic Regression,1,1,0.7838980435643285
+Cleveland,Logistic Regression,0,0,0.21487990030794787
+Cleveland,Logistic Regression,1,1,0.8861848113154288
+Cleveland,Logistic Regression,1,1,0.6161516588631899
+Cleveland,Logistic Regression,1,1,0.8092389967312108
+Cleveland,Logistic Regression,1,1,0.6201305642803968
+Cleveland,Logistic Regression,0,0,0.11373715708087176
+Cleveland,Logistic Regression,0,1,0.9124166133344784
+Cleveland,Logistic Regression,1,1,0.8556650630816098
+Cleveland,Logistic Regression,0,1,0.8985585688803809
+Cleveland,Logistic Regression,0,0,0.09239468827164045
+Cleveland,Logistic Regression,0,1,0.5259973819633087
+Cleveland,Logistic Regression,0,0,0.058232193568040436
+Cleveland,Logistic Regression,0,0,0.46691089345063946
+Cleveland,Logistic Regression,0,0,0.413405322569186
+Cleveland,Logistic Regression,0,0,0.1418203803665075
+Cleveland,Logistic Regression,1,0,0.14140830018128508
+Cleveland,Logistic Regression,0,0,0.08918571137338284
+Cleveland,Logistic Regression,1,0,0.02791514572425836
+Cleveland,Logistic Regression,0,0,0.2603719080450647
+Cleveland,Logistic Regression,0,0,0.18825421607381698
+Cleveland,Logistic Regression,1,1,0.9590323590906478
+Cleveland,Logistic Regression,1,1,0.8604574040152725
+Cleveland,Logistic Regression,1,1,0.8284961667494732
+Cleveland,Logistic Regression,1,1,0.6317688504346385
+Cleveland,Logistic Regression,1,0,0.33955491949503297
+Cleveland,Logistic Regression,0,0,0.20053348382630298
+Cleveland,Logistic Regression,1,1,0.9014231324987085
+Cleveland,Logistic Regression,0,1,0.831909930350874
+Cleveland,Logistic Regression,1,1,0.8835573852294424
+Cleveland,Logistic Regression,0,1,0.6913952336808673
+Cleveland,Logistic Regression,1,1,0.545551083214751
+Cleveland,Logistic Regression,0,0,0.4943190720826633
+Cleveland,Logistic Regression,0,0,0.125046174938289
+Cleveland,Logistic Regression,0,0,0.06048854580940609
+Cleveland,Logistic Regression,1,0,0.07305015144320501
+Cleveland,Logistic Regression,0,0,0.42392281636649626
+Cleveland,Logistic Regression,1,1,0.9477511044870024
+Cleveland,Logistic Regression,0,0,0.18996399641370976
+Cleveland,Logistic Regression,1,1,0.7695319946663675
+Cleveland,Logistic Regression,0,0,0.039980418796927195
+Cleveland,Logistic Regression,1,1,0.6015485064674875
+Cleveland,Logistic Regression,1,1,0.9329618098007302
+Cleveland,Logistic Regression,1,1,0.7656815587756832
+Cleveland,Logistic Regression,0,0,0.14873914493106274
+Cleveland,Logistic Regression,0,0,0.0739623705048286
+Cleveland,Logistic Regression,0,0,0.09550409395278608
+Cleveland,Logistic Regression,1,0,0.42221554594904975
+Cleveland,Logistic Regression,0,0,0.051610023378283056
+Cleveland,Logistic Regression,1,1,0.9029003262187533
+Cleveland,Logistic Regression,1,1,0.9624196750102981
+Cleveland,Logistic Regression,1,1,0.6354878025751143
+Cleveland,Logistic Regression,0,0,0.047428802002833254
+Cleveland,Logistic Regression,1,1,0.7568055629456374
+Cleveland,Logistic Regression,1,1,0.6209953323506655
+Cleveland,Logistic Regression,1,1,0.529887569551327
+Cleveland,Logistic Regression,1,1,0.9260590690245061
+Cleveland,Logistic Regression,1,1,0.9061044309326755
+Cleveland,Logistic Regression,1,0,0.02208590628752198
+Cleveland,Logistic Regression,0,0,0.14369615618946469
+Hungarian,Logistic Regression,0,0,0.04468694785608498
+Hungarian,Logistic Regression,0,0,0.08176526812113452
+Hungarian,Logistic Regression,0,0,0.07913171638063127
+Hungarian,Logistic Regression,0,0,0.04357787224533557
+Hungarian,Logistic Regression,0,0,0.02713485789296156
+Hungarian,Logistic Regression,0,0,0.019082717443896894
+Hungarian,Logistic Regression,0,0,0.04902744165419189
+Hungarian,Logistic Regression,0,0,0.09892381084886188
+Hungarian,Logistic Regression,0,0,0.0736997255678457
+Hungarian,Logistic Regression,0,0,0.014573001934198705
+Hungarian,Logistic Regression,0,0,0.106821431074167
+Hungarian,Logistic Regression,0,0,0.09070053294418995
+Hungarian,Logistic Regression,0,0,0.022720956912632904
+Hungarian,Logistic Regression,0,0,0.19118196395387105
+Hungarian,Logistic Regression,0,0,0.051637764127738725
+Hungarian,Logistic Regression,0,0,0.09912332961996596
+Hungarian,Logistic Regression,0,0,0.06219126366723364
+Hungarian,Logistic Regression,0,0,0.10653953654075649
+Hungarian,Logistic Regression,0,0,0.09671596865441193
+Hungarian,Logistic Regression,0,0,0.12710318716254446
+Hungarian,Logistic Regression,0,0,0.04929260488382454
+Hungarian,Logistic Regression,0,0,0.058385846594376
+Hungarian,Logistic Regression,0,0,0.10717962615328085
+Hungarian,Logistic Regression,0,0,0.3220965697295289
+Hungarian,Logistic Regression,0,0,0.1659260752383868
+Hungarian,Logistic Regression,0,0,0.3471703699357522
+Hungarian,Logistic Regression,0,0,0.41880060904396105
+Hungarian,Logistic Regression,0,0,0.051230113063309685
+Hungarian,Logistic Regression,0,0,0.13551873562142588
+Hungarian,Logistic Regression,0,0,0.2625565347472159
+Hungarian,Logistic Regression,0,0,0.025750499064949205
+Hungarian,Logistic Regression,0,0,0.26310158364393094
+Hungarian,Logistic Regression,0,0,0.24970656047048367
+Hungarian,Logistic Regression,0,0,0.1294912286841818
+Hungarian,Logistic Regression,0,0,0.21753999204488372
+Hungarian,Logistic Regression,0,0,0.3909073943836427
+Hungarian,Logistic Regression,0,0,0.10961529548382906
+Hungarian,Logistic Regression,0,0,0.17906776633036964
+Hungarian,Logistic Regression,0,1,0.522298585442976
+Hungarian,Logistic Regression,0,1,0.524114075286556
+Hungarian,Logistic Regression,0,0,0.12964369636300513
+Hungarian,Logistic Regression,0,0,0.09225579442774132
+Hungarian,Logistic Regression,0,0,0.2141587149824082
+Hungarian,Logistic Regression,0,0,0.12766062054079552
+Hungarian,Logistic Regression,0,0,0.0925702986708776
+Hungarian,Logistic Regression,0,0,0.04200828514587103
+Hungarian,Logistic Regression,0,0,0.019644280570638325
+Hungarian,Logistic Regression,0,0,0.03833792543295371
+Hungarian,Logistic Regression,0,0,0.11044219460634823
+Hungarian,Logistic Regression,0,0,0.08293181312994985
+Hungarian,Logistic Regression,0,0,0.14172717555569853
+Hungarian,Logistic Regression,0,0,0.4827663417466674
+Hungarian,Logistic Regression,0,0,0.06855344023845271
+Hungarian,Logistic Regression,0,0,0.12398682378416954
+Hungarian,Logistic Regression,0,0,0.11280473089909111
+Hungarian,Logistic Regression,0,0,0.19991203988247142
+Hungarian,Logistic Regression,0,0,0.41926606837779107
+Hungarian,Logistic Regression,0,0,0.23775022944639776
+Hungarian,Logistic Regression,0,0,0.4013567166095026
+Hungarian,Logistic Regression,0,0,0.048908558470255166
+Hungarian,Logistic Regression,0,0,0.02672884203378346
+Hungarian,Logistic Regression,0,0,0.023967605358349846
+Hungarian,Logistic Regression,0,0,0.023471137461915485
+Hungarian,Logistic Regression,0,0,0.06996479946345677
+Hungarian,Logistic Regression,0,0,0.043485080537067095
+Hungarian,Logistic Regression,0,0,0.03937966468097563
+Hungarian,Logistic Regression,0,0,0.18511179235477926
+Hungarian,Logistic Regression,0,0,0.3552978057246085
+Hungarian,Logistic Regression,0,0,0.2061738744687597
+Hungarian,Logistic Regression,0,0,0.18154770267687273
+Hungarian,Logistic Regression,0,0,0.4323893830440031
+Hungarian,Logistic Regression,0,0,0.027267480829915376
+Hungarian,Logistic Regression,0,0,0.034164110833596384
+Hungarian,Logistic Regression,0,0,0.23259892289979173
+Hungarian,Logistic Regression,0,0,0.2462671282755162
+Hungarian,Logistic Regression,0,0,0.3637220170055501
+Hungarian,Logistic Regression,0,1,0.5304749965773021
+Hungarian,Logistic Regression,0,1,0.5535660736520897
+Hungarian,Logistic Regression,0,0,0.4913383942137922
+Hungarian,Logistic Regression,0,0,0.21555848075228706
+Hungarian,Logistic Regression,0,0,0.17773051405652265
+Hungarian,Logistic Regression,0,0,0.3694366973364119
+Hungarian,Logistic Regression,0,1,0.7826579817239792
+Hungarian,Logistic Regression,0,1,0.5385070490237318
+Hungarian,Logistic Regression,0,1,0.7701104719365606
+Hungarian,Logistic Regression,0,0,0.09120016950688577
+Hungarian,Logistic Regression,0,0,0.1348378890790514
+Hungarian,Logistic Regression,0,0,0.16302335975068663
+Hungarian,Logistic Regression,0,0,0.1174911592991421
+Hungarian,Logistic Regression,0,1,0.8006587611833638
+Hungarian,Logistic Regression,0,0,0.12166534500548754
+Hungarian,Logistic Regression,0,0,0.04599479637712393
+Hungarian,Logistic Regression,0,0,0.07348532447780039
+Hungarian,Logistic Regression,0,0,0.09155851465187881
+Hungarian,Logistic Regression,0,0,0.2277652343480327
+Hungarian,Logistic Regression,0,0,0.3984283311033991
+Hungarian,Logistic Regression,0,1,0.6110523133891307
+Hungarian,Logistic Regression,0,0,0.2794733552521975
+Hungarian,Logistic Regression,0,0,0.12289584908693478
+Hungarian,Logistic Regression,0,0,0.27380536859132626
+Hungarian,Logistic Regression,0,0,0.209886381303792
+Hungarian,Logistic Regression,0,0,0.03040715061650716
+Hungarian,Logistic Regression,0,0,0.03040715061650716
+Hungarian,Logistic Regression,0,0,0.0315904638790809
+Hungarian,Logistic Regression,0,0,0.09128272791893849
+Hungarian,Logistic Regression,0,0,0.07484812529551634
+Hungarian,Logistic Regression,0,0,0.14588776284179225
+Hungarian,Logistic Regression,0,1,0.6829623252225516
+Hungarian,Logistic Regression,0,1,0.6437930918434751
+Hungarian,Logistic Regression,0,0,0.04223140013452331
+Hungarian,Logistic Regression,0,1,0.6571567908323394
+Hungarian,Logistic Regression,0,0,0.1174936647541231
+Hungarian,Logistic Regression,0,0,0.11385203179658909
+Hungarian,Logistic Regression,0,0,0.37203748378390994
+Hungarian,Logistic Regression,0,1,0.6233561348179316
+Hungarian,Logistic Regression,0,1,0.7713012174414612
+Hungarian,Logistic Regression,0,0,0.03949459513145877
+Hungarian,Logistic Regression,0,0,0.09801379609656675
+Hungarian,Logistic Regression,0,0,0.20194585234026158
+Hungarian,Logistic Regression,0,0,0.15932272706757605
+Hungarian,Logistic Regression,0,0,0.16370361884671888
+Hungarian,Logistic Regression,0,0,0.15532573143621012
+Hungarian,Logistic Regression,0,1,0.7656623999651027
+Hungarian,Logistic Regression,0,0,0.04487091901101939
+Hungarian,Logistic Regression,0,0,0.06251842613111877
+Hungarian,Logistic Regression,0,0,0.0777296196633516
+Hungarian,Logistic Regression,0,1,0.5826754633811165
+Hungarian,Logistic Regression,0,0,0.25396299308297754
+Hungarian,Logistic Regression,0,0,0.3548163395997246
+Hungarian,Logistic Regression,0,0,0.15088489244159506
+Hungarian,Logistic Regression,0,0,0.17302248948138738
+Hungarian,Logistic Regression,0,0,0.06591269334395235
+Hungarian,Logistic Regression,0,0,0.23017203824070212
+Hungarian,Logistic Regression,0,0,0.09061186887089098
+Hungarian,Logistic Regression,0,0,0.2044685605649209
+Hungarian,Logistic Regression,0,0,0.13907394271592471
+Hungarian,Logistic Regression,0,0,0.23445491895866805
+Hungarian,Logistic Regression,0,1,0.9495616062332702
+Hungarian,Logistic Regression,0,1,0.5481393149881306
+Hungarian,Logistic Regression,0,1,0.5330700991028345
+Hungarian,Logistic Regression,0,0,0.08255598026054405
+Hungarian,Logistic Regression,0,0,0.05477296376285898
+Hungarian,Logistic Regression,0,0,0.07822003052731799
+Hungarian,Logistic Regression,0,0,0.0484341875537952
+Hungarian,Logistic Regression,0,0,0.07129927783355261
+Hungarian,Logistic Regression,0,0,0.08583159680549672
+Hungarian,Logistic Regression,0,0,0.09311097843453074
+Hungarian,Logistic Regression,0,0,0.4159937857954397
+Hungarian,Logistic Regression,0,0,0.16202407141937736
+Hungarian,Logistic Regression,0,0,0.1405019451754493
+Hungarian,Logistic Regression,0,0,0.29572092728307553
+Hungarian,Logistic Regression,0,0,0.391931123583306
+Hungarian,Logistic Regression,0,0,0.1296820485302712
+Hungarian,Logistic Regression,0,0,0.24976783242478842
+Hungarian,Logistic Regression,0,0,0.37518202214698854
+Hungarian,Logistic Regression,0,1,0.7669257321277592
+Hungarian,Logistic Regression,0,0,0.03751600212002236
+Hungarian,Logistic Regression,0,0,0.04177445278568437
+Hungarian,Logistic Regression,0,0,0.041803371162873394
+Hungarian,Logistic Regression,0,0,0.19348998372058202
+Hungarian,Logistic Regression,0,0,0.1783723755977693
+Hungarian,Logistic Regression,0,0,0.16939584175641914
+Hungarian,Logistic Regression,0,0,0.15932998260628858
+Hungarian,Logistic Regression,0,0,0.23247729171619366
+Hungarian,Logistic Regression,0,1,0.5777598583446214
+Hungarian,Logistic Regression,0,1,0.8873408711696402
+Hungarian,Logistic Regression,0,0,0.0580982624128095
+Hungarian,Logistic Regression,0,0,0.37153195126467803
+Hungarian,Logistic Regression,0,0,0.38248352935425156
+Hungarian,Logistic Regression,0,1,0.5860613798249853
+Hungarian,Logistic Regression,0,1,0.5824252758836916
+Hungarian,Logistic Regression,0,0,0.25148438406006
+Hungarian,Logistic Regression,0,1,0.7312864230972826
+Hungarian,Logistic Regression,0,0,0.21845283515894273
+Hungarian,Logistic Regression,0,0,0.17373940858987577
+Hungarian,Logistic Regression,0,0,0.33142528802152627
+Hungarian,Logistic Regression,0,0,0.2079110914015353
+Hungarian,Logistic Regression,0,1,0.7962064956211463
+Hungarian,Logistic Regression,0,0,0.12755119752244468
+Hungarian,Logistic Regression,0,0,0.1898783549827018
+Hungarian,Logistic Regression,0,1,0.6403050203278207
+Hungarian,Logistic Regression,0,1,0.5806885424879418
+Hungarian,Logistic Regression,0,1,0.6385315835547201
+Hungarian,Logistic Regression,0,0,0.2460021392260498
+Hungarian,Logistic Regression,0,1,0.6982254908916167
+Hungarian,Logistic Regression,0,1,0.8631135028479153
+Hungarian,Logistic Regression,0,0,0.1809532330084701
+Hungarian,Logistic Regression,0,0,0.2613452601030899
+Hungarian,Logistic Regression,1,1,0.7110910771191552
+Hungarian,Logistic Regression,1,0,0.329297609035829
+Hungarian,Logistic Regression,1,0,0.09449871602413974
+Hungarian,Logistic Regression,1,0,0.12300498286625003
+Hungarian,Logistic Regression,1,0,0.25108607473419686
+Hungarian,Logistic Regression,1,1,0.843899387245151
+Hungarian,Logistic Regression,1,0,0.34099428503661194
+Hungarian,Logistic Regression,1,0,0.3418124634070045
+Hungarian,Logistic Regression,1,1,0.8304809870061189
+Hungarian,Logistic Regression,1,1,0.7101046234262384
+Hungarian,Logistic Regression,1,0,0.3346634876690776
+Hungarian,Logistic Regression,1,1,0.7712191986632563
+Hungarian,Logistic Regression,1,1,0.8899732986726909
+Hungarian,Logistic Regression,1,1,0.6380844211979751
+Hungarian,Logistic Regression,1,1,0.6145237060963368
+Hungarian,Logistic Regression,1,1,0.8305735094825424
+Hungarian,Logistic Regression,1,0,0.47508154040090916
+Hungarian,Logistic Regression,1,1,0.9342909556131394
+Hungarian,Logistic Regression,1,1,0.6676460419075967
+Hungarian,Logistic Regression,1,1,0.8190585783688418
+Hungarian,Logistic Regression,1,1,0.9210926820401861
+Hungarian,Logistic Regression,1,0,0.10106802829382511
+Hungarian,Logistic Regression,1,0,0.11354363714546603
+Hungarian,Logistic Regression,1,0,0.4121360729918518
+Hungarian,Logistic Regression,1,0,0.15847848755233448
+Hungarian,Logistic Regression,1,1,0.5564865180638914
+Hungarian,Logistic Regression,1,1,0.542346616182106
+Hungarian,Logistic Regression,1,1,0.9087486441807764
+Hungarian,Logistic Regression,1,1,0.5839793269288144
+Hungarian,Logistic Regression,1,1,0.8204678434467674
+Hungarian,Logistic Regression,1,1,0.9326508895583978
+Hungarian,Logistic Regression,1,0,0.4619517638330779
+Hungarian,Logistic Regression,1,0,0.2899493860112454
+Hungarian,Logistic Regression,1,1,0.686707249921632
+Hungarian,Logistic Regression,1,1,0.720991953351113
+Hungarian,Logistic Regression,1,1,0.7809163099046846
+Hungarian,Logistic Regression,1,1,0.9587410513248327
+Hungarian,Logistic Regression,1,1,0.5173881486551578
+Hungarian,Logistic Regression,1,1,0.6923367102644326
+Hungarian,Logistic Regression,1,0,0.42637172344703805
+Hungarian,Logistic Regression,1,0,0.4915227823428812
+Hungarian,Logistic Regression,1,0,0.16413356719518632
+Hungarian,Logistic Regression,1,1,0.8396022361822307
+Hungarian,Logistic Regression,1,1,0.8032711882747152
+Hungarian,Logistic Regression,1,1,0.6965514808791265
+Hungarian,Logistic Regression,1,1,0.8333615062525683
+Hungarian,Logistic Regression,1,1,0.9634976380255428
+Hungarian,Logistic Regression,1,1,0.9474368717501966
+Hungarian,Logistic Regression,1,1,0.949802105677168
+Hungarian,Logistic Regression,1,1,0.9036716947402079
+Hungarian,Logistic Regression,1,1,0.5104290544171799
+Hungarian,Logistic Regression,1,1,0.9112336267322214
+Hungarian,Logistic Regression,1,1,0.8204646894206239
+Hungarian,Logistic Regression,1,0,0.48673631718538224
+Hungarian,Logistic Regression,1,1,0.9283283299306454
+Hungarian,Logistic Regression,1,1,0.8620382500439276
+Hungarian,Logistic Regression,1,1,0.842184314738177
+Hungarian,Logistic Regression,1,1,0.9234993034670983
+Hungarian,Logistic Regression,1,1,0.8884665069893135
+Hungarian,Logistic Regression,1,1,0.8858899066096687
+Hungarian,Logistic Regression,1,1,0.9726304995181383
+Hungarian,Logistic Regression,1,1,0.599095675149986
+Hungarian,Logistic Regression,1,1,0.8791671033219877
+Hungarian,Logistic Regression,1,1,0.7766474044523679
+Hungarian,Logistic Regression,1,1,0.8374585103269038
+Hungarian,Logistic Regression,1,1,0.5677447138924737
+Hungarian,Logistic Regression,1,1,0.9291712713355095
+Hungarian,Logistic Regression,1,0,0.24445725718778166
+Hungarian,Logistic Regression,1,0,0.041303987357543384
+Hungarian,Logistic Regression,1,1,0.7339504783550008
+Hungarian,Logistic Regression,1,1,0.8633925237972343
+Hungarian,Logistic Regression,1,1,0.8182228718585238
+Hungarian,Logistic Regression,1,0,0.37578733666803765
+Hungarian,Logistic Regression,1,1,0.9135199861708873
+Hungarian,Logistic Regression,1,1,0.8924120759418002
+Hungarian,Logistic Regression,1,1,0.9090499433881335
+Hungarian,Logistic Regression,1,1,0.9863244005867297
+Hungarian,Logistic Regression,1,0,0.3218192590696366
+Hungarian,Logistic Regression,1,1,0.9351429856155666
+Hungarian,Logistic Regression,1,1,0.860504516177771
+Hungarian,Logistic Regression,1,0,0.2861177150425954
+Hungarian,Logistic Regression,1,1,0.5806858607742078
+Hungarian,Logistic Regression,1,1,0.9527803703004747
+Hungarian,Logistic Regression,1,0,0.06741512487863514
+Hungarian,Logistic Regression,1,1,0.9146682305413939
+Hungarian,Logistic Regression,1,1,0.9422588947213787
+Hungarian,Logistic Regression,1,1,0.7710744205639026
+Hungarian,Logistic Regression,1,1,0.6902310782602764
+Hungarian,Logistic Regression,1,1,0.8279117029688443
+Hungarian,Logistic Regression,1,1,0.9559155905458931
+Hungarian,Logistic Regression,1,1,0.9435454337602645
+Hungarian,Logistic Regression,1,1,0.9197148084307436
+Hungarian,Logistic Regression,1,1,0.8691959032373857
+Hungarian,Logistic Regression,1,1,0.5852100043206648
+Hungarian,Logistic Regression,1,1,0.7769023384883694
+Hungarian,Logistic Regression,1,1,0.8962204544935853
+Hungarian,Logistic Regression,1,1,0.8747043173663634
+Hungarian,Logistic Regression,1,1,0.838519440733863
+Hungarian,Logistic Regression,1,1,0.9613936767222465
+Hungarian,Logistic Regression,1,1,0.9271348232623505
+Hungarian,Logistic Regression,1,1,0.8897006988888867
+Hungarian,Logistic Regression,1,1,0.9651997748195649
+Hungarian,Logistic Regression,1,0,0.32689938414552755
+Hungarian,Logistic Regression,1,1,0.9131398738655863
+Hungarian,Logistic Regression,1,0,0.38577147360232417
+Hungarian,Logistic Regression,1,1,0.9137210864913311
+Long Beach VA,Logistic Regression,1,1,0.9843956815118934
+Long Beach VA,Logistic Regression,0,1,0.6905213028931692
+Long Beach VA,Logistic Regression,1,1,0.9358468476387335
+Long Beach VA,Logistic Regression,1,1,0.9491138441638397
+Long Beach VA,Logistic Regression,0,1,0.8605397094016077
+Long Beach VA,Logistic Regression,0,0,0.3878232191469465
+Long Beach VA,Logistic Regression,1,1,0.9402455901368018
+Long Beach VA,Logistic Regression,0,1,0.7526028728268045
+Long Beach VA,Logistic Regression,1,1,0.7400701749201103
+Long Beach VA,Logistic Regression,1,0,0.20045684088022792
+Long Beach VA,Logistic Regression,0,0,0.18591444700371854
+Long Beach VA,Logistic Regression,1,1,0.9465056759309803
+Long Beach VA,Logistic Regression,1,1,0.9145799359859728
+Long Beach VA,Logistic Regression,1,0,0.3519392518692294
+Long Beach VA,Logistic Regression,1,1,0.8971505252171708
+Long Beach VA,Logistic Regression,0,1,0.8880526233000663
+Long Beach VA,Logistic Regression,1,1,0.986929870895531
+Long Beach VA,Logistic Regression,1,1,0.935025458283821
+Long Beach VA,Logistic Regression,0,1,0.9018194206611505
+Long Beach VA,Logistic Regression,0,1,0.9144400651374311
+Long Beach VA,Logistic Regression,1,1,0.8227541897361279
+Long Beach VA,Logistic Regression,1,1,0.9417242495489654
+Long Beach VA,Logistic Regression,1,1,0.7052456398649359
+Long Beach VA,Logistic Regression,0,0,0.37886708085517257
+Long Beach VA,Logistic Regression,1,0,0.4637135439235753
+Long Beach VA,Logistic Regression,1,1,0.872916418793067
+Long Beach VA,Logistic Regression,1,1,0.6857882040988043
+Long Beach VA,Logistic Regression,1,1,0.8948936424113189
+Long Beach VA,Logistic Regression,1,1,0.9412957798614522
+Long Beach VA,Logistic Regression,1,0,0.3127627691760025
+Long Beach VA,Logistic Regression,1,1,0.7018692109543052
+Long Beach VA,Logistic Regression,1,1,0.9814876458703917
+Long Beach VA,Logistic Regression,1,1,0.9558103462271417
+Long Beach VA,Logistic Regression,1,0,0.3672122587001743
+Long Beach VA,Logistic Regression,1,1,0.8145949040918125
+Long Beach VA,Logistic Regression,1,1,0.9481400432317512
+Long Beach VA,Logistic Regression,1,1,0.7325582843708569
+Long Beach VA,Logistic Regression,0,1,0.9467476024499147
+Long Beach VA,Logistic Regression,1,1,0.6836341419018831
+Long Beach VA,Logistic Regression,0,1,0.9470797130640779
+Long Beach VA,Logistic Regression,1,1,0.7765615177969449
+Long Beach VA,Logistic Regression,1,0,0.4329891331053151
+Long Beach VA,Logistic Regression,1,1,0.9462503873624198
+Long Beach VA,Logistic Regression,0,1,0.7306743714734869
+Long Beach VA,Logistic Regression,1,1,0.7174662759608429
+Long Beach VA,Logistic Regression,1,1,0.9486853780410843
+Long Beach VA,Logistic Regression,1,1,0.9431567904986624
+Long Beach VA,Logistic Regression,0,1,0.7677754077836513
+Long Beach VA,Logistic Regression,1,1,0.7870061911651142
+Long Beach VA,Logistic Regression,0,0,0.14590651598687768
+Long Beach VA,Logistic Regression,1,1,0.8455142770232362
+Long Beach VA,Logistic Regression,0,0,0.0539746698114419
+Long Beach VA,Logistic Regression,1,1,0.9759233669505379
+Long Beach VA,Logistic Regression,0,0,0.2636750960218375
+Long Beach VA,Logistic Regression,1,1,0.779443868615943
+Long Beach VA,Logistic Regression,1,1,0.9761803248611587
+Long Beach VA,Logistic Regression,1,1,0.9275620672534364
+Long Beach VA,Logistic Regression,1,0,0.3405047128326876
+Long Beach VA,Logistic Regression,0,0,0.19193763056276883
+Long Beach VA,Logistic Regression,1,1,0.9115458588841356
+Long Beach VA,Logistic Regression,0,1,0.6803342596667167
+Long Beach VA,Logistic Regression,1,1,0.9674363837274914
+Long Beach VA,Logistic Regression,1,1,0.9372859935721488
+Long Beach VA,Logistic Regression,1,1,0.8636440581021699
+Long Beach VA,Logistic Regression,1,1,0.7310072600490288
+Long Beach VA,Logistic Regression,1,1,0.7866411814225487
+Long Beach VA,Logistic Regression,1,1,0.795459726354858
+Long Beach VA,Logistic Regression,1,1,0.9634509534781237
+Long Beach VA,Logistic Regression,1,1,0.7205492634111659
+Long Beach VA,Logistic Regression,1,0,0.22695441591392282
+Long Beach VA,Logistic Regression,0,0,0.09589431576922677
+Long Beach VA,Logistic Regression,1,1,0.9430497333948484
+Long Beach VA,Logistic Regression,0,0,0.42735875966952835
+Long Beach VA,Logistic Regression,1,1,0.9589829297854275
+Long Beach VA,Logistic Regression,1,1,0.8333315977465158
+Long Beach VA,Logistic Regression,1,1,0.8865714957241015
+Long Beach VA,Logistic Regression,1,1,0.7160496588434521
+Long Beach VA,Logistic Regression,1,0,0.254486067741836
+Long Beach VA,Logistic Regression,1,1,0.9749120494408563
+Long Beach VA,Logistic Regression,1,1,0.7103116798170902
+Long Beach VA,Logistic Regression,0,1,0.9363873873527973
+Long Beach VA,Logistic Regression,1,1,0.9603281138039474
+Long Beach VA,Logistic Regression,1,1,0.9103688537010569
+Long Beach VA,Logistic Regression,1,1,0.923219845379333
+Long Beach VA,Logistic Regression,1,1,0.9813619495357675
+Long Beach VA,Logistic Regression,1,1,0.946490387266437
+Long Beach VA,Logistic Regression,1,1,0.960504737669204
+Long Beach VA,Logistic Regression,0,1,0.6857882040988043
+Long Beach VA,Logistic Regression,1,1,0.981485164139454
+Long Beach VA,Logistic Regression,1,0,0.3127627691760025
+Long Beach VA,Logistic Regression,1,1,0.9859678136299374
+Long Beach VA,Logistic Regression,0,1,0.6651375127392882
+Long Beach VA,Logistic Regression,1,1,0.818786644276339
+Long Beach VA,Logistic Regression,1,1,0.7813325435678792
+Long Beach VA,Logistic Regression,0,1,0.6944483707100312
+Long Beach VA,Logistic Regression,1,1,0.9843460889350583
+Long Beach VA,Logistic Regression,0,0,0.2155162730303059
+Long Beach VA,Logistic Regression,1,1,0.6342533509266574
+Long Beach VA,Logistic Regression,1,1,0.7278124153475397
+Long Beach VA,Logistic Regression,0,1,0.6327069595636796
+Long Beach VA,Logistic Regression,1,0,0.37593999081585183
+Long Beach VA,Logistic Regression,1,1,0.9554275324039516
+Long Beach VA,Logistic Regression,1,1,0.728988810254658
+Long Beach VA,Logistic Regression,1,1,0.9426778417834657
+Long Beach VA,Logistic Regression,0,1,0.8254992416946013
+Long Beach VA,Logistic Regression,1,1,0.9839773475493451
+Long Beach VA,Logistic Regression,1,1,0.9287851432877345
+Long Beach VA,Logistic Regression,1,1,0.9341879953293685
+Long Beach VA,Logistic Regression,0,1,0.6578529448184204
+Long Beach VA,Logistic Regression,0,0,0.2268377035783749
+Long Beach VA,Logistic Regression,1,1,0.7518748693666328
+Long Beach VA,Logistic Regression,0,0,0.18805372071154666
+Long Beach VA,Logistic Regression,1,0,0.245028917014749
+Long Beach VA,Logistic Regression,1,1,0.7547025161205022
+Long Beach VA,Logistic Regression,1,1,0.6384450639968239
+Long Beach VA,Logistic Regression,1,1,0.751866564149234
+Long Beach VA,Logistic Regression,1,1,0.8263502537012322
+Long Beach VA,Logistic Regression,1,1,0.951510094169457
+Long Beach VA,Logistic Regression,1,1,0.9564639530324714
+Long Beach VA,Logistic Regression,1,1,0.7071323520510601
+Long Beach VA,Logistic Regression,1,0,0.35192909849542897
+Long Beach VA,Logistic Regression,1,1,0.990153100192333
+Long Beach VA,Logistic Regression,1,1,0.9598983520701452
+Long Beach VA,Logistic Regression,0,1,0.8338789572872009
+Long Beach VA,Logistic Regression,1,0,0.35192909849542897
+Long Beach VA,Logistic Regression,1,1,0.8669173218072855
+Long Beach VA,Logistic Regression,1,1,0.8342715716405958
+Long Beach VA,Logistic Regression,1,1,0.9826726828706724
+Long Beach VA,Logistic Regression,0,0,0.16537297497639006
+Long Beach VA,Logistic Regression,0,1,0.6692485537919991
+Long Beach VA,Logistic Regression,1,0,0.1863416590016466
+Long Beach VA,Logistic Regression,1,1,0.7971237950268651
+Long Beach VA,Logistic Regression,1,1,0.841546541266523
+Long Beach VA,Logistic Regression,0,0,0.49243054189549434
+Long Beach VA,Logistic Regression,1,1,0.9589270450493917
+Long Beach VA,Logistic Regression,0,1,0.5931787187670957
+Long Beach VA,Logistic Regression,1,0,0.36122000556358735
+Long Beach VA,Logistic Regression,1,0,0.4836318787605087
+Long Beach VA,Logistic Regression,0,0,0.24016775643721022
+Long Beach VA,Logistic Regression,1,1,0.6560457195725757
+Long Beach VA,Logistic Regression,0,1,0.977435614926044
+Long Beach VA,Logistic Regression,1,0,0.31821289041568745
+Long Beach VA,Logistic Regression,1,0,0.32926276605412835
+Long Beach VA,Logistic Regression,1,1,0.9910613509833794
+Long Beach VA,Logistic Regression,0,0,0.30736391146781294
+Long Beach VA,Logistic Regression,0,0,0.18958200102406547
+Long Beach VA,Logistic Regression,0,1,0.9218002676035059
+Long Beach VA,Logistic Regression,1,1,0.7071231325817163
+Long Beach VA,Logistic Regression,1,1,0.9233970016797637
+Long Beach VA,Logistic Regression,1,1,0.7374736675989719
+Long Beach VA,Logistic Regression,0,1,0.9085757485349515
+Long Beach VA,Logistic Regression,1,1,0.9347167619474478
+Long Beach VA,Logistic Regression,1,1,0.9311814912368889
+Long Beach VA,Logistic Regression,1,1,0.9725473126182713
+Long Beach VA,Logistic Regression,1,1,0.9632338650035754
+Long Beach VA,Logistic Regression,1,1,0.7404173247616793
+Long Beach VA,Logistic Regression,1,1,0.9158031247368278
+Long Beach VA,Logistic Regression,1,1,0.907829692992364
+Long Beach VA,Logistic Regression,1,1,0.7746542528272715
+Long Beach VA,Logistic Regression,1,1,0.6726176062040963
+Long Beach VA,Logistic Regression,1,1,0.980833163321558
+Long Beach VA,Logistic Regression,1,1,0.7305988975967761
+Long Beach VA,Logistic Regression,1,1,0.9793453976834791
+Long Beach VA,Logistic Regression,1,1,0.7746542528272715
+Long Beach VA,Logistic Regression,1,1,0.6803342596667167
+Long Beach VA,Logistic Regression,1,1,0.8606229183368365
+Long Beach VA,Logistic Regression,1,1,0.9608532236065738
+Long Beach VA,Logistic Regression,0,0,0.3871994914280955
+Long Beach VA,Logistic Regression,1,1,0.751866564149234
+Long Beach VA,Logistic Regression,1,0,0.3768250355405591
+Long Beach VA,Logistic Regression,1,1,0.9494936231600327
+Long Beach VA,Logistic Regression,0,0,0.20864410683615925
+Long Beach VA,Logistic Regression,1,1,0.9708999512464133
+Long Beach VA,Logistic Regression,1,1,0.5981255956097244
+Long Beach VA,Logistic Regression,0,0,0.22695441591392282
+Long Beach VA,Logistic Regression,0,1,0.8083057242101097
+Long Beach VA,Logistic Regression,1,1,0.9461262799282164
+Long Beach VA,Logistic Regression,1,1,0.7722404856636522
+Long Beach VA,Logistic Regression,1,1,0.9500911606843252
+Long Beach VA,Logistic Regression,1,1,0.8925003087799069
+Long Beach VA,Logistic Regression,1,1,0.8373490340931967
+Long Beach VA,Logistic Regression,0,0,0.3127627691760025
+Long Beach VA,Logistic Regression,1,1,0.9466070886276058
+Long Beach VA,Logistic Regression,1,1,0.9097746036192692
+Long Beach VA,Logistic Regression,0,1,0.9619282714062543
+Long Beach VA,Logistic Regression,1,0,0.30524377439088296
+Long Beach VA,Logistic Regression,1,1,0.7066271569637897
+Long Beach VA,Logistic Regression,1,1,0.6560457195725757
+Long Beach VA,Logistic Regression,1,1,0.9696952594813445
+Long Beach VA,Logistic Regression,0,1,0.50138122650474
+Long Beach VA,Logistic Regression,0,1,0.6535234458753469
+Long Beach VA,Logistic Regression,1,1,0.9858366335855507
+Long Beach VA,Logistic Regression,1,1,0.9412120282606737
+Long Beach VA,Logistic Regression,1,1,0.8833742148164712
+Long Beach VA,Logistic Regression,1,1,0.6671189082656206
+Long Beach VA,Logistic Regression,1,0,0.278296862932383
+Long Beach VA,Logistic Regression,0,0,0.45469792799572917
+Long Beach VA,Logistic Regression,1,1,0.8338762668036969
+Long Beach VA,Logistic Regression,0,1,0.7174752999256946
+Long Beach VA,Logistic Regression,1,1,0.6288637041214175
+Switzerland,Logistic Regression,1,0,0.1563450733211933
+Switzerland,Logistic Regression,1,0,0.3261326282415609
+Switzerland,Logistic Regression,1,1,0.6941206462513305
+Switzerland,Logistic Regression,1,1,0.7546594384920036
+Switzerland,Logistic Regression,1,0,0.3862080033049204
+Switzerland,Logistic Regression,1,0,0.09351241988873793
+Switzerland,Logistic Regression,0,0,0.043674044423347914
+Switzerland,Logistic Regression,1,0,0.3155927789832196
+Switzerland,Logistic Regression,1,0,0.3652514404970234
+Switzerland,Logistic Regression,1,1,0.7593981592321014
+Switzerland,Logistic Regression,1,0,0.3885331924708507
+Switzerland,Logistic Regression,1,1,0.5886334116145179
+Switzerland,Logistic Regression,1,0,0.39223361819546093
+Switzerland,Logistic Regression,1,1,0.7536155945636779
+Switzerland,Logistic Regression,1,1,0.6707936218741747
+Switzerland,Logistic Regression,1,1,0.8720275942218657
+Switzerland,Logistic Regression,1,1,0.7866459224086737
+Switzerland,Logistic Regression,0,0,0.15574234249471527
+Switzerland,Logistic Regression,1,0,0.13113962951902297
+Switzerland,Logistic Regression,1,1,0.879138634477795
+Switzerland,Logistic Regression,1,0,0.4023761015686395
+Switzerland,Logistic Regression,1,1,0.644365673942992
+Switzerland,Logistic Regression,1,1,0.786455395953818
+Switzerland,Logistic Regression,1,1,0.7621317084788981
+Switzerland,Logistic Regression,1,0,0.475058333556325
+Switzerland,Logistic Regression,1,0,0.2529231845206409
+Switzerland,Logistic Regression,1,1,0.798602815527433
+Switzerland,Logistic Regression,1,1,0.7203166244227228
+Switzerland,Logistic Regression,1,1,0.821359510714314
+Switzerland,Logistic Regression,1,1,0.6374334035177939
+Switzerland,Logistic Regression,1,1,0.5785208756909462
+Switzerland,Logistic Regression,1,1,0.5663849153689335
+Switzerland,Logistic Regression,1,0,0.3165227597695061
+Switzerland,Logistic Regression,1,0,0.4993005560047597
+Switzerland,Logistic Regression,1,1,0.6905675210173556
+Switzerland,Logistic Regression,1,1,0.8060022268379803
+Switzerland,Logistic Regression,1,1,0.554140607155867
+Switzerland,Logistic Regression,1,1,0.9267399992423135
+Switzerland,Logistic Regression,1,1,0.8899977877420675
+Switzerland,Logistic Regression,1,1,0.8431584554471505
+Switzerland,Logistic Regression,1,0,0.18659084606764043
+Switzerland,Logistic Regression,0,0,0.2805734745558378
+Switzerland,Logistic Regression,1,0,0.24233997241351066
+Switzerland,Logistic Regression,1,1,0.5731050187027504
+Switzerland,Logistic Regression,1,1,0.5479031725381629
+Switzerland,Logistic Regression,1,1,0.778826646753533
+Switzerland,Logistic Regression,1,1,0.8766662440788354
+Switzerland,Logistic Regression,0,1,0.8918803539920217
+Switzerland,Logistic Regression,1,0,0.4756889557194451
+Switzerland,Logistic Regression,1,1,0.9689079804746603
+Switzerland,Logistic Regression,1,1,0.7956664040409265
+Switzerland,Logistic Regression,0,0,0.1931092693923081
+Switzerland,Logistic Regression,1,0,0.49442902163200364
+Switzerland,Logistic Regression,1,1,0.7218386163637286
+Switzerland,Logistic Regression,1,1,0.6763322387351552
+Switzerland,Logistic Regression,0,0,0.31723670226146516
+Switzerland,Logistic Regression,1,0,0.10667407768098627
+Switzerland,Logistic Regression,1,0,0.4138259030293799
+Switzerland,Logistic Regression,1,1,0.5388224888899428
+Switzerland,Logistic Regression,1,1,0.7314379913114711
+Switzerland,Logistic Regression,1,1,0.5648678481090588
+Switzerland,Logistic Regression,1,1,0.8972695481796003
+Switzerland,Logistic Regression,1,1,0.933707686933208
+Switzerland,Logistic Regression,1,0,0.2512467138507339
+Switzerland,Logistic Regression,1,1,0.9124544505808889
+Switzerland,Logistic Regression,1,1,0.9442603419042056
+Switzerland,Logistic Regression,1,1,0.8369718054149689
+Switzerland,Logistic Regression,1,1,0.9593001727691921
+Switzerland,Logistic Regression,1,1,0.5223330121227603
+Switzerland,Logistic Regression,1,1,0.6281344403074379
+Switzerland,Logistic Regression,1,1,0.9254898884232948
+Switzerland,Logistic Regression,1,1,0.8841362904527548
+Switzerland,Logistic Regression,1,1,0.6089600687374207
+Switzerland,Logistic Regression,1,1,0.6447095924732519
+Switzerland,Logistic Regression,1,1,0.6135489391890909
+Switzerland,Logistic Regression,1,1,0.8870077315025499
+Switzerland,Logistic Regression,1,1,0.9028540899235087
+Switzerland,Logistic Regression,1,1,0.6407036121731624
+Switzerland,Logistic Regression,1,1,0.6562013052349787
+Switzerland,Logistic Regression,1,1,0.9155063548768991
+Switzerland,Logistic Regression,1,1,0.9173516859136089
+Switzerland,Logistic Regression,1,1,0.9202220015448163
+Switzerland,Logistic Regression,1,1,0.6699470055380818
+Switzerland,Logistic Regression,1,1,0.5962099464206106
+Switzerland,Logistic Regression,1,1,0.9247215327983508
+Switzerland,Logistic Regression,1,1,0.8114307091112457
+Switzerland,Logistic Regression,1,1,0.8381384305616226
+Switzerland,Logistic Regression,1,1,0.6840289358776543
+Switzerland,Logistic Regression,1,1,0.9358127916607076
+Switzerland,Logistic Regression,1,1,0.8582153551817012
+Switzerland,Logistic Regression,1,1,0.9555989302082885
+Switzerland,Logistic Regression,1,1,0.8045753172178478
+Switzerland,Logistic Regression,1,0,0.08112852628450706
+Switzerland,Logistic Regression,1,1,0.7969943321432352
+Switzerland,Logistic Regression,1,0,0.20746413981308895
+Switzerland,Logistic Regression,1,1,0.7156906049606734
+Switzerland,Logistic Regression,1,1,0.9581215891116378
+Switzerland,Logistic Regression,1,1,0.8295116461014659
+Switzerland,Logistic Regression,1,1,0.9373623201391996
+Switzerland,Logistic Regression,1,0,0.4802729671805363
+Switzerland,Logistic Regression,1,1,0.8778677014629014
+Switzerland,Logistic Regression,1,1,0.9687183310368839
+Switzerland,Logistic Regression,1,1,0.9610926476302782
+Switzerland,Logistic Regression,1,1,0.8964974838038505
+Switzerland,Logistic Regression,1,1,0.7467296999944794
+Switzerland,Logistic Regression,1,0,0.3693067374394064
+Switzerland,Logistic Regression,1,1,0.9224283185345341
+Switzerland,Logistic Regression,1,1,0.8632966760318161
+Switzerland,Logistic Regression,1,1,0.8645309329593466
+Switzerland,Logistic Regression,0,1,0.7738812229909717
+Switzerland,Logistic Regression,1,1,0.8074676141478715
+Switzerland,Logistic Regression,1,0,0.41777249968313
+Switzerland,Logistic Regression,1,1,0.9657507616465133
+Switzerland,Logistic Regression,1,0,0.41052746778306315
+Switzerland,Logistic Regression,1,1,0.8855330943200156
+Switzerland,Logistic Regression,1,1,0.8807834809672689
+Switzerland,Logistic Regression,1,1,0.6874382771836076
+Switzerland,Logistic Regression,1,1,0.7716849640868547
+Switzerland,Logistic Regression,1,1,0.905242383440535
+Switzerland,Logistic Regression,1,1,0.951119576134204
+Switzerland,Logistic Regression,0,1,0.7681444535083225
+Switzerland,Logistic Regression,1,0,0.1984250489511592
+Switzerland,Logistic Regression,1,1,0.5793271223939431
+Cleveland,Random Forest,0,1,0.6845999614781751
+Cleveland,Random Forest,1,1,0.9220179130613144
+Cleveland,Random Forest,1,1,0.931805488924681
+Cleveland,Random Forest,0,0,0.469226777551342
+Cleveland,Random Forest,0,0,0.14792742359321187
+Cleveland,Random Forest,0,0,0.15654673574232583
+Cleveland,Random Forest,1,1,0.604361126828787
+Cleveland,Random Forest,0,1,0.5799476139261709
+Cleveland,Random Forest,1,1,0.7541021191558661
+Cleveland,Random Forest,1,1,0.8439048565438931
+Cleveland,Random Forest,0,1,0.553505154055977
+Cleveland,Random Forest,0,0,0.21373238951083
+Cleveland,Random Forest,1,1,0.586768604132677
+Cleveland,Random Forest,0,0,0.025955678407213793
+Cleveland,Random Forest,0,0,0.3002900955862915
+Cleveland,Random Forest,0,1,0.5095645709530309
+Cleveland,Random Forest,1,0,0.1218789635537398
+Cleveland,Random Forest,0,1,0.567947014444689
+Cleveland,Random Forest,0,0,0.14696582521744198
+Cleveland,Random Forest,0,0,0.09437107511815306
+Cleveland,Random Forest,0,1,0.7354228877240053
+Cleveland,Random Forest,0,0,0.38267873382819306
+Cleveland,Random Forest,1,0,0.28967714095953895
+Cleveland,Random Forest,1,1,0.564568472974382
+Cleveland,Random Forest,1,1,0.9160071299682331
+Cleveland,Random Forest,0,0,0.28661215081703983
+Cleveland,Random Forest,0,0,0.21599490913788894
+Cleveland,Random Forest,0,1,0.5520894328627253
+Cleveland,Random Forest,0,1,0.6415727101828799
+Cleveland,Random Forest,1,1,0.8568167628682204
+Cleveland,Random Forest,0,1,0.5180893391403381
+Cleveland,Random Forest,1,1,0.7021999016173831
+Cleveland,Random Forest,1,0,0.33754718248797194
+Cleveland,Random Forest,0,1,0.5594018522759923
+Cleveland,Random Forest,0,0,0.41796454310631515
+Cleveland,Random Forest,0,0,0.30533885819321976
+Cleveland,Random Forest,1,1,0.9161920357427442
+Cleveland,Random Forest,1,1,0.8596192415039745
+Cleveland,Random Forest,1,1,0.8557457047415176
+Cleveland,Random Forest,0,1,0.5866128491868691
+Cleveland,Random Forest,1,1,0.5420486347235428
+Cleveland,Random Forest,0,1,0.5328341382329533
+Cleveland,Random Forest,0,0,0.27324159984189866
+Cleveland,Random Forest,0,1,0.5421177820859897
+Cleveland,Random Forest,1,0,0.4126869647938546
+Cleveland,Random Forest,1,1,0.5515780671270921
+Cleveland,Random Forest,0,0,0.4287965488494429
+Cleveland,Random Forest,1,1,0.7844284485094867
+Cleveland,Random Forest,0,0,0.36642433851214173
+Cleveland,Random Forest,0,0,0.401249047443471
+Cleveland,Random Forest,0,0,0.04164075537173643
+Cleveland,Random Forest,0,1,0.6872062703855522
+Cleveland,Random Forest,1,0,0.4856616122779109
+Cleveland,Random Forest,0,0,0.0335466110534405
+Cleveland,Random Forest,1,1,0.8291281607621256
+Cleveland,Random Forest,1,1,0.8794379293397457
+Cleveland,Random Forest,1,0,0.3514575931444105
+Cleveland,Random Forest,1,1,0.5041868686163489
+Cleveland,Random Forest,0,0,0.3397260984645609
+Cleveland,Random Forest,0,1,0.752281827848924
+Cleveland,Random Forest,1,1,0.5392774017996926
+Cleveland,Random Forest,0,0,0.4307640798089169
+Cleveland,Random Forest,1,1,0.9214719034626198
+Cleveland,Random Forest,0,0,0.2346543635181414
+Cleveland,Random Forest,1,1,0.8977138370117633
+Cleveland,Random Forest,1,1,0.9126893695561603
+Cleveland,Random Forest,1,1,0.6010312001555123
+Cleveland,Random Forest,0,0,0.4439960516895702
+Cleveland,Random Forest,1,1,0.9163359632244721
+Cleveland,Random Forest,1,1,0.5271454761104132
+Cleveland,Random Forest,0,0,0.4345288684879182
+Cleveland,Random Forest,1,1,0.7420054731745549
+Cleveland,Random Forest,1,1,0.949789758718584
+Cleveland,Random Forest,1,1,0.6847639381971999
+Cleveland,Random Forest,1,0,0.47997351130777344
+Cleveland,Random Forest,0,0,0.40971893439177604
+Cleveland,Random Forest,1,1,0.8939396813259228
+Cleveland,Random Forest,0,0,0.31651553628839924
+Cleveland,Random Forest,0,0,0.05884599405039008
+Cleveland,Random Forest,1,1,0.8858349856363852
+Cleveland,Random Forest,0,1,0.8382515151877525
+Cleveland,Random Forest,0,0,0.3177094080370864
+Cleveland,Random Forest,0,0,0.12230161864068627
+Cleveland,Random Forest,1,1,0.5940397267950005
+Cleveland,Random Forest,0,0,0.054663602508590425
+Cleveland,Random Forest,0,0,0.13226664503585975
+Cleveland,Random Forest,0,0,0.19113122869063645
+Cleveland,Random Forest,0,0,0.16428334075450782
+Cleveland,Random Forest,0,0,0.3197603627063881
+Cleveland,Random Forest,0,0,0.18091907693490047
+Cleveland,Random Forest,0,1,0.7244963657937583
+Cleveland,Random Forest,1,1,0.6639008987999596
+Cleveland,Random Forest,0,1,0.6150856092476784
+Cleveland,Random Forest,0,0,0.1783923755871738
+Cleveland,Random Forest,0,0,0.29849900847500116
+Cleveland,Random Forest,1,1,0.7042342548910007
+Cleveland,Random Forest,1,1,0.8415403826744804
+Cleveland,Random Forest,1,1,0.6262575438175951
+Cleveland,Random Forest,0,0,0.11030368016201973
+Cleveland,Random Forest,0,1,0.5184558151284135
+Cleveland,Random Forest,0,0,0.49118396495514655
+Cleveland,Random Forest,0,0,0.34515786781291685
+Cleveland,Random Forest,0,0,0.3853023426621736
+Cleveland,Random Forest,0,0,0.28697812901413816
+Cleveland,Random Forest,1,0,0.45284505858755797
+Cleveland,Random Forest,0,0,0.04550021264372877
+Cleveland,Random Forest,1,1,0.6060944499409037
+Cleveland,Random Forest,1,0,0.4053612846227673
+Cleveland,Random Forest,1,1,0.8472561728930217
+Cleveland,Random Forest,1,1,0.5978327418692289
+Cleveland,Random Forest,1,1,0.6642938977922992
+Cleveland,Random Forest,1,1,0.8999820658785268
+Cleveland,Random Forest,0,0,0.3709769254793663
+Cleveland,Random Forest,1,1,0.6464509922813798
+Cleveland,Random Forest,1,0,0.3142048577176859
+Cleveland,Random Forest,0,0,0.03501270677930372
+Cleveland,Random Forest,0,0,0.25268408768834816
+Cleveland,Random Forest,0,1,0.5057357847678896
+Cleveland,Random Forest,1,1,0.9228142098265126
+Cleveland,Random Forest,1,1,0.8450280120319099
+Cleveland,Random Forest,1,1,0.7940833650244927
+Cleveland,Random Forest,1,1,0.6364736594920444
+Cleveland,Random Forest,0,1,0.5795127406390983
+Cleveland,Random Forest,1,1,0.9103790382811767
+Cleveland,Random Forest,1,1,0.57350622808294
+Cleveland,Random Forest,0,0,0.09350512096193082
+Cleveland,Random Forest,1,1,0.7137264537734539
+Cleveland,Random Forest,1,1,0.8890654254664425
+Cleveland,Random Forest,0,0,0.026872345073880463
+Cleveland,Random Forest,0,0,0.44794023742833267
+Cleveland,Random Forest,0,0,0.28998340784072996
+Cleveland,Random Forest,0,0,0.46817732987290706
+Cleveland,Random Forest,0,0,0.0328410018478313
+Cleveland,Random Forest,0,1,0.7075318149385057
+Cleveland,Random Forest,0,0,0.12989779481002994
+Cleveland,Random Forest,0,0,0.16294153296639832
+Cleveland,Random Forest,1,1,0.9302482760433475
+Cleveland,Random Forest,1,0,0.3996864331291996
+Cleveland,Random Forest,1,1,0.8786664067010336
+Cleveland,Random Forest,0,1,0.5531982036091037
+Cleveland,Random Forest,0,0,0.33563931578171635
+Cleveland,Random Forest,1,0,0.47001793327372177
+Cleveland,Random Forest,0,0,0.025248032964981376
+Cleveland,Random Forest,1,1,0.6736225923985372
+Cleveland,Random Forest,0,1,0.5222545925766455
+Cleveland,Random Forest,1,0,0.17291652107237704
+Cleveland,Random Forest,1,1,0.6389336806086572
+Cleveland,Random Forest,0,0,0.09913108506609203
+Cleveland,Random Forest,0,0,0.03407030032712977
+Cleveland,Random Forest,0,0,0.27914135734032547
+Cleveland,Random Forest,0,1,0.5330111524986546
+Cleveland,Random Forest,0,0,0.3354165143846955
+Cleveland,Random Forest,0,0,0.3586239624342306
+Cleveland,Random Forest,1,1,0.8725735412130702
+Cleveland,Random Forest,1,1,0.9292631363658443
+Cleveland,Random Forest,1,1,0.8399675893391343
+Cleveland,Random Forest,1,1,0.7495258358051925
+Cleveland,Random Forest,1,1,0.5473467356506301
+Cleveland,Random Forest,1,1,0.6277789065963717
+Cleveland,Random Forest,0,0,0.4811577426952989
+Cleveland,Random Forest,0,0,0.058095092719158026
+Cleveland,Random Forest,1,1,0.7820242891799168
+Cleveland,Random Forest,0,0,0.3031593258642149
+Cleveland,Random Forest,0,0,0.3975186724123075
+Cleveland,Random Forest,0,0,0.2454851693127238
+Cleveland,Random Forest,0,1,0.6900020527547568
+Cleveland,Random Forest,0,0,0.22084131112479885
+Cleveland,Random Forest,0,0,0.31781689590765744
+Cleveland,Random Forest,1,1,0.7632292400313657
+Cleveland,Random Forest,0,0,0.024945716571672525
+Cleveland,Random Forest,1,1,0.7414482772714506
+Cleveland,Random Forest,0,1,0.799981890437207
+Cleveland,Random Forest,1,1,0.5931261847696206
+Cleveland,Random Forest,0,1,0.532947822891773
+Cleveland,Random Forest,1,1,0.822583520421052
+Cleveland,Random Forest,1,1,0.9354266995753009
+Cleveland,Random Forest,0,1,0.6786482571759931
+Cleveland,Random Forest,1,1,0.9239797909451414
+Cleveland,Random Forest,0,0,0.39193564808479253
+Cleveland,Random Forest,0,0,0.23730535397428754
+Cleveland,Random Forest,1,1,0.6019226914328658
+Cleveland,Random Forest,1,1,0.6636979585355236
+Cleveland,Random Forest,0,0,0.4212128152700568
+Cleveland,Random Forest,0,1,0.6633549671204357
+Cleveland,Random Forest,1,0,0.437734468512697
+Cleveland,Random Forest,0,0,0.13681054533517176
+Cleveland,Random Forest,0,0,0.20819461964522826
+Cleveland,Random Forest,1,1,0.5832406122188821
+Cleveland,Random Forest,1,0,0.05635571334136961
+Cleveland,Random Forest,1,1,0.56847120896807
+Cleveland,Random Forest,0,0,0.2683157373013236
+Cleveland,Random Forest,1,1,0.9424323947505013
+Cleveland,Random Forest,1,1,0.8423187919332833
+Cleveland,Random Forest,1,1,0.6346347906891638
+Cleveland,Random Forest,0,0,0.3622813556193615
+Cleveland,Random Forest,1,1,0.8897978173263281
+Cleveland,Random Forest,0,1,0.5387368001641623
+Cleveland,Random Forest,0,1,0.5592875168968361
+Cleveland,Random Forest,0,0,0.10410270300081176
+Cleveland,Random Forest,1,0,0.49113077308444975
+Cleveland,Random Forest,0,0,0.37662888143972706
+Cleveland,Random Forest,0,1,0.65119386910497
+Cleveland,Random Forest,0,0,0.31934338695479303
+Cleveland,Random Forest,0,0,0.3710764347333657
+Cleveland,Random Forest,0,1,0.5618386453537929
+Cleveland,Random Forest,1,1,0.747668419169366
+Cleveland,Random Forest,1,1,0.9425328570285442
+Cleveland,Random Forest,1,1,0.9089311016471332
+Cleveland,Random Forest,0,0,0.014094068479956737
+Cleveland,Random Forest,1,1,0.6650686425926049
+Cleveland,Random Forest,0,0,0.0866363528429467
+Cleveland,Random Forest,1,1,0.6033864908391479
+Cleveland,Random Forest,0,0,0.38356140942481676
+Cleveland,Random Forest,1,1,0.6769094336612572
+Cleveland,Random Forest,1,1,0.6297815245380025
+Cleveland,Random Forest,0,1,0.5232596735300128
+Cleveland,Random Forest,0,0,0.041938826130027494
+Cleveland,Random Forest,0,1,0.536805628695783
+Cleveland,Random Forest,0,1,0.6162904040720733
+Cleveland,Random Forest,0,0,0.45003265878424525
+Cleveland,Random Forest,0,0,0.3941692325167012
+Cleveland,Random Forest,0,0,0.15516161002537163
+Cleveland,Random Forest,0,0,0.14115044241456703
+Cleveland,Random Forest,1,1,0.918489435654015
+Cleveland,Random Forest,1,1,0.6415351429679536
+Cleveland,Random Forest,0,0,0.10914835401581949
+Cleveland,Random Forest,0,1,0.5844263887866086
+Cleveland,Random Forest,0,0,0.3346763620209696
+Cleveland,Random Forest,1,1,0.829660800425948
+Cleveland,Random Forest,1,1,0.8768453836794365
+Cleveland,Random Forest,0,0,0.2237550714529832
+Cleveland,Random Forest,1,1,0.6510404079355672
+Cleveland,Random Forest,1,0,0.3718241150016945
+Cleveland,Random Forest,0,0,0.4911174689414542
+Cleveland,Random Forest,0,0,0.23253478666642172
+Cleveland,Random Forest,1,1,0.883990526455404
+Cleveland,Random Forest,1,1,0.9183150049183187
+Cleveland,Random Forest,1,1,0.5234426581145563
+Cleveland,Random Forest,0,0,0.02729384170700273
+Cleveland,Random Forest,0,0,0.019422209561244956
+Cleveland,Random Forest,0,0,0.06016967708352207
+Cleveland,Random Forest,0,0,0.011580206605515729
+Cleveland,Random Forest,0,0,0.3163348296949136
+Cleveland,Random Forest,1,1,0.7073158138595864
+Cleveland,Random Forest,0,0,0.24474004230199237
+Cleveland,Random Forest,1,1,0.7845020740916298
+Cleveland,Random Forest,1,1,0.7175587462411881
+Cleveland,Random Forest,1,1,0.8629425863136466
+Cleveland,Random Forest,1,1,0.66281104427082
+Cleveland,Random Forest,0,0,0.21028571367832433
+Cleveland,Random Forest,0,1,0.9104248226741324
+Cleveland,Random Forest,1,1,0.8505996987277332
+Cleveland,Random Forest,0,1,0.945339585531759
+Cleveland,Random Forest,0,0,0.18820005464789574
+Cleveland,Random Forest,0,1,0.6711402537096015
+Cleveland,Random Forest,0,0,0.08389465010124394
+Cleveland,Random Forest,0,1,0.574020150487889
+Cleveland,Random Forest,0,0,0.4853103336220506
+Cleveland,Random Forest,0,0,0.3075374796419043
+Cleveland,Random Forest,1,0,0.1443221674445775
+Cleveland,Random Forest,0,0,0.13262456487826343
+Cleveland,Random Forest,1,0,0.1073650266992216
+Cleveland,Random Forest,0,0,0.38770157544333067
+Cleveland,Random Forest,0,0,0.07042952654545459
+Cleveland,Random Forest,1,1,0.9449958844526435
+Cleveland,Random Forest,1,1,0.9181969916450105
+Cleveland,Random Forest,1,1,0.8068854609072438
+Cleveland,Random Forest,1,1,0.65057034753669
+Cleveland,Random Forest,1,0,0.3552899284192901
+Cleveland,Random Forest,0,0,0.06764736532087935
+Cleveland,Random Forest,1,1,0.9069431889189872
+Cleveland,Random Forest,0,1,0.8633022250326818
+Cleveland,Random Forest,1,1,0.9378197241933396
+Cleveland,Random Forest,0,1,0.6515953306269998
+Cleveland,Random Forest,1,0,0.46313594229975574
+Cleveland,Random Forest,0,1,0.5087478849931315
+Cleveland,Random Forest,0,0,0.34934332146493363
+Cleveland,Random Forest,0,0,0.12472779112608051
+Cleveland,Random Forest,1,0,0.13393075441966884
+Cleveland,Random Forest,0,0,0.42210069758777263
+Cleveland,Random Forest,1,1,0.8213785196884953
+Cleveland,Random Forest,0,0,0.2151960813722023
+Cleveland,Random Forest,1,1,0.6254840912732359
+Cleveland,Random Forest,0,0,0.050465434179882605
+Cleveland,Random Forest,1,0,0.46227541676578443
+Cleveland,Random Forest,1,1,0.7628937527576363
+Cleveland,Random Forest,1,1,0.7297176707989845
+Cleveland,Random Forest,0,0,0.164737085150159
+Cleveland,Random Forest,0,0,0.07261806259298328
+Cleveland,Random Forest,0,0,0.06733682672499273
+Cleveland,Random Forest,1,0,0.46253763987090557
+Cleveland,Random Forest,0,0,0.12383458240862531
+Cleveland,Random Forest,1,1,0.8673043363263865
+Cleveland,Random Forest,1,1,0.9573396752573391
+Cleveland,Random Forest,1,1,0.6560565661603878
+Cleveland,Random Forest,0,0,0.02421579127503943
+Cleveland,Random Forest,1,1,0.6441849326904799
+Cleveland,Random Forest,1,1,0.5551635661619297
+Cleveland,Random Forest,1,0,0.46427129508358367
+Cleveland,Random Forest,1,1,0.8611285728412448
+Cleveland,Random Forest,1,1,0.9528818884254989
+Cleveland,Random Forest,1,0,0.09619780055361203
+Cleveland,Random Forest,0,0,0.07177030718147356
+Hungarian,Random Forest,0,0,0.04337140306922307
+Hungarian,Random Forest,0,0,0.058526645860565336
+Hungarian,Random Forest,0,0,0.054000209610130766
+Hungarian,Random Forest,0,0,0.2525837947352612
+Hungarian,Random Forest,0,0,0.15354334993736127
+Hungarian,Random Forest,0,0,0.04119456774976321
+Hungarian,Random Forest,0,0,0.060432036497840035
+Hungarian,Random Forest,0,0,0.07431320153437591
+Hungarian,Random Forest,0,0,0.031241042276398547
+Hungarian,Random Forest,0,0,0.040247544094406236
+Hungarian,Random Forest,0,0,0.20443161382861383
+Hungarian,Random Forest,0,0,0.18232977174702467
+Hungarian,Random Forest,0,0,0.17716292589071073
+Hungarian,Random Forest,0,0,0.40384310900702675
+Hungarian,Random Forest,0,0,0.04172791075906409
+Hungarian,Random Forest,0,0,0.1085539614138826
+Hungarian,Random Forest,0,0,0.027763926648357636
+Hungarian,Random Forest,0,0,0.09944992506540301
+Hungarian,Random Forest,0,0,0.02611995575185934
+Hungarian,Random Forest,0,0,0.059821460295900575
+Hungarian,Random Forest,0,0,0.11079976827717372
+Hungarian,Random Forest,0,0,0.08717908691994437
+Hungarian,Random Forest,0,0,0.30267784569077333
+Hungarian,Random Forest,0,0,0.31676085810246185
+Hungarian,Random Forest,0,0,0.13921111004717904
+Hungarian,Random Forest,0,1,0.6039224243741701
+Hungarian,Random Forest,0,1,0.6146695288291693
+Hungarian,Random Forest,0,0,0.11302199049939593
+Hungarian,Random Forest,0,0,0.13150377243769198
+Hungarian,Random Forest,0,0,0.3517668358348886
+Hungarian,Random Forest,0,0,0.11445161862956307
+Hungarian,Random Forest,0,0,0.36204879258145983
+Hungarian,Random Forest,0,0,0.29875798618958255
+Hungarian,Random Forest,0,0,0.13659428197864018
+Hungarian,Random Forest,0,0,0.2745477054915424
+Hungarian,Random Forest,0,0,0.4294590244140732
+Hungarian,Random Forest,0,0,0.028782247984270915
+Hungarian,Random Forest,0,0,0.14648911301355338
+Hungarian,Random Forest,0,1,0.6487610250378356
+Hungarian,Random Forest,0,1,0.5966676923256898
+Hungarian,Random Forest,0,0,0.09046768853535414
+Hungarian,Random Forest,0,0,0.04721052707044823
+Hungarian,Random Forest,0,0,0.1934714568002268
+Hungarian,Random Forest,0,0,0.03922684207541231
+Hungarian,Random Forest,0,0,0.05548291304068667
+Hungarian,Random Forest,0,0,0.13822440832611632
+Hungarian,Random Forest,0,0,0.026342452471572672
+Hungarian,Random Forest,0,0,0.06545901857455179
+Hungarian,Random Forest,0,0,0.1252758524869733
+Hungarian,Random Forest,0,0,0.023191086107775153
+Hungarian,Random Forest,0,0,0.11070219741048028
+Hungarian,Random Forest,0,1,0.5455525408060117
+Hungarian,Random Forest,0,0,0.12871439868252377
+Hungarian,Random Forest,0,0,0.11984072241523336
+Hungarian,Random Forest,0,0,0.06642111850788428
+Hungarian,Random Forest,0,0,0.24136302911423393
+Hungarian,Random Forest,0,0,0.2915585426546529
+Hungarian,Random Forest,0,0,0.26862146931108727
+Hungarian,Random Forest,0,0,0.42591466755734053
+Hungarian,Random Forest,0,0,0.19089401893789498
+Hungarian,Random Forest,0,0,0.02008227129472483
+Hungarian,Random Forest,0,0,0.10806217005093935
+Hungarian,Random Forest,0,0,0.10787698486575416
+Hungarian,Random Forest,0,0,0.15252270424204514
+Hungarian,Random Forest,0,0,0.10476031048501894
+Hungarian,Random Forest,0,0,0.02899442226641888
+Hungarian,Random Forest,0,0,0.17789778554554206
+Hungarian,Random Forest,0,0,0.31557368381039164
+Hungarian,Random Forest,0,0,0.24309437036790205
+Hungarian,Random Forest,0,0,0.18077664828659912
+Hungarian,Random Forest,0,0,0.4256034286872781
+Hungarian,Random Forest,0,0,0.018168330297450495
+Hungarian,Random Forest,0,0,0.12087166205750496
+Hungarian,Random Forest,0,0,0.3298638786507409
+Hungarian,Random Forest,0,0,0.3517267091103295
+Hungarian,Random Forest,0,0,0.39108233868715625
+Hungarian,Random Forest,0,1,0.5956551216623514
+Hungarian,Random Forest,0,1,0.538939820851829
+Hungarian,Random Forest,0,0,0.4014693442040948
+Hungarian,Random Forest,0,0,0.23161411519490727
+Hungarian,Random Forest,0,0,0.20288217264231945
+Hungarian,Random Forest,0,0,0.4924035954677373
+Hungarian,Random Forest,0,1,0.8542454389431706
+Hungarian,Random Forest,0,0,0.4958163149346402
+Hungarian,Random Forest,0,1,0.5353841609344656
+Hungarian,Random Forest,0,0,0.14526378852314892
+Hungarian,Random Forest,0,0,0.26741422243645335
+Hungarian,Random Forest,0,0,0.37648413922191815
+Hungarian,Random Forest,0,0,0.1588323447289391
+Hungarian,Random Forest,0,1,0.8538869817096082
+Hungarian,Random Forest,0,0,0.253469370805551
+Hungarian,Random Forest,0,0,0.1377352261614955
+Hungarian,Random Forest,0,0,0.1507220326913736
+Hungarian,Random Forest,0,0,0.10525963622523736
+Hungarian,Random Forest,0,0,0.39749041179671374
+Hungarian,Random Forest,0,0,0.34787529233258835
+Hungarian,Random Forest,0,1,0.804055842186137
+Hungarian,Random Forest,0,0,0.42923542937819303
+Hungarian,Random Forest,0,0,0.07441444083332485
+Hungarian,Random Forest,0,0,0.3890198804572522
+Hungarian,Random Forest,0,0,0.3441019118547597
+Hungarian,Random Forest,0,0,0.040500108087561625
+Hungarian,Random Forest,0,0,0.040500108087561625
+Hungarian,Random Forest,0,0,0.025849709834093192
+Hungarian,Random Forest,0,0,0.1574740238873545
+Hungarian,Random Forest,0,0,0.10612914589007907
+Hungarian,Random Forest,0,0,0.11273427214682456
+Hungarian,Random Forest,0,1,0.7799977601104315
+Hungarian,Random Forest,0,1,0.6776390556300667
+Hungarian,Random Forest,0,0,0.09048074778926349
+Hungarian,Random Forest,0,1,0.8038704488489116
+Hungarian,Random Forest,0,0,0.08074250583295849
+Hungarian,Random Forest,0,0,0.08275066997238746
+Hungarian,Random Forest,0,0,0.4632749367711323
+Hungarian,Random Forest,0,1,0.6735122608848509
+Hungarian,Random Forest,0,1,0.8044129957436867
+Hungarian,Random Forest,0,0,0.11046807100917704
+Hungarian,Random Forest,0,0,0.12404967951528072
+Hungarian,Random Forest,0,0,0.2957351476690297
+Hungarian,Random Forest,0,0,0.1793717055625165
+Hungarian,Random Forest,0,0,0.14932144237060654
+Hungarian,Random Forest,0,0,0.11471466382652142
+Hungarian,Random Forest,0,1,0.7036664568891967
+Hungarian,Random Forest,0,0,0.07969135040776085
+Hungarian,Random Forest,0,0,0.14112449325757048
+Hungarian,Random Forest,0,0,0.08232235380108278
+Hungarian,Random Forest,0,1,0.8210797164536572
+Hungarian,Random Forest,0,0,0.3865008195798579
+Hungarian,Random Forest,0,0,0.3968648445969379
+Hungarian,Random Forest,0,0,0.18110888627018654
+Hungarian,Random Forest,0,0,0.2413924963355131
+Hungarian,Random Forest,0,0,0.12539762039256971
+Hungarian,Random Forest,0,0,0.436809242883655
+Hungarian,Random Forest,0,0,0.09022257914651359
+Hungarian,Random Forest,0,0,0.3086433718992054
+Hungarian,Random Forest,0,0,0.10093345449939732
+Hungarian,Random Forest,0,0,0.36759427905546055
+Hungarian,Random Forest,0,1,0.9284098643501957
+Hungarian,Random Forest,0,1,0.6152963046230964
+Hungarian,Random Forest,0,1,0.6037320492368978
+Hungarian,Random Forest,0,0,0.0903086270482204
+Hungarian,Random Forest,0,0,0.09511084154216426
+Hungarian,Random Forest,0,0,0.09536618247406786
+Hungarian,Random Forest,0,0,0.1467699259354239
+Hungarian,Random Forest,0,0,0.18986644575865955
+Hungarian,Random Forest,0,0,0.19841808786193119
+Hungarian,Random Forest,0,0,0.22790388116915306
+Hungarian,Random Forest,0,1,0.6027439118647638
+Hungarian,Random Forest,0,0,0.22440507787090855
+Hungarian,Random Forest,0,0,0.09661828336353476
+Hungarian,Random Forest,0,0,0.4328897084687468
+Hungarian,Random Forest,0,0,0.44298456692315513
+Hungarian,Random Forest,0,0,0.17555949720609154
+Hungarian,Random Forest,0,0,0.3537453027499624
+Hungarian,Random Forest,0,1,0.5167372790948993
+Hungarian,Random Forest,0,1,0.6807871332607006
+Hungarian,Random Forest,0,0,0.12255307462056182
+Hungarian,Random Forest,0,0,0.06480338272851954
+Hungarian,Random Forest,0,0,0.13236101683006388
+Hungarian,Random Forest,0,0,0.21425406660147644
+Hungarian,Random Forest,0,0,0.1359532489313604
+Hungarian,Random Forest,0,0,0.14120572409999504
+Hungarian,Random Forest,0,0,0.25322458218513977
+Hungarian,Random Forest,0,0,0.35236998989131235
+Hungarian,Random Forest,0,1,0.7274978362853808
+Hungarian,Random Forest,0,1,0.9441974158799821
+Hungarian,Random Forest,0,0,0.16679606099093036
+Hungarian,Random Forest,0,0,0.389622705337528
+Hungarian,Random Forest,0,1,0.519581549349961
+Hungarian,Random Forest,0,1,0.7207183593136629
+Hungarian,Random Forest,0,1,0.7327223927746431
+Hungarian,Random Forest,0,0,0.29069505978803806
+Hungarian,Random Forest,0,1,0.7563315556484269
+Hungarian,Random Forest,0,0,0.2579503425639805
+Hungarian,Random Forest,0,0,0.20294419854380127
+Hungarian,Random Forest,0,0,0.443538876097739
+Hungarian,Random Forest,0,0,0.31672511945809456
+Hungarian,Random Forest,0,1,0.7483560366097936
+Hungarian,Random Forest,0,0,0.1798697390389555
+Hungarian,Random Forest,0,0,0.22211270984082135
+Hungarian,Random Forest,0,1,0.7567028034260485
+Hungarian,Random Forest,0,1,0.6270808942038594
+Hungarian,Random Forest,0,1,0.6151953795432243
+Hungarian,Random Forest,0,0,0.40276235424446105
+Hungarian,Random Forest,0,1,0.8129830821517504
+Hungarian,Random Forest,0,1,0.8536669999696503
+Hungarian,Random Forest,0,0,0.34824209759156805
+Hungarian,Random Forest,0,0,0.23545025613288853
+Hungarian,Random Forest,1,1,0.7079439719461702
+Hungarian,Random Forest,1,1,0.5731777278286284
+Hungarian,Random Forest,1,0,0.16842544259293668
+Hungarian,Random Forest,1,0,0.17342982143917962
+Hungarian,Random Forest,1,0,0.2957388227484842
+Hungarian,Random Forest,1,1,0.7541865246154683
+Hungarian,Random Forest,1,1,0.5731563109668805
+Hungarian,Random Forest,1,1,0.5690599905117363
+Hungarian,Random Forest,1,1,0.7046829614828537
+Hungarian,Random Forest,1,1,0.7435205897727879
+Hungarian,Random Forest,1,0,0.49986605401917594
+Hungarian,Random Forest,1,1,0.8495580635049274
+Hungarian,Random Forest,1,1,0.7854113595252686
+Hungarian,Random Forest,1,1,0.7389555930650225
+Hungarian,Random Forest,1,1,0.7565501861773377
+Hungarian,Random Forest,1,1,0.9396810557190264
+Hungarian,Random Forest,1,0,0.4576648672685994
+Hungarian,Random Forest,1,1,0.8598878699292171
+Hungarian,Random Forest,1,1,0.6645610953784743
+Hungarian,Random Forest,1,1,0.8761142951739144
+Hungarian,Random Forest,1,1,0.9153190452432445
+Hungarian,Random Forest,1,0,0.08353024968480566
+Hungarian,Random Forest,1,0,0.0998131485366169
+Hungarian,Random Forest,1,1,0.5296057867566877
+Hungarian,Random Forest,1,0,0.3381122338745961
+Hungarian,Random Forest,1,1,0.6045000807830209
+Hungarian,Random Forest,1,1,0.7384843934735592
+Hungarian,Random Forest,1,1,0.9667271459885838
+Hungarian,Random Forest,1,1,0.7161800149254544
+Hungarian,Random Forest,1,1,0.8979869151923545
+Hungarian,Random Forest,1,1,0.9257191473661497
+Hungarian,Random Forest,1,0,0.4816245146162687
+Hungarian,Random Forest,1,1,0.5616572892979839
+Hungarian,Random Forest,1,1,0.8045737978086427
+Hungarian,Random Forest,1,1,0.7866899489727769
+Hungarian,Random Forest,1,1,0.8149374722765235
+Hungarian,Random Forest,1,1,0.8799008815736498
+Hungarian,Random Forest,1,1,0.7050694985237286
+Hungarian,Random Forest,1,1,0.760268131777413
+Hungarian,Random Forest,1,1,0.6194740015386687
+Hungarian,Random Forest,1,1,0.5185339286223759
+Hungarian,Random Forest,1,0,0.30547224499502007
+Hungarian,Random Forest,1,1,0.8365268683987863
+Hungarian,Random Forest,1,1,0.8813754229663447
+Hungarian,Random Forest,1,1,0.6768887947365345
+Hungarian,Random Forest,1,1,0.8655878082647468
+Hungarian,Random Forest,1,1,0.9204742161221996
+Hungarian,Random Forest,1,1,0.8605038492306801
+Hungarian,Random Forest,1,1,0.8863762936961691
+Hungarian,Random Forest,1,1,0.9625559153249867
+Hungarian,Random Forest,1,1,0.684091727263573
+Hungarian,Random Forest,1,1,0.7747902860427651
+Hungarian,Random Forest,1,1,0.879586481248717
+Hungarian,Random Forest,1,0,0.41624466741130195
+Hungarian,Random Forest,1,1,0.9149808969695672
+Hungarian,Random Forest,1,1,0.9455687350574051
+Hungarian,Random Forest,1,1,0.8550420988570916
+Hungarian,Random Forest,1,1,0.7625569130898397
+Hungarian,Random Forest,1,1,0.7996496334775938
+Hungarian,Random Forest,1,1,0.9214846122156943
+Hungarian,Random Forest,1,1,0.9455656535631465
+Hungarian,Random Forest,1,1,0.6928778808311443
+Hungarian,Random Forest,1,1,0.8156497682213315
+Hungarian,Random Forest,1,1,0.6410008861499318
+Hungarian,Random Forest,1,1,0.9431119596403396
+Hungarian,Random Forest,1,1,0.5113409095467417
+Hungarian,Random Forest,1,1,0.9306645980951316
+Hungarian,Random Forest,1,0,0.27861948478252835
+Hungarian,Random Forest,1,0,0.017565825401753908
+Hungarian,Random Forest,1,1,0.7994887193836139
+Hungarian,Random Forest,1,1,0.9545359770322807
+Hungarian,Random Forest,1,1,0.88531757012428
+Hungarian,Random Forest,1,0,0.48897882840025386
+Hungarian,Random Forest,1,1,0.8140118484699788
+Hungarian,Random Forest,1,1,0.9531326526213227
+Hungarian,Random Forest,1,1,0.9426903661987768
+Hungarian,Random Forest,1,1,0.8780563715439806
+Hungarian,Random Forest,1,0,0.4928575712162178
+Hungarian,Random Forest,1,1,0.7667236588210941
+Hungarian,Random Forest,1,1,0.8141527850587108
+Hungarian,Random Forest,1,1,0.5201314499481026
+Hungarian,Random Forest,1,1,0.5306414449839478
+Hungarian,Random Forest,1,1,0.9405405907744915
+Hungarian,Random Forest,1,0,0.07961208140298033
+Hungarian,Random Forest,1,1,0.8004141504556789
+Hungarian,Random Forest,1,1,0.8628594596674215
+Hungarian,Random Forest,1,1,0.7181153068261801
+Hungarian,Random Forest,1,1,0.7567696146151616
+Hungarian,Random Forest,1,1,0.7864699485397509
+Hungarian,Random Forest,1,1,0.7985056104130469
+Hungarian,Random Forest,1,1,0.8970315399016761
+Hungarian,Random Forest,1,1,0.9215041307085763
+Hungarian,Random Forest,1,1,0.8159548553399822
+Hungarian,Random Forest,1,1,0.6063508325226123
+Hungarian,Random Forest,1,1,0.7988588761152305
+Hungarian,Random Forest,1,1,0.8139359103724196
+Hungarian,Random Forest,1,1,0.842290725256647
+Hungarian,Random Forest,1,1,0.8192748840880367
+Hungarian,Random Forest,1,1,0.9207953369020597
+Hungarian,Random Forest,1,1,0.9223213468575472
+Hungarian,Random Forest,1,1,0.8212055946716262
+Hungarian,Random Forest,1,1,0.9320300066703566
+Hungarian,Random Forest,1,0,0.4801493504763089
+Hungarian,Random Forest,1,1,0.8420517339446162
+Hungarian,Random Forest,1,0,0.47997376195452535
+Hungarian,Random Forest,1,1,0.9090690963058002
+Long Beach VA,Random Forest,1,1,0.9051242661386243
+Long Beach VA,Random Forest,0,1,0.6588765228336964
+Long Beach VA,Random Forest,1,1,0.9312721490519266
+Long Beach VA,Random Forest,1,1,0.9363230843462405
+Long Beach VA,Random Forest,0,1,0.6421728849422517
+Long Beach VA,Random Forest,0,1,0.5808993600265201
+Long Beach VA,Random Forest,1,1,0.869948313652913
+Long Beach VA,Random Forest,0,1,0.7207655878083871
+Long Beach VA,Random Forest,1,1,0.6647447187247969
+Long Beach VA,Random Forest,1,0,0.36901614180801545
+Long Beach VA,Random Forest,0,0,0.20516446869656488
+Long Beach VA,Random Forest,1,1,0.9298228006698703
+Long Beach VA,Random Forest,1,1,0.8573561886403316
+Long Beach VA,Random Forest,1,0,0.45756659230186775
+Long Beach VA,Random Forest,1,1,0.9025863247880972
+Long Beach VA,Random Forest,0,1,0.8854662928392886
+Long Beach VA,Random Forest,1,1,0.9912889228042754
+Long Beach VA,Random Forest,1,1,0.9132984099267344
+Long Beach VA,Random Forest,0,1,0.9204544759659712
+Long Beach VA,Random Forest,0,1,0.8494690330871807
+Long Beach VA,Random Forest,1,1,0.8770379890791112
+Long Beach VA,Random Forest,1,1,0.9178157218382526
+Long Beach VA,Random Forest,1,1,0.6951693027808424
+Long Beach VA,Random Forest,0,0,0.4035564985358581
+Long Beach VA,Random Forest,1,0,0.4623312819211858
+Long Beach VA,Random Forest,1,1,0.838814314950426
+Long Beach VA,Random Forest,1,1,0.6708377146403834
+Long Beach VA,Random Forest,1,1,0.8397510293565532
+Long Beach VA,Random Forest,1,1,0.9551520236495429
+Long Beach VA,Random Forest,1,0,0.31061319926161335
+Long Beach VA,Random Forest,1,1,0.6729430213706903
+Long Beach VA,Random Forest,1,1,0.861342553922547
+Long Beach VA,Random Forest,1,1,0.9656314110102998
+Long Beach VA,Random Forest,1,0,0.2374083169941015
+Long Beach VA,Random Forest,1,1,0.6572540822533505
+Long Beach VA,Random Forest,1,1,0.9263861159527772
+Long Beach VA,Random Forest,1,1,0.806081330987871
+Long Beach VA,Random Forest,0,1,0.9626033303555613
+Long Beach VA,Random Forest,1,0,0.47222159641120526
+Long Beach VA,Random Forest,0,1,0.9545348484891112
+Long Beach VA,Random Forest,1,1,0.6757761067351529
+Long Beach VA,Random Forest,1,1,0.5781211761235421
+Long Beach VA,Random Forest,1,1,0.9240285708543076
+Long Beach VA,Random Forest,0,1,0.7135046089999537
+Long Beach VA,Random Forest,1,1,0.7499985075365783
+Long Beach VA,Random Forest,1,1,0.8929707598729079
+Long Beach VA,Random Forest,1,1,0.9697609303873836
+Long Beach VA,Random Forest,0,1,0.7528207750252436
+Long Beach VA,Random Forest,1,1,0.6308051489382713
+Long Beach VA,Random Forest,0,0,0.05989939155557302
+Long Beach VA,Random Forest,1,1,0.6842760363390124
+Long Beach VA,Random Forest,0,0,0.18318393987718073
+Long Beach VA,Random Forest,1,1,0.9535842686843982
+Long Beach VA,Random Forest,0,0,0.44935889771709536
+Long Beach VA,Random Forest,1,1,0.8000659513602032
+Long Beach VA,Random Forest,1,1,0.9730618002081489
+Long Beach VA,Random Forest,1,1,0.893692876740226
+Long Beach VA,Random Forest,1,1,0.5823197388166736
+Long Beach VA,Random Forest,0,0,0.2354932178083259
+Long Beach VA,Random Forest,1,1,0.8537612166459254
+Long Beach VA,Random Forest,0,1,0.6095836514547338
+Long Beach VA,Random Forest,1,1,0.9249930085439521
+Long Beach VA,Random Forest,1,1,0.939688610586035
+Long Beach VA,Random Forest,1,1,0.7691400557945851
+Long Beach VA,Random Forest,1,1,0.6822959287931423
+Long Beach VA,Random Forest,1,1,0.7578381115694498
+Long Beach VA,Random Forest,1,1,0.6727024030307784
+Long Beach VA,Random Forest,1,1,0.9613439887566297
+Long Beach VA,Random Forest,1,1,0.5426032743032643
+Long Beach VA,Random Forest,1,0,0.36501522766579697
+Long Beach VA,Random Forest,0,0,0.14584649095687144
+Long Beach VA,Random Forest,1,1,0.9514022487996737
+Long Beach VA,Random Forest,0,1,0.5395375811712366
+Long Beach VA,Random Forest,1,1,0.9584792907780367
+Long Beach VA,Random Forest,1,1,0.6010777308140263
+Long Beach VA,Random Forest,1,1,0.8015078829641584
+Long Beach VA,Random Forest,1,1,0.5376004290952858
+Long Beach VA,Random Forest,1,0,0.21384800647757313
+Long Beach VA,Random Forest,1,1,0.9738796225489872
+Long Beach VA,Random Forest,1,1,0.7537273385566698
+Long Beach VA,Random Forest,0,1,0.8160071750106138
+Long Beach VA,Random Forest,1,1,0.9607575269210061
+Long Beach VA,Random Forest,1,1,0.8346854520352124
+Long Beach VA,Random Forest,1,1,0.9407622626307066
+Long Beach VA,Random Forest,1,1,0.9614364866567645
+Long Beach VA,Random Forest,1,1,0.96349319679962
+Long Beach VA,Random Forest,1,1,0.9365916770894853
+Long Beach VA,Random Forest,0,1,0.6708377146403834
+Long Beach VA,Random Forest,1,1,0.9766691360608045
+Long Beach VA,Random Forest,1,0,0.31061319926161335
+Long Beach VA,Random Forest,1,1,0.9670888596941374
+Long Beach VA,Random Forest,0,1,0.647343295098185
+Long Beach VA,Random Forest,1,1,0.7171570148260265
+Long Beach VA,Random Forest,1,1,0.859531942898383
+Long Beach VA,Random Forest,0,1,0.5728910593667846
+Long Beach VA,Random Forest,1,1,0.9625397761399057
+Long Beach VA,Random Forest,0,0,0.24417071440529847
+Long Beach VA,Random Forest,1,1,0.560143154612492
+Long Beach VA,Random Forest,1,1,0.7346258296657867
+Long Beach VA,Random Forest,0,1,0.7258612088331857
+Long Beach VA,Random Forest,1,0,0.3855690525936324
+Long Beach VA,Random Forest,1,1,0.9698216702543718
+Long Beach VA,Random Forest,1,1,0.5985318931862806
+Long Beach VA,Random Forest,1,1,0.8235931652015402
+Long Beach VA,Random Forest,0,1,0.8421413492520867
+Long Beach VA,Random Forest,1,1,0.8795192229065422
+Long Beach VA,Random Forest,1,1,0.9414246294431456
+Long Beach VA,Random Forest,1,1,0.955090323820038
+Long Beach VA,Random Forest,0,1,0.6593199101283118
+Long Beach VA,Random Forest,0,0,0.1303053357694723
+Long Beach VA,Random Forest,1,1,0.6583209191359345
+Long Beach VA,Random Forest,0,0,0.23052893209404013
+Long Beach VA,Random Forest,1,0,0.2300571792492459
+Long Beach VA,Random Forest,1,1,0.5528307875307774
+Long Beach VA,Random Forest,1,0,0.44825464121861425
+Long Beach VA,Random Forest,1,1,0.7889310761501164
+Long Beach VA,Random Forest,1,1,0.7944020069879182
+Long Beach VA,Random Forest,1,1,0.8275360884423297
+Long Beach VA,Random Forest,1,1,0.9640768719172174
+Long Beach VA,Random Forest,1,1,0.6174932066169208
+Long Beach VA,Random Forest,1,1,0.5880692855662205
+Long Beach VA,Random Forest,1,1,0.9353860540067456
+Long Beach VA,Random Forest,1,1,0.9743050216134227
+Long Beach VA,Random Forest,0,1,0.8129101536425717
+Long Beach VA,Random Forest,1,1,0.5880692855662205
+Long Beach VA,Random Forest,1,1,0.7016217259050095
+Long Beach VA,Random Forest,1,1,0.7351857557980601
+Long Beach VA,Random Forest,1,1,0.9325981752188667
+Long Beach VA,Random Forest,0,0,0.45946662042394865
+Long Beach VA,Random Forest,0,1,0.6392889230968163
+Long Beach VA,Random Forest,1,0,0.20173430792470717
+Long Beach VA,Random Forest,1,1,0.6722314694810841
+Long Beach VA,Random Forest,1,1,0.7016452964924613
+Long Beach VA,Random Forest,0,1,0.6361247064952245
+Long Beach VA,Random Forest,1,1,0.8994119850386054
+Long Beach VA,Random Forest,0,1,0.5745774769948154
+Long Beach VA,Random Forest,1,0,0.40161205409141365
+Long Beach VA,Random Forest,1,1,0.527057422441078
+Long Beach VA,Random Forest,0,0,0.2817132893481285
+Long Beach VA,Random Forest,1,1,0.7267823416240057
+Long Beach VA,Random Forest,0,1,0.9705620620031115
+Long Beach VA,Random Forest,1,0,0.4317735279213026
+Long Beach VA,Random Forest,1,1,0.5813200866000403
+Long Beach VA,Random Forest,1,1,0.9743394380631366
+Long Beach VA,Random Forest,0,0,0.29379838444679846
+Long Beach VA,Random Forest,0,0,0.0920335700350697
+Long Beach VA,Random Forest,0,1,0.9364764235980505
+Long Beach VA,Random Forest,1,1,0.6892453048571845
+Long Beach VA,Random Forest,1,1,0.8873556209697973
+Long Beach VA,Random Forest,1,1,0.8070355434420836
+Long Beach VA,Random Forest,0,1,0.9621683696638331
+Long Beach VA,Random Forest,1,1,0.7962527267653375
+Long Beach VA,Random Forest,1,1,0.9285917956551729
+Long Beach VA,Random Forest,1,1,0.9612190389608896
+Long Beach VA,Random Forest,1,1,0.940929552221855
+Long Beach VA,Random Forest,1,1,0.5561641208641107
+Long Beach VA,Random Forest,1,1,0.8310685688045257
+Long Beach VA,Random Forest,1,1,0.7937849552126935
+Long Beach VA,Random Forest,1,1,0.7792583403891451
+Long Beach VA,Random Forest,1,0,0.4355677980741728
+Long Beach VA,Random Forest,1,1,0.9105151295294875
+Long Beach VA,Random Forest,1,1,0.560886343086333
+Long Beach VA,Random Forest,1,1,0.9690083777006199
+Long Beach VA,Random Forest,1,1,0.7792583403891451
+Long Beach VA,Random Forest,1,1,0.6095836514547338
+Long Beach VA,Random Forest,1,1,0.8543480883841122
+Long Beach VA,Random Forest,1,1,0.8952829084198212
+Long Beach VA,Random Forest,0,0,0.4559316716669472
+Long Beach VA,Random Forest,1,1,0.7889310761501164
+Long Beach VA,Random Forest,1,0,0.43018564601277376
+Long Beach VA,Random Forest,1,1,0.9524975695532146
+Long Beach VA,Random Forest,0,0,0.17011597253698907
+Long Beach VA,Random Forest,1,1,0.9494897608034997
+Long Beach VA,Random Forest,1,1,0.5223211165962125
+Long Beach VA,Random Forest,0,0,0.36501522766579697
+Long Beach VA,Random Forest,0,1,0.8409516787715939
+Long Beach VA,Random Forest,1,1,0.9413289918467769
+Long Beach VA,Random Forest,1,1,0.7658936297095759
+Long Beach VA,Random Forest,1,1,0.9699170957758565
+Long Beach VA,Random Forest,1,1,0.8732039620743781
+Long Beach VA,Random Forest,1,1,0.7792799040920719
+Long Beach VA,Random Forest,0,0,0.31061319926161335
+Long Beach VA,Random Forest,1,1,0.9589899447659851
+Long Beach VA,Random Forest,1,1,0.8678823162159699
+Long Beach VA,Random Forest,0,1,0.9432852798275828
+Long Beach VA,Random Forest,1,0,0.39442752243949075
+Long Beach VA,Random Forest,1,1,0.6657254351844812
+Long Beach VA,Random Forest,1,1,0.7267823416240057
+Long Beach VA,Random Forest,1,1,0.9633747767086411
+Long Beach VA,Random Forest,0,0,0.4513604510000373
+Long Beach VA,Random Forest,0,0,0.34784889105757816
+Long Beach VA,Random Forest,1,1,0.9317001492950158
+Long Beach VA,Random Forest,1,1,0.92866021233133
+Long Beach VA,Random Forest,1,1,0.8092270371340727
+Long Beach VA,Random Forest,1,1,0.6876033766549318
+Long Beach VA,Random Forest,1,0,0.23086942904696287
+Long Beach VA,Random Forest,0,1,0.6669580398285578
+Long Beach VA,Random Forest,1,1,0.7761131779405751
+Long Beach VA,Random Forest,0,1,0.6684247242360633
+Long Beach VA,Random Forest,1,1,0.6175315657052852
+Switzerland,Random Forest,1,0,0.3917862237014086
+Switzerland,Random Forest,1,0,0.48718476793872384
+Switzerland,Random Forest,1,1,0.7912753494707427
+Switzerland,Random Forest,1,1,0.9000954391623202
+Switzerland,Random Forest,1,0,0.35065041533341434
+Switzerland,Random Forest,1,0,0.17523579924791316
+Switzerland,Random Forest,0,0,0.12088733356848763
+Switzerland,Random Forest,1,0,0.394726592673967
+Switzerland,Random Forest,1,0,0.43584903317638957
+Switzerland,Random Forest,1,1,0.733916626182819
+Switzerland,Random Forest,1,0,0.3823503737493394
+Switzerland,Random Forest,1,1,0.5293718859533393
+Switzerland,Random Forest,1,1,0.7196946845641541
+Switzerland,Random Forest,1,1,0.6809353238509385
+Switzerland,Random Forest,1,1,0.7657987924267368
+Switzerland,Random Forest,1,1,0.9233249402133259
+Switzerland,Random Forest,1,1,0.720342530941507
+Switzerland,Random Forest,0,0,0.1522200177010934
+Switzerland,Random Forest,1,0,0.33047986075484936
+Switzerland,Random Forest,1,1,0.932314516686706
+Switzerland,Random Forest,1,0,0.4049578716570909
+Switzerland,Random Forest,1,1,0.5640035996981765
+Switzerland,Random Forest,1,1,0.6247473933323623
+Switzerland,Random Forest,1,1,0.6441427062076189
+Switzerland,Random Forest,1,1,0.6194495966439045
+Switzerland,Random Forest,1,0,0.2510807398452616
+Switzerland,Random Forest,1,1,0.8380221688054199
+Switzerland,Random Forest,1,1,0.6605253242729656
+Switzerland,Random Forest,1,1,0.7719613803621487
+Switzerland,Random Forest,1,1,0.652418834445863
+Switzerland,Random Forest,1,1,0.5131159641314792
+Switzerland,Random Forest,1,1,0.5200845675773322
+Switzerland,Random Forest,1,1,0.5198391189269171
+Switzerland,Random Forest,1,0,0.44793997953510856
+Switzerland,Random Forest,1,0,0.35271352293832886
+Switzerland,Random Forest,1,1,0.811961643085137
+Switzerland,Random Forest,1,1,0.600117779539557
+Switzerland,Random Forest,1,1,0.944272680862508
+Switzerland,Random Forest,1,1,0.9468294822585623
+Switzerland,Random Forest,1,1,0.7806014601557693
+Switzerland,Random Forest,1,0,0.07397228413472957
+Switzerland,Random Forest,0,0,0.25449536899078085
+Switzerland,Random Forest,1,0,0.24284912287661253
+Switzerland,Random Forest,1,1,0.5637512935487599
+Switzerland,Random Forest,1,1,0.624746630832665
+Switzerland,Random Forest,1,1,0.8845213294428106
+Switzerland,Random Forest,1,1,0.9259680544406621
+Switzerland,Random Forest,0,1,0.8635177970753231
+Switzerland,Random Forest,1,1,0.5309882859452723
+Switzerland,Random Forest,1,1,0.9764086537814488
+Switzerland,Random Forest,1,1,0.6221977995490602
+Switzerland,Random Forest,0,0,0.15496272764193955
+Switzerland,Random Forest,1,1,0.500555387934671
+Switzerland,Random Forest,1,1,0.5499252154894472
+Switzerland,Random Forest,1,0,0.4345195958590219
+Switzerland,Random Forest,0,0,0.23090398854879127
+Switzerland,Random Forest,1,0,0.25279872702417494
+Switzerland,Random Forest,1,1,0.5043508544794711
+Switzerland,Random Forest,1,1,0.5231419662748857
+Switzerland,Random Forest,1,1,0.695229273898039
+Switzerland,Random Forest,1,0,0.4403634046979624
+Switzerland,Random Forest,1,1,0.93517818616776
+Switzerland,Random Forest,1,1,0.9718088149801639
+Switzerland,Random Forest,1,0,0.3104788731061933
+Switzerland,Random Forest,1,1,0.7721174040856082
+Switzerland,Random Forest,1,1,0.946254907660415
+Switzerland,Random Forest,1,1,0.6695301809474525
+Switzerland,Random Forest,1,1,0.9440028869532949
+Switzerland,Random Forest,1,0,0.4916558166075813
+Switzerland,Random Forest,1,1,0.6888996646241472
+Switzerland,Random Forest,1,1,0.7647376076135881
+Switzerland,Random Forest,1,1,0.6936621513647071
+Switzerland,Random Forest,1,1,0.5453066766073006
+Switzerland,Random Forest,1,1,0.5830098225728636
+Switzerland,Random Forest,1,1,0.6371268794171701
+Switzerland,Random Forest,1,1,0.9317212620400954
+Switzerland,Random Forest,1,1,0.9518194670043275
+Switzerland,Random Forest,1,1,0.6545068636859712
+Switzerland,Random Forest,1,1,0.6447185508830814
+Switzerland,Random Forest,1,1,0.8397909502484788
+Switzerland,Random Forest,1,1,0.7951272820105219
+Switzerland,Random Forest,1,1,0.7711930433796065
+Switzerland,Random Forest,1,0,0.44245699387751036
+Switzerland,Random Forest,1,1,0.5775678382443474
+Switzerland,Random Forest,1,1,0.8268994745246785
+Switzerland,Random Forest,1,1,0.8525611788364819
+Switzerland,Random Forest,1,1,0.7271453320289023
+Switzerland,Random Forest,1,1,0.6557815881901917
+Switzerland,Random Forest,1,1,0.8510240904232327
+Switzerland,Random Forest,1,1,0.7023482406419298
+Switzerland,Random Forest,1,1,0.93539232407105
+Switzerland,Random Forest,1,1,0.7106044963211702
+Switzerland,Random Forest,1,0,0.14232588978459332
+Switzerland,Random Forest,1,1,0.7654898953820808
+Switzerland,Random Forest,1,0,0.32557732995362265
+Switzerland,Random Forest,1,1,0.6764218098525875
+Switzerland,Random Forest,1,1,0.9135861151636296
+Switzerland,Random Forest,1,1,0.7849406234035659
+Switzerland,Random Forest,1,1,0.776411165221728
+Switzerland,Random Forest,1,1,0.6402418391889573
+Switzerland,Random Forest,1,1,0.7770762224674761
+Switzerland,Random Forest,1,1,0.943123031123046
+Switzerland,Random Forest,1,1,0.7321411707644279
+Switzerland,Random Forest,1,1,0.7516768891298905
+Switzerland,Random Forest,1,1,0.7662681995952334
+Switzerland,Random Forest,1,0,0.3050404620432467
+Switzerland,Random Forest,1,1,0.8726168805514015
+Switzerland,Random Forest,1,1,0.7989114116022952
+Switzerland,Random Forest,1,1,0.7280196211228028
+Switzerland,Random Forest,0,1,0.6353764353009289
+Switzerland,Random Forest,1,1,0.7103211778344474
+Switzerland,Random Forest,1,0,0.3892588656477037
+Switzerland,Random Forest,1,1,0.9234640778496352
+Switzerland,Random Forest,1,0,0.47787981029591264
+Switzerland,Random Forest,1,1,0.8284234615107748
+Switzerland,Random Forest,1,1,0.8124753963182234
+Switzerland,Random Forest,1,1,0.6635513235996596
+Switzerland,Random Forest,1,1,0.8708694805900549
+Switzerland,Random Forest,1,1,0.7932326732965995
+Switzerland,Random Forest,1,1,0.7837975184490408
+Switzerland,Random Forest,0,1,0.6438124838082605
+Switzerland,Random Forest,1,0,0.17926129377709185
+Switzerland,Random Forest,1,1,0.5662617099291011

@@ -1,0 +1,3 @@
+model,model_file,metadata_file,features,training_records,verification
+All 8 Features,heartcare_expanded_all8_candidate.joblib,heartcare_expanded_all8_candidate_metadata.json,8,920,Passed
+Without Sex,heartcare_expanded_without_sex_candidate.joblib,heartcare_expanded_without_sex_candidate_metadata.json,7,920,Passed
