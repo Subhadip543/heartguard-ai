@@ -1,7 +1,7 @@
 
-/* ==========================================
-   HEARTCARE HOME PAGE - COMPLETE CSS
-========================================== */
+/* =========================================
+   HEARTCARE HOME PAGE - GLOBAL STYLES
+========================================= */
 
 * {
   margin: 0;
@@ -14,62 +14,66 @@
   min-height: 100vh;
   overflow-x: hidden;
   font-family: "Segoe UI", Arial, sans-serif;
-  color: #183b42;
-  background: #ffffff;
+  color: #1e293b;
+  background: #f8fcfc;
 }
 
-/* ==========================================
-   1. NAVIGATION BAR
-========================================== */
+/* =========================================
+   NAVIGATION BAR
+========================================= */
 
 .navbar {
   width: 100%;
   min-height: 78px;
-  padding: 14px 7%;
+  padding: 15px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
   background: #ffffff;
-  border-bottom: 1px solid #e8eeee;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.035);
+  box-shadow: 0 3px 15px rgba(15, 118, 110, 0.07);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
+
+/* Logo */
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #087f86;
   font-size: 27px;
-  font-weight: 750;
-  white-space: nowrap;
+  font-weight: 800;
+  color: #0f766e;
+  letter-spacing: -0.7px;
 }
 
 .logo-icon {
-  color: #e95768;
-  font-size: 30px;
+  color: #0f766e;
+  font-size: 29px;
 }
+
+/* Navigation Links */
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 34px;
+  gap: 35px;
 }
 
 .nav-links a {
-  color: #526a70;
   text-decoration: none;
-  font-size: 14px;
+  color: #475569;
+  font-size: 15px;
   font-weight: 600;
-  transition: color 0.25s ease;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #0d9488;
+  color: #0f766e;
 }
+
+/* Navigation Buttons */
 
 .nav-buttons {
   display: flex;
@@ -78,45 +82,63 @@
 }
 
 .login-btn,
-.register-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 11px 22px;
+.register-btn,
+.doctor-nav-btn {
+  padding: 11px 19px;
   border-radius: 8px;
-  font-size: 14px;
-  font-weight: 650;
   text-decoration: none;
-  transition: all 0.25s ease;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
 }
 
+/* Login */
+
 .login-btn {
-  color: #0d9488;
-  background: #ffffff;
-  border: 1px solid #0d9488;
+  color: #0f766e;
+  border: 1px solid #0f766e;
+  background: transparent;
 }
 
 .login-btn:hover {
-  background: #e8f7f5;
+  color: #ffffff;
+  background: #0f766e;
 }
+
+/* Register */
 
 .register-btn {
   color: #ffffff;
-  background: #0d9488;
-  border: 1px solid #0d9488;
+  background: #0f766e;
+  border: 1px solid #0f766e;
 }
 
 .register-btn:hover {
-  background: #0b766e;
+  background: #115e59;
+  border-color: #115e59;
   transform: translateY(-2px);
 }
 
-/* ==========================================
-   2. HERO SECTION
-========================================== */
+/* Doctor Portal */
+
+.doctor-nav-btn {
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.doctor-nav-btn:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.2);
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
 
 .hero {
-  width: 100%;
   min-height: 570px;
   padding: 75px 8%;
   display: flex;
@@ -125,349 +147,375 @@
   gap: 55px;
   background: linear-gradient(
     120deg,
-    #effaf9,
-    #f8fcfc 55%,
-    #e7f6f5
+    #ecfdf9 0%,
+    #f0fdfa 45%,
+    #eff6ff 100%
   );
 }
 
+/* Hero Content */
+
 .hero-content {
   flex: 1;
-  max-width: 590px;
+  max-width: 600px;
+  animation: homeFadeIn 0.8s ease;
 }
+
+/* Tagline */
 
 .tagline {
   display: inline-block;
-  padding: 9px 16px;
-  margin-bottom: 23px;
+  padding: 9px 15px;
   border-radius: 30px;
-  color: #0d8179;
-  background: #dff4f0;
-  font-size: 11px;
-  font-weight: 750;
-  letter-spacing: 1px;
+  background: #ccfbf1;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin-bottom: 23px;
 }
 
+/* Hero Heading */
+
 .hero-content h1 {
-  color: #173e46;
-  font-size: clamp(36px, 4vw, 50px);
-  font-weight: 750;
-  line-height: 1.2;
+  font-size: clamp(38px, 5vw, 59px);
+  line-height: 1.15;
+  font-weight: 800;
+  color: #0f172a;
   margin-bottom: 22px;
+  letter-spacing: -1.5px;
 }
 
 .hero-content h1 span {
   display: block;
-  color: #0d9488;
+  color: #0f766e;
 }
 
-.hero-content > p {
+/* Hero Paragraph */
+
+.hero-content p {
   max-width: 550px;
-  margin-bottom: 28px;
-  color: #647b80;
   font-size: 16px;
   line-height: 1.9;
+  color: #64748b;
+  margin-bottom: 30px;
 }
+
+/* Hero Buttons */
 
 .hero-buttons {
   display: flex;
   align-items: center;
+  gap: 16px;
   flex-wrap: wrap;
-  gap: 15px;
 }
 
 .primary-btn,
 .secondary-btn {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 14px 24px;
-  border-radius: 8px;
+  border-radius: 9px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   transition: all 0.3s ease;
 }
 
+/* Primary Button */
+
 .primary-btn {
+  background: #0f766e;
   color: #ffffff;
-  background: #0d9488;
-  box-shadow: 0 5px 15px rgba(13, 148, 136, 0.15);
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.18);
 }
 
 .primary-btn:hover {
-  background: #0b766e;
+  background: #115e59;
   transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(15, 118, 110, 0.23);
 }
 
+/* Secondary Button */
+
 .secondary-btn {
-  color: #0d8179;
+  color: #0f766e;
+  border: 1px solid #0f766e;
   background: #ffffff;
-  border: 1px solid #b9e2dc;
 }
 
 .secondary-btn:hover {
-  background: #e6f6f3;
-  border-color: #0d9488;
+  background: #ccfbf1;
+  transform: translateY(-3px);
 }
+
+/* Trust Information */
 
 .trust-info {
   display: flex;
   align-items: center;
   gap: 9px;
-  margin-top: 30px;
-  color: #71878b;
+  margin-top: 32px;
+  color: #64748b;
   font-size: 13px;
-  line-height: 1.6;
+  font-weight: 600;
 }
 
 .trust-info span {
-  color: #e95768;
+  color: #0f766e;
   font-size: 19px;
 }
 
-/* Hero Image */
+/* =========================================
+   HERO IMAGE
+========================================= */
 
 .hero-image {
   flex: 1;
-  max-width: 470px;
+  max-width: 480px;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: imageFloat 4s ease-in-out infinite;
 }
 
 .hero-image img {
-  display: block;
   width: 100%;
-  max-width: 440px;
-  height: 360px;
+  max-width: 460px;
+  height: 370px;
   object-fit: contain;
-  border-radius: 18px;
+  border-radius: 22px;
+  filter: drop-shadow(0 15px 25px rgba(15, 118, 110, 0.10));
 }
 
-/* ==========================================
-   3. FEATURES SECTION
-========================================== */
+/* =========================================
+   FEATURES SECTION
+========================================= */
 
 .features {
-  width: 100%;
-  padding: 80px 7%;
+  padding: 85px 7%;
   text-align: center;
   background: #ffffff;
 }
 
-.features > h2 {
-  color: #173e46;
-  font-size: 32px;
-  font-weight: 750;
-  margin-bottom: 12px;
+.features h2 {
+  color: #0f172a;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 14px;
 }
 
 .section-description {
   max-width: 650px;
-  margin: 0 auto 45px;
-  color: #7b8e92;
-  font-size: 16px;
-  line-height: 1.7;
+  margin: 0 auto 48px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
-/* Feature Grid */
+/* Feature Container */
 
 .feature-container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 25px;
-  max-width: 1200px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 23px;
+  max-width: 1250px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
-/* Feature Cards */
+/* Feature Card */
 
 .feature-card {
   min-width: 0;
-  min-height: 285px;
   padding: 32px 24px;
+  min-height: 285px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   background: #ffffff;
-  border: 1px solid #e0ebeb;
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
-}
-
-/* Entire card is clickable */
-
-.feature-link {
-  display: flex;
-  width: 100%;
-  color: inherit;
   text-decoration: none;
-  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+  transition: all 0.35s ease;
 }
 
-.feature-link:hover {
-  transform: translateY(-8px);
-  border-color: #0d9488;
-  box-shadow: 0 13px 30px rgba(13, 148, 136, 0.12);
-}
-
-.feature-link:focus-visible {
-  outline: 3px solid #0d9488;
-  outline-offset: 5px;
+.feature-card:hover {
+  transform: translateY(-9px);
+  border-color: #99f6e4;
+  box-shadow: 0 15px 35px rgba(15, 118, 110, 0.11);
 }
 
 /* Feature Icons */
 
 .feature-icon {
-  width: 68px;
-  height: 68px;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 21px;
-  border-radius: 19px;
-  color: #0d9488;
-  background: #e8f7f4;
-  font-size: 35px;
+  border-radius: 13px;
+  background: #ccfbf1;
+  color: #0f766e;
+  font-size: 27px;
+  font-weight: 800;
+  margin-bottom: 23px;
   transition: all 0.3s ease;
 }
 
-.feature-link:hover .feature-icon {
-  background: #d5f0ea;
-  transform: scale(1.06);
+.feature-card:hover .feature-icon {
+  transform: scale(1.08);
+  background: #0f766e;
+  color: #ffffff;
 }
 
-/* Feature Titles */
+/* Feature Heading */
 
 .feature-card h3 {
-  color: #183e47;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 19px;
+  color: #0f172a;
+  font-weight: 750;
   margin-bottom: 13px;
 }
 
 /* Feature Description */
 
 .feature-card p {
-  max-width: 330px;
-  color: #71858a;
   font-size: 14px;
   line-height: 1.8;
+  color: #64748b;
+  margin-bottom: 22px;
 }
 
 /* Feature Action */
 
 .feature-action {
-  display: inline-block;
-  margin-top: 19px;
-  color: #0d9488;
-  font-size: 14px;
-  font-weight: 750;
-  transition: color 0.25s ease;
+  margin-top: auto;
+  color: #0f766e;
+  font-size: 13px;
+  font-weight: 800;
+  transition: 0.3s ease;
 }
 
-.feature-link:hover .feature-action {
-  color: #0b766e;
+.feature-card:hover .feature-action {
+  color: #115e59;
+  letter-spacing: 0.2px;
 }
 
-/* ==========================================
-   4. ABOUT SECTION
-========================================== */
+/* =========================================
+   DOCTOR FEATURE CARD
+========================================= */
+
+.doctor-feature {
+  border-top: 4px solid #2563eb;
+}
+
+.doctor-feature .doctor-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.doctor-feature:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
+}
+
+.doctor-feature:hover .doctor-icon {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.doctor-feature .feature-action {
+  color: #2563eb;
+}
+
+.doctor-feature:hover .feature-action {
+  color: #1d4ed8;
+}
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
 
 .about {
-  padding: 75px 10%;
+  padding: 85px 12%;
   text-align: center;
-  background: #eff8f7;
+  background: #f0fdfa;
 }
 
 .about h2 {
-  color: #173e46;
-  font-size: 30px;
-  font-weight: 750;
-  margin-bottom: 22px;
+  font-size: 34px;
+  color: #0f172a;
+  font-weight: 800;
+  margin-bottom: 23px;
 }
 
 .about p {
   max-width: 850px;
   margin: 0 auto;
-  color: #687f84;
-  font-size: 15px;
+  color: #64748b;
+  font-size: 16px;
   line-height: 2;
 }
 
-/* ==========================================
-   5. FOOTER
-========================================== */
+/* =========================================
+   FOOTER
+========================================= */
 
-.home-page footer {
+footer {
   width: 100%;
   padding: 25px 15px;
-  color: #d8e9e9;
-  background: #123f46;
   text-align: center;
+  background: #0f172a;
+  color: #cbd5e1;
 }
 
-.home-page footer p {
-  font-size: 13px;
+footer p {
+  font-size: 14px;
   line-height: 1.7;
 }
 
-/* ==========================================
-   6. TABLET RESPONSIVE
-========================================== */
+/* =========================================
+   ANIMATIONS
+========================================= */
 
-@media (max-width: 1000px) {
+@keyframes homeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1100px) {
+
   .navbar {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 15px 4%;
   }
 
   .nav-links {
     gap: 20px;
-  }
-
-  .hero {
-    padding: 60px 6%;
-    gap: 30px;
-  }
-
-  .hero-image img {
-    height: 310px;
-  }
-
-  .feature-container {
-    gap: 17px;
-  }
-
-  .feature-card {
-    padding: 27px 17px;
-  }
-
-  .feature-card h3 {
-    font-size: 18px;
-  }
-}
-
-/* ==========================================
-   7. MOBILE RESPONSIVE
-========================================== */
-
-@media (max-width: 700px) {
-  .navbar {
-    padding: 15px 5%;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .logo {
-    font-size: 23px;
   }
 
   .nav-buttons {
@@ -475,35 +523,72 @@
   }
 
   .login-btn,
-  .register-btn {
-    padding: 9px 13px;
+  .register-btn,
+  .doctor-nav-btn {
+    padding: 10px 12px;
     font-size: 13px;
   }
 
+  .hero {
+    padding: 65px 5%;
+    gap: 30px;
+  }
+
+  .feature-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 16px 5%;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
   .nav-links {
-    order: 3;
     width: 100%;
     justify-content: center;
     gap: 25px;
+    order: 3;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .login-btn,
+  .register-btn,
+  .doctor-nav-btn {
+    padding: 9px 12px;
+    font-size: 12px;
   }
 
   .hero {
+    padding: 55px 7%;
     flex-direction: column;
     text-align: center;
-    padding: 55px 7%;
-    gap: 35px;
   }
 
   .hero-content {
     max-width: 100%;
   }
 
-  .hero-content h1 {
-    font-size: 36px;
-  }
-
-  .hero-content > p {
-    font-size: 14px;
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-buttons {
@@ -514,92 +599,108 @@
     justify-content: center;
   }
 
-  .hero-image {
-    width: 100%;
-    max-width: 450px;
-  }
-
   .hero-image img {
-    height: 270px;
+    height: 280px;
   }
 
   .features {
-    padding: 60px 6%;
+    padding: 65px 6%;
   }
 
-  .features > h2 {
-    font-size: 27px;
+  .features h2 {
+    font-size: 29px;
   }
 
-  .section-description {
+  .about {
+    padding: 65px 7%;
+  }
+
+  .about h2 {
+    font-size: 29px;
+  }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 45px 6%;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
     font-size: 14px;
-    margin-bottom: 30px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .hero-image img {
+    height: 230px;
   }
 
   .feature-container {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
   .feature-card {
     min-height: 250px;
-    padding: 30px 22px;
   }
 
-  .feature-card h3 {
-    font-size: 20px;
-  }
-
-  .about {
-    padding: 55px 7%;
+  .features h2 {
+    font-size: 26px;
   }
 
   .about h2 {
     font-size: 26px;
   }
 
-  .about p {
-    font-size: 14px;
-  }
 }
 
-/* ==========================================
-   8. SMALL MOBILE
-========================================== */
+/* =========================================
+   ACCESSIBILITY
+========================================= */
 
-@media (max-width: 400px) {
-  .logo {
-    font-size: 21px;
+@media (prefers-reduced-motion: reduce) {
+
+  .home-page *,
+  .home-page *::before,
+  .home-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 
-  .nav-links {
-    gap: 16px;
-  }
-
-  .nav-links a {
-    font-size: 12px;
-  }
-
-  .hero-content h1 {
-    font-size: 30px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .primary-btn,
-  .secondary-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .hero-image img {
-    height: 220px;
-  }
-
-  .features > h2 {
-    font-size: 24px;
-  }
 }

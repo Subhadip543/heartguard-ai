@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import ThemeToggle from "../ThemeToggle.jsx";
 import "./Home.css";
 
 function Home() {
@@ -23,6 +24,9 @@ function Home() {
         </div>
 
         <div className="nav-buttons">
+
+          <ThemeToggle />
+
           <Link to="/login" className="login-btn">
             Login
           </Link>
@@ -30,6 +34,14 @@ function Home() {
           <Link to="/register" className="register-btn">
             Register
           </Link>
+
+          <Link
+            to="/doctor-dashboard"
+            className="doctor-nav-btn"
+          >
+            Doctor Portal
+          </Link>
+
         </div>
 
       </nav>
@@ -173,6 +185,30 @@ function Home() {
 
             <span className="feature-action">
               Open Dashboard →
+            </span>
+
+          </Link>
+
+
+          {/* 4. DOCTOR DASHBOARD */}
+          <Link
+            to="/doctor-dashboard"
+            className="feature-card feature-link doctor-feature"
+          >
+
+            <div className="feature-icon doctor-icon">
+              ✚
+            </div>
+
+            <h3>Doctor Dashboard</h3>
+
+            <p>
+              Manage patient appointments, review consultations
+              and conduct online video visits.
+            </p>
+
+            <span className="feature-action">
+              Open Doctor Portal →
             </span>
 
           </Link>

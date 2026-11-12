@@ -1,0 +1,163 @@
+
+/* =====================================
+   HEARTCARE - GLOBAL FRONTEND ANIMATIONS
+===================================== */
+
+/* 1. Page entrance */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-page,
+.login-page,
+.registration-page,
+.assessment-page,
+.emergency-page,
+.dashboard-page,
+.patient-dashboard,
+.dashboard-container {
+  animation: pageFadeIn 0.55s ease both;
+}
+
+/* 2. Card entrance */
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emergency-card,
+.hospital-result-card,
+.assessment-card,
+.dashboard-card,
+.stat-card,
+.feature-card,
+.service-card,
+.contact-card {
+  animation: cardReveal 0.6s ease both;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* 3. Card hover */
+.emergency-card:hover,
+.hospital-result-card:hover,
+.assessment-card:hover,
+.dashboard-card:hover,
+.stat-card:hover,
+.feature-card:hover,
+.service-card:hover,
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(15, 70, 90, 0.12);
+}
+
+/* 4. Button interaction */
+.call-button,
+.location-button,
+.hospital-search-button,
+.directions-button,
+.back-dashboard {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.call-button:hover,
+.location-button:hover,
+.hospital-search-button:hover,
+.directions-button:hover,
+.back-dashboard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(15, 70, 90, 0.15);
+}
+
+button:active,
+.call-button:active {
+  transform: scale(0.97);
+}
+
+/* 5. Gentle emergency button attention effect */
+@keyframes emergencyAttention {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(220, 38, 38, 0.12);
+  }
+}
+
+.emergency-call {
+  animation: emergencyAttention 2.8s ease-in-out infinite;
+}
+
+/* 6. Input focus animation */
+input,
+textarea,
+select {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
+}
+
+/* 7. Loading shimmer utility */
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
+  }
+}
+
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    #edf2f7 25%,
+    #f8fafc 50%,
+    #edf2f7 75%
+  );
+  background-size: 900px 100%;
+  animation: shimmer 1.6s infinite linear;
+  border-radius: 8px;
+}
+
+/* 8. Smooth links */
+a {
+  transition: color 0.2s ease;
+}
+
+/* 9. Accessibility: respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

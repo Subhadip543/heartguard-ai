@@ -1,0 +1,219 @@
+
+/* ==================================
+   HEARTCARE THEME VARIABLES
+================================== */
+
+:root {
+  color-scheme: light;
+
+  --page-bg: #f3f8fa;
+  --card-bg: #ffffff;
+  --text-main: #263746;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --input-bg: #ffffff;
+  --soft-bg: #f8fafc;
+  --accent-color: #087f8c;
+  --shadow-color: rgba(15, 50, 70, 0.08);
+}
+
+/* ==================================
+   DARK MODE COLORS
+================================== */
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --page-bg: #101b2a;
+  --card-bg: #1b2a3b;
+  --text-main: #e5edf5;
+  --text-muted: #a9b8c8;
+  --border-color: #34465a;
+  --input-bg: #142235;
+  --soft-bg: #223449;
+  --accent-color: #25a6ad;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* ==================================
+   SMOOTH THEME TRANSITION
+================================== */
+
+html {
+  transition: background-color 0.35s ease;
+}
+
+body,
+.emergency-page,
+.home-page,
+.login-page,
+.registration-page,
+.assessment-page,
+.dashboard-page,
+.patient-dashboard,
+.dashboard-container {
+  background-color: var(--page-bg);
+  color: var(--text-main);
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
+}
+
+/* Cards and content sections */
+
+.emergency-section,
+.hospital-section,
+.contacts-section,
+.emergency-card,
+.hospital-result-card,
+.assessment-card,
+.dashboard-card,
+.stat-card,
+.feature-card,
+.service-card,
+.contact-card {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border-color: var(--border-color);
+  box-shadow: 0 5px 22px var(--shadow-color);
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Headings and paragraph text */
+
+h1,
+h2,
+h3,
+h4,
+label {
+  color: var(--text-main);
+  transition: color 0.35s ease;
+}
+
+p,
+.text-muted {
+  color: var(--text-muted);
+  transition: color 0.35s ease;
+}
+
+/* Form fields */
+
+input,
+textarea,
+select {
+  background-color: var(--input-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Soft backgrounds */
+
+.empty-hospitals,
+.contact-note {
+  background-color: var(--soft-bg);
+  color: var(--text-main);
+}
+
+/* ==================================
+   THEME TOGGLE BUTTON
+================================== */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 10px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  background: var(--card-bg);
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 0 3px 12px var(--shadow-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--shadow-color);
+}
+
+.theme-toggle:active {
+  transform: scale(0.96);
+}
+
+.theme-toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.theme-toggle:hover .theme-toggle-icon {
+  transform: rotate(25deg);
+}
+
+/* ==================================
+   DARK MODE EMERGENCY PAGE
+================================== */
+
+:root[data-theme="dark"] .emergency-header {
+  background: linear-gradient(135deg, #123b4b, #102d49);
+}
+
+:root[data-theme="dark"] .medical-warning {
+  background: #39291e;
+  border-color: #854d0e;
+}
+
+:root[data-theme="dark"] .medical-warning h3,
+:root[data-theme="dark"] .medical-warning p {
+  color: #fed7aa;
+}
+
+:root[data-theme="dark"] .emergency-error {
+  background: #3b2025;
+  border-color: #7f303b;
+  color: #fecaca;
+}
+
+:root[data-theme="dark"] .hospital-result-card:hover {
+  background: #263b4e;
+}
+
+:root[data-theme="dark"] .location-button {
+  background: #203b50;
+  color: #bae6fd;
+  border-color: #36566f;
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

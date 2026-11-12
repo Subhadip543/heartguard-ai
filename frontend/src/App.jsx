@@ -13,6 +13,10 @@ import AssessmentResult from "./Pages/AssessmentResult";
 import Emergency from "./Emergency";
 import HealthAwareness from "./Pages/HealthAwareness";
 import GeminiTest from "./GeminiTest";
+// Import doctor and appointment pages
+import DoctorDashboard from "./DoctorDashboard";
+import FindDoctors from "./FindDoctors.jsx";
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,22 +25,14 @@ function App() {
         {/* Home Page */}
         <Route path="/" element={<Home />} />
 
-        {/* Login Page */}
+        {/* Authentication */}
         <Route path="/login" element={<Login />} />
-
-        {/* Registration Page */}
         <Route path="/register" element={<Registration />} />
 
-        {/* Patient Dashboard */}
+        {/* Patient Pages */}
         <Route path="/dashboard" element={<PDashboard />} />
-
-        {/* Heart Risk Assessment */}
         <Route path="/assessment" element={<HeartAssessment />} />
-
-        {/* Assessment History */}
         <Route path="/history" element={<History />} />
-
-        {/* Patient Profile */}
         <Route path="/profile" element={<Profile />} />
 
         {/* Assessment Results */}
@@ -45,21 +41,48 @@ function App() {
         {/* Emergency Assistance */}
         <Route path="/emergency" element={<Emergency />} />
 
+        {/* Health Awareness */}
+        <Route
+          path="/health-awareness"
+          element={<HealthAwareness />}
+        />
+
+        {/* Gemini API Test */}
+        <Route path="/gemini-test" element={<GeminiTest />} />
+
+        {/* Doctor Dashboard */}
+        <Route
+          path="/doctor-dashboard"
+          element={<DoctorDashboard />}
+        />
+
+        {/* Find Doctors and Book Appointment */}
+        <Route
+          path="/find-doctors"
+          element={<FindDoctors />}
+        />
+
         {/* Forgot Password */}
         <Route
           path="/forgot-password"
-          element={<h1>Forgot Password - Coming Soon</h1>}
+          element={
+            <div style={{ padding: "40px", textAlign: "center" }}>
+              <h2>Forgot Password</h2>
+              <p>Forgot password page will be developed soon.</p>
+            </div>
+          }
         />
-        <Route
-  path="/health-awareness"
-  element={<HealthAwareness />}
-/>
 
-<Route path="/gemini-test" element={<GeminiTest />} />
         {/* Page Not Found */}
         <Route
           path="*"
-          element={<h1>404 - Page Not Found</h1>}
+          element={
+            <div style={{ padding: "50px", textAlign: "center" }}>
+              <h1>404</h1>
+              <h2>Page Not Found</h2>
+              <a href="/">Go to Home</a>
+            </div>
+          }
         />
 
       </Routes>

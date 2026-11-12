@@ -14,46 +14,50 @@ function PDashboard() {
   useEffect(() => {
     const fetchPatient = async () => {
       const token = sessionStorage.getItem("heartcareToken");
+      const cached = sessionStorage.getItem("heartcarePatient");
 
-      if (!token) {
+      if (cached) {
+        try {
+          setPatient(JSON.parse(cached));
+          setLoading(false);
+        } catch {
+          // ignore json parse error
+        }
+      }
+
+      if (!token && !cached) {
         navigate("/login", { replace: true });
+        setLoading(false);
         return;
       }
 
-      try {
-        const response = await fetch(
-          "http://localhost:5000/api/auth/me",
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
+      if (token) {
+        try {
+          const response = await fetch(
+            "http://localhost:5000/api/auth/me",
+            {
+              method: "GET",
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+
+          if (response.ok) {
+            const data = await response.json();
+            if (data.patient) {
+              setPatient(data.patient);
+              sessionStorage.setItem(
+                "heartcarePatient",
+                JSON.stringify(data.patient)
+              );
+            }
           }
-        );
-
-        const data = await response.json();
-
-        if (!response.ok) {
-          sessionStorage.removeItem("heartcareToken");
-          sessionStorage.removeItem("heartcarePatient");
-
-          navigate("/login", { replace: true });
-          return;
+        } catch (error) {
+          console.warn("Auth server unavailable; continuing with cached profile.", error);
+        } finally {
+          setLoading(false);
         }
-
-        setPatient(data.patient);
-
-        sessionStorage.setItem(
-          "heartcarePatient",
-          JSON.stringify(data.patient)
-        );
-
-      } catch (error) {
-        setError("Unable to connect to the backend server.");
-        console.error("Dashboard error:", error);
-
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -117,6 +121,10 @@ function PDashboard() {
             Heart Assessment
           </Link>
 
+          <Link to="/find-doctors">
+            Find Doctors
+          </Link>
+
           <Link to="/history">
             Assessment History
           </Link>
@@ -125,8 +133,10 @@ function PDashboard() {
             My Profile
           </Link>
 
-  <Link to="/emergency">Emergency Help</Link>
-  
+          <Link to="/emergency">
+            Emergency Help
+          </Link>
+
           <Link to="/">
             Home
           </Link>
@@ -165,7 +175,6 @@ function PDashboard() {
         <section className="welcome-card">
 
           <div>
-
             <h2>Welcome, {patient.name}! 👋</h2>
 
             <p>
@@ -183,7 +192,6 @@ function PDashboard() {
             >
               Start Heart Assessment →
             </Link>
-
           </div>
 
           <div className="heart-icon"></div>
@@ -200,7 +208,6 @@ function PDashboard() {
             </span>
 
             <div>
-
               <h2>Risk Assessment</h2>
 
               <p>
@@ -213,6 +220,36 @@ function PDashboard() {
                 className="risk-assessment-btn"
               >
                 Start Risk Assessment →
+              </Link>
+            </div>
+
+          </div>
+
+        </section>
+
+        {/* Find Doctors Section */}
+        <section className="find-doctors-card">
+
+          <div className="find-doctors-content">
+
+            <div className="find-doctors-icon">
+              ✚
+            </div>
+
+            <div className="find-doctors-details">
+
+              <h2>Find a Doctor</h2>
+
+              <p>
+                Explore doctors, check their specializations
+                and find a suitable consultation option.
+              </p>
+
+              <Link
+                to="/find-doctors"
+                className="find-doctors-btn"
+              >
+                Explore Doctors →
               </Link>
 
             </div>
@@ -251,13 +288,11 @@ function PDashboard() {
         <section className="dashboard-section">
 
           <div className="section-heading">
-
             <h2>Recent Assessments</h2>
 
             <Link to="/history">
               View All
             </Link>
-
           </div>
 
           <div className="empty-assessment">

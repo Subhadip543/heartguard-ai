@@ -1,9 +1,94 @@
-#root {
-  width: 100%;
-  min-height: 100vh;
+
+/* =====================================
+   HEARTCARE - APP GLOBAL STYLES
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f8fb;
+  color: #1e293b;
+}
+
+/* =====================================
+   404 PAGE
+===================================== */
+
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0fdfa, #eff6ff);
+}
+
+.not-found-content {
+  max-width: 500px;
+  padding: 45px 35px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+.not-found-content h1 {
+  color: #0f766e;
+  font-size: 85px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.not-found-content h2 {
+  color: #0f172a;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.not-found-content p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.not-found-content a {
+  display: inline-block;
+  padding: 12px 23px;
+  background: #0f766e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.not-found-content a:hover {
+  background: #115e59;
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 480px) {
+  .not-found-content {
+    padding: 35px 22px;
+  }
+
+  .not-found-content h1 {
+    font-size: 65px;
+  }
+
+  .not-found-content h2 {
+    font-size: 21px;
+  }
 }
