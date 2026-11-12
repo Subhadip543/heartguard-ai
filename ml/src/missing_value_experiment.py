@@ -87,6 +87,15 @@ def load_dataset():
     if not set(y.unique()).issubset({0, 1}):
         raise ValueError("Target must contain only 0 and 1.")
 
+    # Convert categorical values to strings while
+    # preserving missing values as actual NaN values.
+    for column in CATEGORICAL_FEATURES:
+        X[column] = X[column].map(
+            lambda value: (
+                str(value) if pd.notna(value) else float("nan")
+            )
+        )
+
     return X, y
 
 
@@ -168,24 +177,24 @@ def build_preprocessor(strategy):
 # 4. CLASSIFIERS
 # --------------------------------------------------
 
+
 def get_classifiers():
-    # Import build_models from the same Python package.
     from .train import build_models
 
     existing_models = build_models()
 
-    selected_models = [
-        "Logistic Regression",
-        "Random Forest",
-        "SVM",
-    ]
+    selected_models = {
+        "logistic_regression": "Logistic Regression",
+        "random_forest": "Random Forest",
+        "svm": "SVM",
+    }
 
     classifiers = {}
 
-    for model_name in selected_models:
-        pipeline = existing_models[model_name]
+    for model_key, display_name in selected_models.items():
+        pipeline = existing_models[model_key]
 
-        classifiers[model_name] = clone(
+        classifiers[display_name] = clone(
             pipeline.named_steps["classifier"]
         )
 
@@ -230,6 +239,7 @@ def evaluate_experiment():
         n_repeats=N_REPEATS,
         random_state=RANDOM_STATE,
     )
+    splits = list(cv.split(X, y))
 
     fold_results = []
 
@@ -253,7 +263,7 @@ def evaluate_experiment():
             print(f"\nEvaluating: {model_name}")
 
             for fold_number, (train_idx, test_idx) in enumerate(
-                cv.split(X, y),
+                splits,
                 start=1,
             ):
                 evaluation_number += 1
@@ -287,6 +297,12 @@ def evaluate_experiment():
                             y_test, predictions,
                             zero_division=0,
                         ),
+                        "specificity": recall_score(
+                            y_test,
+                            predictions,
+                            pos_label=0,
+                            zero_division=0,
+                        ),
                         "f1": f1_score(
                             y_test, predictions,
                             zero_division=0,
@@ -317,6 +333,7 @@ def summarize_results(results):
     metrics = [
         "accuracy",
         "recall",
+        "specificity",
         "precision",
         "f1",
         "balanced_accuracy",

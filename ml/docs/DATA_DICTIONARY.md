@@ -46,3 +46,15 @@ The original num column is retained.
 - Zero resting blood pressure in VA is treated as missing.
 - site is retained for analysis, not used as a predictive feature.
 - The dataset is for educational ML research, not clinical diagnosis.
+
+
+### Missing Measurement Values
+
+`chol` and `trestbps` are continuous measurement features.
+
+Zero values in these two columns are treated as missing values
+during dataset preparation because they are physiologically
+invalid measurements.
+
+Zero values in categorical features are retained where they
+represent valid categories.

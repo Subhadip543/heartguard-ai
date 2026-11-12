@@ -1,4 +1,3 @@
-
 import csv
 from pathlib import Path
 
@@ -22,6 +21,9 @@ COLUMNS = [
 ]
 
 OUTPUT_COLUMNS = COLUMNS + ["site", "target"]
+
+# Continuous measurements where zero is physiologically invalid.
+ZERO_AS_MISSING_COLUMNS = ["chol", "trestbps"]
 
 
 def load_records():
@@ -52,9 +54,29 @@ def load_records():
     return records
 
 
+def count_zero_measurements(records):
+    counts = {
+        column: 0
+        for column in ZERO_AS_MISSING_COLUMNS
+    }
+
+    for record in records:
+        for column in ZERO_AS_MISSING_COLUMNS:
+            value = record[column].strip()
+
+            if value == "?":
+                continue
+
+            if float(value) == 0:
+                counts[column] += 1
+
+    return counts
+
+
 def normalize_missing_values(record):
     cleaned = record.copy()
 
+    # Normalize source missing markers.
     for column in COLUMNS:
         value = cleaned[column].strip()
 
@@ -63,12 +85,12 @@ def normalize_missing_values(record):
         else:
             cleaned[column] = value
 
-    # Confirmed invalid measurement values in these source files.
-    if cleaned["chol"] in ("0", "0.0"):
-        cleaned["chol"] = ""
+    # Convert physiologically invalid zero measurements to missing.
+    for column in ZERO_AS_MISSING_COLUMNS:
+        value = cleaned[column]
 
-    if cleaned["trestbps"] in ("0", "0.0"):
-        cleaned["trestbps"] = ""
+        if value != "" and float(value) == 0:
+            cleaned[column] = ""
 
     return cleaned
 
@@ -85,7 +107,10 @@ def save_csv(path, records, fieldnames):
 def main():
     records = load_records()
 
-    # Interim dataset: preserve measurement values and all records.
+    zero_counts = count_zero_measurements(records)
+
+    # Interim dataset: preserve original measurement values.
+    # Only convert the source missing marker "?" to an empty field.
     interim_records = []
 
     for record in records:
@@ -127,15 +152,36 @@ def main():
     cleaned_path = PROCESSED_DIR / "heart_disease_918_cleaned.csv"
     save_csv(cleaned_path, cleaned_records, OUTPUT_COLUMNS)
 
+    # Validate dataset preparation.
+    if len(records) != 920:
+        raise ValueError(f"Expected 920 source records, got {len(records)}")
+
+    if duplicate_count != 2:
+        raise ValueError(
+            f"Expected 2 duplicate records removed, got {duplicate_count}"
+        )
+
+    if len(cleaned_records) != 918:
+        raise ValueError(
+            f"Expected 918 cleaned records, got {len(cleaned_records)}"
+        )
+
     print("\nDATASET PREPARATION COMPLETE")
-    print("-" * 40)
+    print("-" * 45)
+
     print(f"Original records: {len(records)}")
     print(f"Duplicate records removed: {duplicate_count}")
     print(f"Cleaned records: {len(cleaned_records)}")
+
+    print("\nZERO MEASUREMENTS CONVERTED TO MISSING")
+    for column, count in zero_counts.items():
+        print(f"{column}: {count}")
+
+    print("\nOUTPUT FILES")
     print(f"Interim file: {interim_path}")
     print(f"Cleaned file: {cleaned_path}")
 
-    print("\nBinary target distribution:")
+    print("\nBINARY TARGET DISTRIBUTION")
 
     for target in (0, 1):
         count = sum(
@@ -144,7 +190,7 @@ def main():
         )
         print(f"Target {target}: {count}")
 
-    print("\nRecords by site:")
+    print("\nRECORDS BY SITE")
 
     for site in FILES:
         count = sum(
