@@ -19,6 +19,29 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
 
+    # Environment
+    ENVIRONMENT: str = "development"
+
+    # AI / Gemini configuration
+    GEMINI_API_KEY: str | None = None
+    GOOGLE_API_KEY: str | None = None
+    GEMINI_MODEL: str = "gemini-1.5-flash"
+
+    # Password reset configuration
+    PASSWORD_RESET_TOKEN_EXPIRE_MINUTES: int = 15
+
+    # SMTP / Email configuration (optional)
+    SMTP_HOST: str | None = None
+    SMTP_PORT: int = 587
+    SMTP_USER: str | None = None
+    SMTP_PASSWORD: str | None = None
+    SMTP_FROM_EMAIL: str = "noreply@heartguard.ai"
+    SMTP_TLS: bool = True
+
+    @property
+    def effective_gemini_api_key(self) -> str | None:
+        return self.GEMINI_API_KEY or self.GOOGLE_API_KEY
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",

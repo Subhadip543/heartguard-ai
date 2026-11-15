@@ -1,117 +1,247 @@
 
-/* ==================================
-   HEARTCARE THEME VARIABLES
-================================== */
+/* =========================================
+   HEARTCARE - GLOBAL THEME SYSTEM
+========================================= */
 
-:root {
+/* LIGHT THEME */
+:root,
+[data-theme="light"] {
   color-scheme: light;
 
-  --page-bg: #f3f8fa;
-  --card-bg: #ffffff;
-  --text-main: #263746;
-  --text-muted: #64748b;
-  --border-color: #e2e8f0;
+  --primary: #087f8c;
+  --primary-dark: #075b66;
+  --secondary: #13b8a6;
+  --accent: #68e0d0;
+
+  --bg: #f7fbfb;
+  --bg-secondary: #eef8f7;
+  --bg-tertiary: #e4f3f1;
+
+  --surface: #ffffff;
+  --surface-hover: #f0faf8;
+
+  --text: #12343b;
+  --text-secondary: #526a70;
+  --text-muted: #819397;
+
+  --border: #dcebe8;
   --input-bg: #ffffff;
-  --soft-bg: #f8fafc;
-  --accent-color: #087f8c;
-  --shadow-color: rgba(15, 50, 70, 0.08);
+  --input-border: #d5e5e2;
+
+  --navbar-bg: rgba(255, 255, 255, 0.94);
+  --footer-bg: #102f35;
+  --footer-text: #ffffff;
+
+  --shadow-sm: 0 4px 15px rgba(7, 91, 102, 0.06);
+  --shadow: 0 10px 30px rgba(7, 91, 102, 0.09);
+  --shadow-lg: 0 20px 50px rgba(7, 91, 102, 0.13);
+
+  --overlay: rgba(10, 35, 40, 0.45);
 }
 
-/* ==================================
-   DARK MODE COLORS
-================================== */
-
-:root[data-theme="dark"] {
+/* DARK THEME */
+[data-theme="dark"] {
   color-scheme: dark;
 
-  --page-bg: #101b2a;
-  --card-bg: #1b2a3b;
-  --text-main: #e5edf5;
-  --text-muted: #a9b8c8;
-  --border-color: #34465a;
-  --input-bg: #142235;
-  --soft-bg: #223449;
-  --accent-color: #25a6ad;
-  --shadow-color: rgba(0, 0, 0, 0.2);
+  --primary: #48c9c1;
+  --primary-dark: #8be5dc;
+  --secondary: #27c7b5;
+  --accent: #8be5dc;
+
+  --bg: #101b22;
+  --bg-secondary: #15252d;
+  --bg-tertiary: #1b3039;
+
+  --surface: #192a33;
+  --surface-hover: #223943;
+
+  --text: #edf8f7;
+  --text-secondary: #b3c9c9;
+  --text-muted: #8da7a9;
+
+  --border: #2d454d;
+  --input-bg: #192a33;
+  --input-border: #38535b;
+
+  --navbar-bg: rgba(16, 27, 34, 0.96);
+  --footer-bg: #091419;
+  --footer-text: #edf8f7;
+
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.15);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.32);
+
+  --overlay: rgba(0, 0, 0, 0.65);
 }
 
-/* ==================================
-   SMOOTH THEME TRANSITION
-================================== */
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
 
 html {
-  transition: background-color 0.35s ease;
+  scroll-behavior: smooth;
 }
 
-body,
-.emergency-page,
-.home-page,
-.login-page,
-.registration-page,
-.assessment-page,
-.dashboard-page,
-.patient-dashboard,
-.dashboard-container {
-  background-color: var(--page-bg);
-  color: var(--text-main);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+
+  background: var(--bg);
+  color: var(--text);
+
   transition:
-    background-color 0.35s ease,
-    color 0.35s ease;
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-/* Cards and content sections */
-
-.emergency-section,
-.hospital-section,
-.contacts-section,
-.emergency-card,
-.hospital-result-card,
-.assessment-card,
-.dashboard-card,
-.stat-card,
-.feature-card,
-.service-card,
-.contact-card {
-  background-color: var(--card-bg);
-  color: var(--text-main);
-  border-color: var(--border-color);
-  box-shadow: 0 5px 22px var(--shadow-color);
-  transition:
-    background-color 0.35s ease,
-    color 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-/* Headings and paragraph text */
+/* =========================================
+   GLOBAL ELEMENTS
+========================================= */
 
 h1,
 h2,
 h3,
 h4,
-label {
-  color: var(--text-main);
-  transition: color 0.35s ease;
+h5,
+h6 {
+  transition: color 0.3s ease;
 }
 
 p,
-.text-muted {
-  color: var(--text-muted);
-  transition: color 0.35s ease;
+span,
+label {
+  transition: color 0.3s ease;
 }
 
-/* Form fields */
+a {
+  color: inherit;
+  transition: color 0.25s ease;
+}
 
+button,
 input,
 textarea,
 select {
-  background-color: var(--input-bg);
-  color: var(--text-main);
-  border: 1px solid var(--border-color);
+  font: inherit;
+}
+
+/* =========================================
+   COMMON PAGE BACKGROUNDS
+========================================= */
+
+.home-page,
+.login-page,
+.registration-page,
+.dashboard-page,
+.assessment-page,
+.history-page,
+.profile-page,
+.emergency-page,
+.health-awareness-page,
+.heart-resources-page,
+.heart-assistant-page {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card,
+.dashboard-card,
+.feature-card,
+.resource-card,
+.doctor-card,
+.assessment-card,
+.history-card,
+.profile-card,
+.awareness-card {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+
   transition:
-    background-color 0.35s ease,
-    color 0.35s ease,
-    border-color 0.35s ease;
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover,
+.dashboard-card:hover,
+.feature-card:hover,
+.resource-card:hover {
+  background: var(--surface-hover);
+  box-shadow: var(--shadow);
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar,
+.dashboard-navbar,
+.top-navbar,
+header {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apply only to common navbar elements */
+.navbar {
+  background: var(--navbar-bg);
+  color: var(--text);
+  border-color: var(--border);
+  backdrop-filter: blur(14px);
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+  background: var(--surface);
+  color: var(--text);
+  border-right: 1px solid var(--border);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar a {
+  color: var(--text-secondary);
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: var(--surface-hover);
+  color: var(--primary);
+}
+
+/* =========================================
+   FORMS
+========================================= */
+
+input,
+select,
+textarea {
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--input-border);
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(19, 184, 166, 0.13);
 }
 
 input::placeholder,
@@ -119,101 +249,190 @@ textarea::placeholder {
   color: var(--text-muted);
 }
 
-/* Soft backgrounds */
-
-.empty-hospitals,
-.contact-note {
-  background-color: var(--soft-bg);
-  color: var(--text-main);
+select option {
+  background: var(--surface);
+  color: var(--text);
 }
 
-/* ==================================
-   THEME TOGGLE BUTTON
-================================== */
+/* =========================================
+   BUTTONS
+========================================= */
 
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  padding: 10px 16px;
-  border: 1px solid var(--border-color);
-  border-radius: 30px;
-  background: var(--card-bg);
-  color: var(--text-main);
-  font-size: 14px;
-  font-weight: 650;
-  cursor: pointer;
-  box-shadow: 0 3px 12px var(--shadow-color);
+button {
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.25s ease,
-    box-shadow 0.3s ease;
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.theme-toggle:hover {
+.primary-btn,
+.submit-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+}
+
+.primary-btn:hover,
+.submit-btn:hover {
+  background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px var(--shadow-color);
 }
 
-.theme-toggle:active {
-  transform: scale(0.96);
+/* =========================================
+   TABLES
+========================================= */
+
+table {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
 }
 
-.theme-toggle-icon {
+th {
+  background: var(--bg-secondary);
+  color: var(--text);
+}
+
+td {
+  color: var(--text-secondary);
+  border-color: var(--border);
+}
+
+/* =========================================
+   MODALS AND POPUPS
+========================================= */
+
+.modal,
+.popup,
+.dialog {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-overlay,
+.popup-overlay {
+  background: var(--overlay);
+}
+
+/* =========================================
+   THEME TOGGLE BUTTON
+========================================= */
+
+.global-theme-toggle {
+  position: fixed;
+  right: 88px;
+  bottom: 25px;
+  z-index: 9990;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.4s ease;
+  gap: 10px;
+
+  padding: 13px 19px;
+
+  border: 1px solid var(--border);
+  border-radius: 50px;
+
+  background: var(--surface);
+  color: var(--text);
+
+  box-shadow: var(--shadow-lg);
+
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+
+  animation: themeButtonEnter 0.6s ease both;
+
+  transition: all 0.3s ease;
 }
 
-.theme-toggle:hover .theme-toggle-icon {
-  transform: rotate(25deg);
+.global-theme-toggle:hover {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(19, 184, 166, 0.25);
 }
 
-/* ==================================
-   DARK MODE EMERGENCY PAGE
-================================== */
-
-:root[data-theme="dark"] .emergency-header {
-  background: linear-gradient(135deg, #123b4b, #102d49);
+.global-theme-toggle:active {
+  transform: scale(0.94);
 }
 
-:root[data-theme="dark"] .medical-warning {
-  background: #39291e;
-  border-color: #854d0e;
+.global-theme-toggle svg {
+  flex-shrink: 0;
 }
 
-:root[data-theme="dark"] .medical-warning h3,
-:root[data-theme="dark"] .medical-warning p {
-  color: #fed7aa;
+@keyframes themeButtonEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-:root[data-theme="dark"] .emergency-error {
-  background: #3b2025;
-  border-color: #7f303b;
-  color: #fecaca;
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 9px;
 }
 
-:root[data-theme="dark"] .hospital-result-card:hover {
-  background: #263b4e;
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
 }
 
-:root[data-theme="dark"] .location-button {
-  background: #203b50;
-  color: #bae6fd;
-  border-color: #36566f;
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 20px;
 }
 
-/* Respect reduced-motion preferences */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .global-theme-toggle {
+    right: 78px;
+    bottom: 20px;
+    padding: 11px 15px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
-    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

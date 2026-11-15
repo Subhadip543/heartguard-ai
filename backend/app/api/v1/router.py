@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from app.api.v1.endpoints import (
+    ai,
     assessments,
     auth,
     health,
@@ -16,3 +17,4 @@ api_router.include_router(predict.router)
 api_router.include_router(auth.router)
 api_router.include_router(patients.router)
 api_router.include_router(assessments.router)
+api_router.include_router(ai.router)

@@ -1,6 +1,11 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// Theme and Settings imports
+import ThemeProvider from "./context/ThemeProvider";
+import ThemeToggle from "./context/ThemeToggle";
+import SettingsPanel from "./SettingsPanel";
+
 // Import all pages
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
@@ -13,79 +18,96 @@ import AssessmentResult from "./Pages/AssessmentResult";
 import Emergency from "./Emergency";
 import HealthAwareness from "./Pages/HealthAwareness";
 import GeminiTest from "./GeminiTest";
-// Import doctor and appointment pages
+
+// Doctor and healthcare tools
 import DoctorDashboard from "./DoctorDashboard";
 import FindDoctors from "./FindDoctors.jsx";
+import HeartAssistant from "./HeartAssistant";
+import HeartResources from "./HeartResources";
+import ForgotPassword from "./Pages/ForgotPassword";
+import ResetPassword from "./Pages/ResetPassword";
+import LiveHealthMonitoring from "./Pages/LiveHealthMonitoring";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
+      <ThemeProvider>
+        {/* Global Theme Toggle & Settings Drawer */}
+        <ThemeToggle />
+        <SettingsPanel />
 
-        {/* Home Page */}
-        <Route path="/" element={<Home />} />
+        <Routes>
+          {/* Home Page */}
+          <Route path="/" element={<Home />} />
 
-        {/* Authentication */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Registration />} />
+          {/* Authentication */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Registration />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
 
-        {/* Patient Pages */}
-        <Route path="/dashboard" element={<PDashboard />} />
-        <Route path="/assessment" element={<HeartAssessment />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/profile" element={<Profile />} />
+          {/* Patient Pages */}
+          <Route path="/dashboard" element={<PDashboard />} />
+          <Route path="/assessment" element={<HeartAssessment />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/profile" element={<Profile />} />
 
-        {/* Assessment Results */}
-        <Route path="/result" element={<AssessmentResult />} />
+          {/* Assessment Results */}
+          <Route path="/result" element={<AssessmentResult />} />
 
-        {/* Emergency Assistance */}
-        <Route path="/emergency" element={<Emergency />} />
+          {/* Emergency Assistance */}
+          <Route path="/emergency" element={<Emergency />} />
 
-        {/* Health Awareness */}
-        <Route
-          path="/health-awareness"
-          element={<HealthAwareness />}
-        />
+          {/* Health Awareness & Education */}
+          <Route
+            path="/health-awareness"
+            element={<HealthAwareness />}
+          />
 
-        {/* Gemini API Test */}
-        <Route path="/gemini-test" element={<GeminiTest />} />
+          {/* Healthcare Lifeline & Monitoring */}
+          <Route
+            path="/heart-resources"
+            element={<HeartResources />}
+          />
+          <Route
+            path="/live-health"
+            element={<LiveHealthMonitoring />}
+          />
 
-        {/* Doctor Dashboard */}
-        <Route
-          path="/doctor-dashboard"
-          element={<DoctorDashboard />}
-        />
+          {/* AI Heart Assistant */}
+          <Route
+            path="/heart-assistant"
+            element={<HeartAssistant />}
+          />
 
-        {/* Find Doctors and Book Appointment */}
-        <Route
-          path="/find-doctors"
-          element={<FindDoctors />}
-        />
+          {/* Doctor Dashboard */}
+          <Route
+            path="/doctor-dashboard"
+            element={<DoctorDashboard />}
+          />
 
-        {/* Forgot Password */}
-        <Route
-          path="/forgot-password"
-          element={
-            <div style={{ padding: "40px", textAlign: "center" }}>
-              <h2>Forgot Password</h2>
-              <p>Forgot password page will be developed soon.</p>
-            </div>
-          }
-        />
+          {/* Find Doctors and Book Appointment */}
+          <Route
+            path="/find-doctors"
+            element={<FindDoctors />}
+          />
 
-        {/* Page Not Found */}
-        <Route
-          path="*"
-          element={
-            <div style={{ padding: "50px", textAlign: "center" }}>
-              <h1>404</h1>
-              <h2>Page Not Found</h2>
-              <a href="/">Go to Home</a>
-            </div>
-          }
-        />
+          {/* Gemini API Test */}
+          <Route path="/gemini-test" element={<GeminiTest />} />
 
-      </Routes>
+          {/* Page Not Found */}
+          <Route
+            path="*"
+            element={
+              <div style={{ padding: "50px", textAlign: "center" }}>
+                <h1>404</h1>
+                <h2>Page Not Found</h2>
+                <a href="/">Go to Home</a>
+              </div>
+            }
+          />
+        </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }

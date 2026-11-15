@@ -1,0 +1,636 @@
+
+/* =========================================
+   HEARTCARE - INTERACTIVE HEART EXPLORER
+   Anatomical Image Demonstration
+========================================= */
+
+.heart-explorer-section {
+  width: 100%;
+  padding: 65px 5%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  overflow: hidden;
+}
+
+.heart-explorer-section * {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.heart-explorer-heading {
+  max-width: 850px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.heart-explorer-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.heart-explorer-heading h2 {
+  font-size: clamp(27px, 4vw, 40px);
+  font-weight: 800;
+  margin: 17px 0 12px;
+  color: var(--text);
+}
+
+.heart-explorer-heading p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.heart-explorer-layout {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* =========================================
+   HEART VISUAL CARD
+========================================= */
+
+.heart-visual-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.heart-visual-top {
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.heart-visual-top > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.heart-live-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #16c784;
+  box-shadow: 0 0 10px #16c784;
+  animation: heartLivePulse 1.5s infinite;
+}
+
+.heart-model-tag {
+  padding: 7px 11px;
+  border-radius: 20px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* =========================================
+   IMAGE STAGE
+========================================= */
+
+.heart-svg-stage {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #071722;
+}
+
+/* Uploaded heart image */
+
+.heart-demo-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  object-position: center;
+  animation: heartImageAppear 0.9s ease both;
+}
+
+/* Background glow */
+
+.heart-glow {
+  position: absolute;
+  z-index: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  filter: blur(75px);
+  opacity: 0.17;
+  pointer-events: none;
+}
+
+.heart-glow-one {
+  background: #ff3d55;
+  top: 15%;
+  left: 15%;
+}
+
+.heart-glow-two {
+  background: #168dff;
+  bottom: 10%;
+  right: 15%;
+}
+
+/* =========================================
+   HEARTBEAT CAPTION
+========================================= */
+
+.heart-beat-caption {
+  position: absolute;
+  z-index: 2;
+  left: 15px;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  background: rgba(3, 18, 29, 0.82);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.heart-beat-wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff697b;
+  animation: heartIconPulse 1s infinite;
+}
+
+/* =========================================
+   IMAGE LEGEND
+========================================= */
+
+.heart-visual-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+.heart-visual-footer span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.heart-visual-footer i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-blue {
+  background: #38bdf8;
+}
+
+.legend-red {
+  background: #fb7185;
+}
+
+.legend-gold {
+  background: #fbbf24;
+}
+
+/* =========================================
+   INFORMATION CARD
+========================================= */
+
+.heart-information-card {
+  min-width: 0;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.heart-info-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  margin-bottom: 22px;
+}
+
+.heart-info-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+/* =========================================
+   SELECTED REGION
+========================================= */
+
+.heart-selected-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 30px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  margin-bottom: 15px;
+}
+
+.heart-selected-indicator span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.heart-information-card > h3 {
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 800;
+  margin: 0 0 5px;
+}
+
+.heart-info-subtitle {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin: 0;
+}
+
+.heart-info-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin: 20px 0;
+}
+
+/* =========================================
+   INFORMATION BLOCKS
+========================================= */
+
+.heart-info-block {
+  margin-bottom: 16px;
+}
+
+.heart-info-block h4 {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+  margin: 0 0 7px;
+}
+
+.heart-info-block p {
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* =========================================
+   DID YOU KNOW
+========================================= */
+
+.heart-fact-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--bg);
+  color: var(--primary);
+}
+
+.heart-fact-box > svg {
+  flex-shrink: 0;
+}
+
+.heart-fact-box strong {
+  display: block;
+  color: var(--text);
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.heart-fact-box p {
+  color: var(--text-secondary);
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================
+   REGION PICKER
+========================================= */
+
+.heart-region-picker {
+  margin-top: 23px;
+}
+
+.heart-region-picker h4 {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.heart-region-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.heart-region-buttons button {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.heart-region-buttons button svg {
+  flex-shrink: 0;
+}
+
+.heart-region-buttons button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.heart-region-buttons button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* =========================================
+   RESET BUTTON
+========================================= */
+
+.heart-reset-button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.heart-reset-button:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* =========================================
+   EDUCATIONAL NOTE
+========================================= */
+
+.heart-explorer-note {
+  max-width: 1250px;
+  margin: 22px auto 0;
+  padding: 15px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text-secondary);
+}
+
+.heart-explorer-note svg {
+  flex-shrink: 0;
+  color: var(--primary);
+  margin-top: 2px;
+}
+
+.heart-explorer-note p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes heartLivePulse {
+  0%, 100% {
+    box-shadow: 0 0 5px #16c784;
+    opacity: 1;
+  }
+
+  50% {
+    box-shadow: 0 0 14px #16c784;
+    opacity: 0.55;
+  }
+}
+
+@keyframes heartIconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes heartImageAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .heart-explorer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .heart-svg-stage {
+    min-height: 320px;
+  }
+
+  .heart-information-card {
+    min-height: auto;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .heart-explorer-section {
+    padding: 45px 4%;
+  }
+
+  .heart-explorer-heading h2 {
+    font-size: 27px;
+  }
+
+  .heart-explorer-heading p {
+    font-size: 13px;
+  }
+
+  .heart-visual-top {
+    padding: 15px;
+  }
+
+  .heart-svg-stage {
+    min-height: 240px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .heart-information-card {
+    padding: 19px;
+  }
+
+  .heart-information-card > h3 {
+    font-size: 22px;
+  }
+
+  .heart-region-buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heart-visual-footer {
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .heart-beat-caption {
+    left: 8px;
+    bottom: 8px;
+    font-size: 9px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .heart-region-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .heart-svg-stage {
+    min-height: 210px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.heart-region-buttons button:focus-visible,
+.heart-reset-button:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heart-demo-image,
+  .heart-live-dot,
+  .heart-beat-wave {
+    animation: none !important;
+  }
+
+  .heart-region-buttons button,
+  .heart-reset-button {
+    transition: none;
+  }
+}

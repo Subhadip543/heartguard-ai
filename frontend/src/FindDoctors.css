@@ -6,8 +6,8 @@
 
 .find-doctors-page {
   min-height: 100vh;
-  background: #f4f8fb;
-  color: #1e293b;
+  background: var(--bg,#f5faf9);
+  color:var(--text,#1e293b);
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
@@ -620,4 +620,176 @@
     animation: none !important;
     transition: none !important;
   }
+}
+/* =====================================
+   HEARTCARE - GLOBAL THEME SUPPORT
+===================================== */
+
+/* PAGE AND CARDS */
+
+.find-doctors-page {
+  background: var(--bg, #f5faf9);
+  color: var(--text, #1e293b);
+}
+
+.find-doctors-header,
+.doctor-search-panel,
+.doctor-card,
+.no-doctors-found,
+.booking-modal {
+  background: var(--surface, #ffffff);
+  color: var(--text, #1e293b);
+  border-color: var(--border, #dce8e6);
+}
+
+/* HEADINGS */
+
+.doctors-intro h1,
+.doctors-results-heading h2,
+.doctor-card h3,
+.no-doctors-found h3,
+.booking-modal h2 {
+  color: var(--text, #1e293b);
+}
+
+/* SECONDARY TEXT */
+
+.find-doctors-brand p,
+.doctors-intro p,
+.doctors-results-heading p,
+.doctor-details div,
+.booking-doctor-specialty,
+.booking-confirmation p {
+  color: var(--text-secondary, #64748b);
+}
+
+/* SEARCH */
+
+.doctor-search-box,
+.doctor-filter-box select,
+.booking-modal form input {
+  background: var(--surface, #ffffff);
+  color: var(--text, #1e293b);
+  border-color: var(--border, #dce8e6);
+}
+
+.doctor-search-box input {
+  color: var(--text, #1e293b);
+}
+
+.doctor-search-box input::placeholder {
+  color: var(--text-muted, #94a3b8);
+}
+
+.doctor-filter-box label,
+.booking-modal form label {
+  color: var(--text, #475569);
+}
+
+/* DIVIDERS */
+
+.doctor-details,
+.booking-fee {
+  border-color: var(--border, #dce8e6);
+}
+
+/* MODAL CLOSE BUTTON */
+
+.booking-close-btn {
+  background: var(--bg-secondary, #f1f5f9);
+  color: var(--text, #475569);
+}
+
+/* DOCTOR AVATAR */
+
+.doctor-avatar,
+.find-doctors-brand-icon,
+.booking-modal-icon {
+  background: var(--bg-secondary, #ccfbf1);
+  color: var(--primary, #0f766e);
+}
+
+/* LINKS */
+
+.back-dashboard-link {
+  background: var(--bg-secondary, #f0fdfa);
+  color: var(--primary, #0f766e);
+  border-color: var(--border, #dce8e6);
+}
+
+/* DARK THEME */
+
+html[data-theme="dark"] .find-doctors-page {
+  background: #101b22;
+  color: #e5eeee;
+}
+
+html[data-theme="dark"] .find-doctors-header,
+html[data-theme="dark"] .doctor-search-panel,
+html[data-theme="dark"] .doctor-card,
+html[data-theme="dark"] .no-doctors-found,
+html[data-theme="dark"] .booking-modal {
+  background: #172630;
+  border-color: #2b414b;
+}
+
+html[data-theme="dark"] .doctors-intro h1,
+html[data-theme="dark"] .doctors-results-heading h2,
+html[data-theme="dark"] .doctor-card h3,
+html[data-theme="dark"] .no-doctors-found h3,
+html[data-theme="dark"] .booking-modal h2,
+html[data-theme="dark"] .booking-modal form label {
+  color: #e5eeee;
+}
+
+html[data-theme="dark"] .find-doctors-brand p,
+html[data-theme="dark"] .doctors-intro p,
+html[data-theme="dark"] .doctors-results-heading p,
+html[data-theme="dark"] .doctor-details div,
+html[data-theme="dark"] .booking-doctor-specialty,
+html[data-theme="dark"] .booking-confirmation p {
+  color: #a8bac1;
+}
+
+html[data-theme="dark"] .doctor-search-box,
+html[data-theme="dark"] .doctor-filter-box select,
+html[data-theme="dark"] .booking-modal form input {
+  background: #101b22;
+  color: #e5eeee;
+  border-color: #344b56;
+}
+
+html[data-theme="dark"] .doctor-search-box input {
+  color: #e5eeee;
+}
+
+html[data-theme="dark"] .doctor-search-box input::placeholder {
+  color: #8da1aa;
+}
+
+html[data-theme="dark"] .doctor-details,
+html[data-theme="dark"] .booking-fee {
+  border-color: #2b414b;
+}
+
+html[data-theme="dark"] .booking-close-btn {
+  background: #263943;
+  color: #e5eeee;
+}
+
+html[data-theme="dark"] .doctors-demo-notice,
+html[data-theme="dark"] .booking-confirmation .demo-booking-warning {
+  background: #332d1d;
+  border-color: #66552c;
+  color: #f5d58a;
+}
+
+html[data-theme="dark"] .doctor-rating {
+  background: #332d1d;
+  color: #f5d58a;
+}
+
+html[data-theme="dark"] .booking-success-icon {
+  background: #173b30;
+  color: #86efac;
 }

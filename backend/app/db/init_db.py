@@ -3,7 +3,7 @@ from app.db.base import Base
 from app.db.session import engine
 
 # Import all models before create_all.
-from app.models import Assessment, Patient  # noqa: F401
+from app.models import Assessment, Patient, PasswordResetToken  # noqa: F401
 
 
 def init_db():

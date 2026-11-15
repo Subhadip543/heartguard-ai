@@ -1,5 +1,7 @@
 
 from datetime import datetime, timedelta, timezone
+import hashlib
+import secrets
 
 import jwt
 from pwdlib import PasswordHash
@@ -47,3 +49,17 @@ def decode_access_token(token: str) -> dict:
         settings.JWT_SECRET_KEY,
         algorithms=[settings.JWT_ALGORITHM],
     )
+
+
+def generate_reset_token() -> str:
+    """
+    Generate a cryptographically secure random URL-safe token.
+    """
+    return secrets.token_urlsafe(32)
+
+
+def hash_reset_token(token: str) -> str:
+    """
+    Generate SHA-256 hash of a reset token for secure storage.
+    """
+    return hashlib.sha256(token.encode("utf-8")).hexdigest()

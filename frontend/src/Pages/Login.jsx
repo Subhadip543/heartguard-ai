@@ -118,7 +118,10 @@ function Login() {
           </div>
 
           <div className="login-options">
-            <span></span>
+            <label className="remember-me">
+              <input type="checkbox" />
+              Remember Me
+            </label>
 
             <Link to="/forgot-password">
               Forgot Password?

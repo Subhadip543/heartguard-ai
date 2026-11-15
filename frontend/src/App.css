@@ -1,6 +1,11 @@
 
 /* =====================================
    HEARTCARE - APP GLOBAL STYLES
+   Supports Light and Dark Mode
+===================================== */
+
+/* =====================================
+   GLOBAL RESET
 ===================================== */
 
 * {
@@ -9,10 +14,49 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  min-height: 100vh;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f8fb;
-  color: #1e293b;
+
+  background: var(--bg, #f4f8fb);
+  color: var(--text, #1e293b);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+/* =====================================
+   GLOBAL APP BACKGROUND
+===================================== */
+
+#root {
+  min-height: 100vh;
+  background: var(--bg, #f4f8fb);
+  color: var(--text, #1e293b);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* =====================================
@@ -21,67 +65,153 @@ body {
 
 .not-found-page {
   min-height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 25px;
   text-align: center;
-  background: linear-gradient(135deg, #f0fdfa, #eff6ff);
+
+  background: linear-gradient(
+    135deg,
+    var(--bg-secondary, #f0fdfa),
+    var(--bg-tertiary, #eff6ff)
+  );
+
+  transition: background 0.3s ease;
 }
 
 .not-found-content {
+  width: 100%;
   max-width: 500px;
+
   padding: 45px 35px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+
+  background: var(--surface, #ffffff);
+  color: var(--text, #1e293b);
+
+  border: 1px solid var(--border, #e2e8f0);
   border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+
+  box-shadow: var(--shadow-lg, 0 15px 40px rgba(15, 23, 42, 0.08));
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  animation: notFoundEnter 0.6s ease;
 }
 
 .not-found-content h1 {
-  color: #0f766e;
+  color: var(--primary, #0f766e);
+
   font-size: 85px;
   font-weight: 900;
+
   margin-bottom: 5px;
 }
 
 .not-found-content h2 {
-  color: #0f172a;
+  color: var(--text, #0f172a);
+
   font-size: 25px;
   margin-bottom: 12px;
 }
 
 .not-found-content p {
-  color: #64748b;
+  color: var(--text-secondary, #64748b);
+
   font-size: 14px;
   line-height: 1.7;
+
   margin-bottom: 25px;
 }
 
 .not-found-content a {
   display: inline-block;
+
   padding: 12px 23px;
-  background: #0f766e;
+
+  background: var(--primary, #0f766e);
   color: #ffffff;
+
   text-decoration: none;
+
   border-radius: 8px;
+
   font-size: 14px;
   font-weight: 700;
-  transition: 0.3s ease;
+
+  transition: all 0.3s ease;
 }
 
 .not-found-content a:hover {
-  background: #115e59;
-  transform: translateY(-2px);
+  background: var(--primary-dark, #115e59);
+  transform: translateY(-3px);
+
+  box-shadow: var(--shadow-md, 0 8px 25px rgba(10, 75, 80, 0.09));
+}
+
+/* =====================================
+   NOT FOUND ANIMATION
+===================================== */
+
+@keyframes notFoundEnter {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =====================================
+   GLOBAL THEME TRANSITIONS
+===================================== */
+
+body,
+#root,
+.not-found-page,
+.not-found-content {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* =====================================
    RESPONSIVE DESIGN
 ===================================== */
 
+@media (max-width: 768px) {
+  .not-found-content {
+    max-width: 450px;
+    padding: 40px 28px;
+  }
+
+  .not-found-content h1 {
+    font-size: 75px;
+  }
+
+  .not-found-content h2 {
+    font-size: 23px;
+  }
+}
+
 @media (max-width: 480px) {
+  .not-found-page {
+    padding: 18px;
+  }
+
   .not-found-content {
     padding: 35px 22px;
+    border-radius: 15px;
   }
 
   .not-found-content h1 {
@@ -90,5 +220,24 @@ body {
 
   .not-found-content h2 {
     font-size: 21px;
+  }
+
+  .not-found-content p {
+    font-size: 13px;
+  }
+}
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

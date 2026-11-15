@@ -150,6 +150,9 @@ function PDashboard() {
 
           <Link to="/assessment">Heart Assessment</Link>
           <Link to="/find-doctors">Find Doctors</Link>
+          <Link to="/heart-assistant">AI Heart Assistant</Link>
+          <Link to="/heart-resources">Healthcare Lifeline</Link>
+          <Link to="/live-health">Live Health Monitoring</Link>
           <Link to="/history">Assessment History</Link>
           <Link to="/profile">My Profile</Link>
           <Link to="/emergency">Emergency Help</Link>
@@ -233,6 +236,33 @@ function PDashboard() {
               <Link to="/find-doctors" className="find-doctors-btn">
                 Explore Doctors →
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Health Tools Section */}
+        <section className="find-doctors-card">
+          <div className="find-doctors-content">
+            <div className="find-doctors-icon">🏥</div>
+
+            <div className="find-doctors-details">
+              <h2>Healthcare Lifeline & Monitoring</h2>
+
+              <p>
+                Find essential medicines, emergency injections, blood and oxygen resources across India, or explore simulated live health monitoring.
+              </p>
+
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginTop: "12px" }}>
+                <Link to="/heart-resources" className="find-doctors-btn">
+                  Explore Lifeline Resources →
+                </Link>
+                <Link to="/live-health" className="find-doctors-btn" style={{ background: "#087f8c" }}>
+                  Live Health Monitoring →
+                </Link>
+                <Link to="/heart-assistant" className="find-doctors-btn" style={{ background: "#2563eb" }}>
+                  HeartWise AI →
+                </Link>
+              </div>
             </div>
           </div>
         </section>
