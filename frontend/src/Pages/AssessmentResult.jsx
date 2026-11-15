@@ -24,10 +24,7 @@ const formatValue = (key, value) => {
   }
 
   const mappings = {
-    sex: {
-      0: "Female",
-      1: "Male",
-    },
+    sex: { 0: "Female", 1: "Male" },
     cp: {
       1: "Typical angina",
       2: "Atypical angina",
@@ -43,10 +40,7 @@ const formatValue = (key, value) => {
       1: "ST-T wave abnormality",
       2: "Left ventricular hypertrophy",
     },
-    exang: {
-      0: "No",
-      1: "Yes",
-    },
+    exang: { 0: "No", 1: "Yes" },
     slope: {
       1: "Upsloping",
       2: "Flat",
@@ -74,10 +68,22 @@ function AssessmentResult() {
   const patient = state.patient || {};
   const prediction = state.prediction || null;
 
+  const isAuthenticated = Boolean(
+    sessionStorage.getItem("heartcareToken")
+  );
+
+  const destination = isAuthenticated ? "/dashboard" : "/";
+
+  const destinationLabel = isAuthenticated
+    ? "Go to Dashboard"
+    : "Return to Home";
+
   const hasPrediction =
     prediction &&
     typeof prediction.prediction === "number" &&
-    typeof prediction.positive_probability === "number";
+    typeof prediction.positive_probability === "number" &&
+    prediction.positive_probability >= 0 &&
+    prediction.positive_probability <= 1;
 
   const isPositive =
     hasPrediction && prediction.prediction === 1;
@@ -90,17 +96,21 @@ function AssessmentResult() {
     navigate("/assessment");
   };
 
+  const handleDestination = () => {
+    navigate(destination);
+  };
+
   if (!hasPrediction) {
     return (
       <div className="result-page">
         <header className="result-header">
           <div className="result-header-content">
-            <Link to="/dashboard" className="result-logo">
+            <Link to="/" className="result-logo">
               HeartCare
             </Link>
 
-            <Link to="/dashboard" className="result-back-link">
-              Back to Dashboard
+            <Link to={destination} className="result-back-link">
+              {destinationLabel}
             </Link>
           </div>
         </header>
@@ -108,6 +118,7 @@ function AssessmentResult() {
         <main className="result-container">
           <section className="result-card">
             <h2>No Prediction Available</h2>
+
             <p>
               No prediction result was found. Please complete
               a new assessment to generate your report.
@@ -120,34 +131,46 @@ function AssessmentResult() {
             >
               Start Assessment
             </button>
+
+            <button
+              type="button"
+              className="result-secondary-btn"
+              onClick={handleDestination}
+            >
+              {destinationLabel}
+            </button>
           </section>
         </main>
       </div>
     );
   }
 
-  const probability =
-    (prediction.positive_probability * 100).toFixed(2);
+  const probability = (
+    prediction.positive_probability * 100
+  ).toFixed(2);
+
+  const probabilityWidth = Math.min(
+    100,
+    Math.max(0, prediction.positive_probability * 100)
+  );
 
   return (
     <div className="result-page">
       <header className="result-header">
         <div className="result-header-content">
-          <Link to="/dashboard" className="result-logo">
+          <Link to="/" className="result-logo">
             HeartCare
           </Link>
 
-          <Link to="/dashboard" className="result-back-link">
-            Back to Dashboard
+          <Link to={destination} className="result-back-link">
+            {destinationLabel}
           </Link>
         </div>
       </header>
 
       <main className="result-container">
         <section className="result-title-section">
-          <div className="result-title-icon">
-            ✓
-          </div>
+          <div className="result-title-icon">✓</div>
 
           <h1>Prediction Report</h1>
 
@@ -202,10 +225,7 @@ function AssessmentResult() {
             >
               <div
                 style={{
-                  width: `${Math.min(
-                    100,
-                    Math.max(0, prediction.positive_probability * 100)
-                  )}%`,
+                  width: `${probabilityWidth}%`,
                   height: "100%",
                   background: "#0d9488",
                   borderRadius: "20px",
@@ -232,6 +252,7 @@ function AssessmentResult() {
               return (
                 <div className="result-detail" key={field.key}>
                   <span>{field.label}</span>
+
                   <strong>
                     {value}
                     {field.unit && value !== "Not provided"
@@ -287,9 +308,9 @@ function AssessmentResult() {
           <button
             type="button"
             className="result-secondary-btn"
-            onClick={() => navigate("/dashboard")}
+            onClick={handleDestination}
           >
-            Go to Dashboard
+            {destinationLabel}
           </button>
         </section>
       </main>

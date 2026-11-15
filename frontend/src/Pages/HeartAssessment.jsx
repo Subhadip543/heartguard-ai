@@ -141,38 +141,75 @@ function HeartAssessment() {
       thal: getNumber("thal"),
     };
 
+    const token = sessionStorage.getItem("heartcareToken");
+
+    // Authenticated patients save their assessments.
+    // Guests receive predictions without database storage.
+    const endpoint = token
+      ? "/api/v1/assessments"
+      : "/api/v1/predict";
+
     try {
-      const response = await fetch("/api/v1/predict", {
+      const headers = {
+        "Content-Type": "application/json",
+      };
+
+      if (token) {
+        headers.Authorization = `Bearer ${token}`;
+      }
+
+      const response = await fetch(endpoint, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ patient }),
+        headers,
+        body: JSON.stringify({
+          patient,
+          threshold: 0.5,
+        }),
       });
 
-      const data = await response.json();
+      const data = await response.json().catch(() => ({}));
 
       if (!response.ok) {
+        if (response.status === 401 && token) {
+          sessionStorage.removeItem("heartcareToken");
+          sessionStorage.removeItem("heartcarePatient");
+
+          throw new Error(
+            "Your session has expired. Please log in again and retry your assessment."
+          );
+        }
+
         const message = Array.isArray(data.detail)
           ? data.detail.map((item) => item.msg).join(", ")
-          : data.detail || "Prediction request failed.";
+          : data.detail || "Assessment request failed.";
 
         throw new Error(message);
       }
 
-      console.log("Random Forest prediction:", data);
+      // The authenticated endpoint returns a saved assessment.
+      // The guest endpoint returns only a prediction.
+      const result = {
+        ...data,
+        saved: Boolean(token),
+      };
+
+      console.log("HeartGuard assessment result:", result);
 
       navigate("/result", {
         state: {
           patient,
-          prediction: data,
+          prediction: result,
+          assessmentId: token ? data.id : null,
+          isSaved: Boolean(token),
         },
       });
     } catch (err) {
-      console.error("Prediction error:", err);
+      console.error("Assessment error:", err);
 
       setError(
-        err.message || "Unable to connect to the prediction API."
+        err instanceof TypeError
+          ? "Cannot connect to the server. Please check whether the backend is running."
+          : err.message || "Unable to complete the assessment."
       );
     } finally {
       setLoading(false);
@@ -344,7 +381,10 @@ function HeartAssessment() {
           </div>
 
           {error && (
-            <div className="assessment-error">
+            <div
+              className="assessment-error"
+              role="alert"
+            >
               {error}
             </div>
           )}

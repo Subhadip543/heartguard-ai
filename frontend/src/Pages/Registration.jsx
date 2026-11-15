@@ -1,4 +1,5 @@
-import  { useState } from "react";
+
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Registration.css";
 
@@ -32,28 +33,24 @@ function Registration() {
 
     const { name, email, phone, password, confirmPassword } = formData;
 
-    // Name validation
     if (!/^[A-Za-z ]+$/.test(name.trim())) {
       setError("Please enter a valid name.");
       return;
     }
 
-    // Email validation
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
       setError("Please enter a valid email address.");
       return;
     }
 
-    // Phone validation
     if (!/^[0-9]{10}$/.test(phone)) {
       setError("Phone number must contain exactly 10 digits.");
       return;
     }
 
-    // Password validation
     if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{8,}$/.test(password)) {
       setError(
-        "Password must contain at least 8 characters, one uppercase, one lowercase and one special character.",
+        "Password must contain at least 8 characters, one uppercase, one lowercase and one special character."
       );
       return;
     }
@@ -66,23 +63,27 @@ function Registration() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/auth/register", {
+      const response = await fetch("/api/v1/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           name: name.trim(),
-          email: email.trim(),
+          email: email.trim().toLowerCase(),
           phone,
           password,
         }),
       });
 
-      const data = await response.json();
+      const data = await response.json().catch(() => ({}));
 
       if (!response.ok) {
-        throw new Error(data.message || "Registration failed.");
+        throw new Error(
+          typeof data.detail === "string"
+            ? data.detail
+            : "Registration failed. Please check your information."
+        );
       }
 
       setMessage("Registration successful! Redirecting to login...");
@@ -91,10 +92,12 @@ function Registration() {
         navigate("/login");
       }, 1500);
     } catch (err) {
+      console.error("Registration Error:", err);
+
       setError(
-        err.message === "Failed to fetch"
-          ? "Cannot connect to server. Please check whether the backend is running."
-          : err.message,
+        err instanceof TypeError
+          ? "Cannot connect to the server. Please check whether the backend is running."
+          : err.message || "Something went wrong. Please try again."
       );
     } finally {
       setLoading(false);
@@ -143,7 +146,7 @@ function Registration() {
               placeholder="Enter 10-digit phone number"
               value={formData.phone}
               onChange={handleChange}
-              maxLength="10"
+              maxLength={10}
               required
             />
           </div>
@@ -156,6 +159,7 @@ function Registration() {
               placeholder="Create a password"
               value={formData.password}
               onChange={handleChange}
+              autoComplete="new-password"
               required
             />
           </div>
@@ -168,13 +172,22 @@ function Registration() {
               placeholder="Confirm your password"
               value={formData.confirmPassword}
               onChange={handleChange}
+              autoComplete="new-password"
               required
             />
           </div>
 
-          {error && <p className="error-message">{error}</p>}
+          {error && (
+            <p className="error-message" role="alert">
+              {error}
+            </p>
+          )}
 
-          {message && <p className="success-message">{message}</p>}
+          {message && (
+            <p className="success-message" role="status">
+              {message}
+            </p>
+          )}
 
           <button type="submit" disabled={loading}>
             {loading ? "Registering..." : "Create Account"}

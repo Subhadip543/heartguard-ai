@@ -7,72 +7,107 @@ function PDashboard() {
   const navigate = useNavigate();
 
   const [patient, setPatient] = useState(null);
+  const [assessments, setAssessments] = useState([]);
+  const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [assessmentError, setAssessmentError] = useState("");
 
-  // Fetch logged-in patient information
   useEffect(() => {
-    const fetchPatient = async () => {
+    const fetchDashboard = async () => {
       const token = sessionStorage.getItem("heartcareToken");
-      const cached = sessionStorage.getItem("heartcarePatient");
 
-      if (cached) {
-        try {
-          setPatient(JSON.parse(cached));
-          setLoading(false);
-        } catch {
-          // ignore json parse error
-        }
-      }
-
-      if (!token && !cached) {
+      if (!token) {
         navigate("/login", { replace: true });
-        setLoading(false);
         return;
       }
 
-      if (token) {
+      const headers = {
+        Authorization: `Bearer ${token}`,
+      };
+
+      try {
+        // Fetch authenticated patient information.
+        const patientResponse = await fetch("/api/v1/auth/me", {
+          method: "GET",
+          headers,
+        });
+
+        if (patientResponse.status === 401) {
+          sessionStorage.removeItem("heartcareToken");
+          sessionStorage.removeItem("heartcarePatient");
+          navigate("/login", { replace: true });
+          return;
+        }
+
+        if (!patientResponse.ok) {
+          throw new Error("Unable to load your patient profile.");
+        }
+
+        const patientData = await patientResponse.json();
+
+        setPatient(patientData);
+        sessionStorage.setItem(
+          "heartcarePatient",
+          JSON.stringify(patientData)
+        );
+
+        // Fetch saved assessments for this patient.
         try {
-          const response = await fetch(
-            "http://localhost:5000/api/auth/me",
+          const historyResponse = await fetch(
+            "/api/v1/assessments?limit=5&offset=0",
             {
               method: "GET",
-              headers: {
-                Authorization: `Bearer ${token}`,
-              },
+              headers,
             }
           );
 
-          if (response.ok) {
-            const data = await response.json();
-            if (data.patient) {
-              setPatient(data.patient);
-              sessionStorage.setItem(
-                "heartcarePatient",
-                JSON.stringify(data.patient)
-              );
-            }
+          if (historyResponse.status === 401) {
+            sessionStorage.removeItem("heartcareToken");
+            sessionStorage.removeItem("heartcarePatient");
+            navigate("/login", { replace: true });
+            return;
           }
-        } catch (error) {
-          console.warn("Auth server unavailable; continuing with cached profile.", error);
-        } finally {
-          setLoading(false);
+
+          if (!historyResponse.ok) {
+            throw new Error("Unable to load assessment history.");
+          }
+
+          const historyData = await historyResponse.json();
+
+          setAssessments(historyData.assessments || []);
+          setTotal(historyData.total || 0);
+        } catch (err) {
+          setAssessmentError(err.message);
         }
+      } catch (err) {
+        setError(err.message || "Something went wrong.");
+      } finally {
+        setLoading(false);
       }
     };
 
-    fetchPatient();
+    fetchDashboard();
   }, [navigate]);
 
-  // Logout function
   const handleLogout = () => {
     sessionStorage.removeItem("heartcareToken");
     sessionStorage.removeItem("heartcarePatient");
-
     navigate("/login", { replace: true });
   };
 
-  // Loading screen
+  const formatDate = (dateString) => {
+    if (!dateString) return "--";
+
+    return new Date(dateString).toLocaleString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
+
   if (loading) {
     return (
       <div className="dashboard-loading">
@@ -82,34 +117,30 @@ function PDashboard() {
     );
   }
 
-  // Error screen
   if (error) {
     return (
       <div className="dashboard-loading">
         <h2>Connection Error</h2>
         <p>{error}</p>
-
-        <button onClick={() => window.location.reload()}>
+        <button type="button" onClick={() => window.location.reload()}>
           Try Again
         </button>
       </div>
     );
   }
 
-  if (!patient) {
-    return null;
-  }
+  if (!patient) return null;
 
   const patientInitial = patient.name
     ? patient.name.charAt(0).toUpperCase()
     : "P";
 
+  const latestAssessment = assessments[0] || null;
+
   return (
     <div className="dashboard-container">
-
       {/* Sidebar */}
       <aside className="dashboard-sidebar">
-
         <h2>HeartCare</h2>
 
         <nav>
@@ -117,29 +148,12 @@ function PDashboard() {
             Dashboard
           </Link>
 
-          <Link to="/assessment">
-            Heart Assessment
-          </Link>
-
-          <Link to="/find-doctors">
-            Find Doctors
-          </Link>
-
-          <Link to="/history">
-            Assessment History
-          </Link>
-
-          <Link to="/profile">
-            My Profile
-          </Link>
-
-          <Link to="/emergency">
-            Emergency Help
-          </Link>
-
-          <Link to="/">
-            Home
-          </Link>
+          <Link to="/assessment">Heart Assessment</Link>
+          <Link to="/find-doctors">Find Doctors</Link>
+          <Link to="/history">Assessment History</Link>
+          <Link to="/profile">My Profile</Link>
+          <Link to="/emergency">Emergency Help</Link>
+          <Link to="/">Home</Link>
         </nav>
 
         <button
@@ -149,177 +163,219 @@ function PDashboard() {
         >
           Logout
         </button>
-
       </aside>
 
       {/* Main Dashboard */}
       <main className="dashboard-main">
-
         {/* Header */}
         <header className="dashboard-header">
-
           <div>
             <h1>Patient Dashboard</h1>
-            <p>
-              Welcome to your HeartCare health portal.
-            </p>
+            <p>Welcome to your HeartCare health portal.</p>
           </div>
 
-          <div className="patient-avatar">
-            {patientInitial}
-          </div>
-
+          <div className="patient-avatar">{patientInitial}</div>
         </header>
 
         {/* Welcome Section */}
         <section className="welcome-card">
-
           <div>
             <h2>Welcome, {patient.name}! 👋</h2>
 
             <p>
-              Take control of your heart health.
-              Stay informed and monitor your health regularly.
+              Take control of your heart health. Stay informed and
+              monitor your health regularly.
             </p>
 
-            <p className="patient-email">
-              {patient.email}
-            </p>
+            <p className="patient-email">{patient.email}</p>
 
-            <Link
-              to="/assessment"
-              className="assessment-btn"
-            >
+            <Link to="/assessment" className="assessment-btn">
               Start Heart Assessment →
             </Link>
           </div>
 
           <div className="heart-icon"></div>
-
         </section>
 
         {/* Risk Assessment Section */}
         <section className="risk-assessment-card">
-
           <div className="risk-assessment-content">
-
-            <span className="risk-icon">
-              ♥
-            </span>
+            <span className="risk-icon">♥</span>
 
             <div>
               <h2>Risk Assessment</h2>
 
               <p>
-                Evaluate potential heart disease risk using
-                relevant health parameters.
+                Evaluate potential heart disease risk using relevant
+                health parameters.
               </p>
 
-              <Link
-                to="/assessment"
-                className="risk-assessment-btn"
-              >
+              <Link to="/assessment" className="risk-assessment-btn">
                 Start Risk Assessment →
               </Link>
             </div>
-
           </div>
-
         </section>
 
         {/* Find Doctors Section */}
         <section className="find-doctors-card">
-
           <div className="find-doctors-content">
-
-            <div className="find-doctors-icon">
-              ✚
-            </div>
+            <div className="find-doctors-icon">✚</div>
 
             <div className="find-doctors-details">
-
               <h2>Find a Doctor</h2>
 
               <p>
-                Explore doctors, check their specializations
-                and find a suitable consultation option.
+                Explore doctors, check their specializations and find
+                a suitable consultation option.
               </p>
 
-              <Link
-                to="/find-doctors"
-                className="find-doctors-btn"
-              >
+              <Link to="/find-doctors" className="find-doctors-btn">
                 Explore Doctors →
               </Link>
-
             </div>
-
           </div>
-
         </section>
 
-        {/* Statistics */}
+        {/* Dynamic Statistics */}
         <section className="dashboard-stats">
-
           <div className="stat-card">
             <span>📋</span>
             <h3>Total Assessments</h3>
-            <h2>0</h2>
-            <p>Assessments completed</p>
+            <h2>{assessmentError ? "--" : total}</h2>
+            <p>Saved assessments</p>
           </div>
 
           <div className="stat-card">
             <span>❤️</span>
-            <h3>Heart Health</h3>
-            <h2>Not Available</h2>
-            <p>Complete an assessment first</p>
+            <h3>Latest Model Result</h3>
+            <h2
+              style={{
+                color: latestAssessment
+                  ? latestAssessment.prediction === 1
+                    ? "#dc2626"
+                    : "#15803d"
+                  : "inherit",
+              }}
+            >
+              {assessmentError
+                ? "Unavailable"
+                : latestAssessment
+                  ? latestAssessment.prediction === 1
+                    ? "Positive"
+                    : "Negative"
+                  : "Not Available"}
+            </h2>
+            <p>
+              {latestAssessment
+                ? `${(latestAssessment.positive_probability * 100).toFixed(2)}% model score`
+                : "Complete an assessment first"}
+            </p>
           </div>
 
           <div className="stat-card">
             <span>📅</span>
             <h3>Last Assessment</h3>
-            <h2>--</h2>
-            <p>No assessment yet</p>
+            <h2>
+              {assessmentError
+                ? "--"
+                : latestAssessment
+                  ? formatDate(latestAssessment.created_at)
+                  : "--"}
+            </h2>
+            <p>
+              {latestAssessment
+                ? "Most recent saved assessment"
+                : "No saved assessment yet"}
+            </p>
           </div>
-
         </section>
 
         {/* Recent Assessments */}
         <section className="dashboard-section">
-
           <div className="section-heading">
             <h2>Recent Assessments</h2>
 
-            <Link to="/history">
-              View All
-            </Link>
+            <Link to="/history">View All</Link>
           </div>
 
-          <div className="empty-assessment">
+          {assessmentError && (
+            <div className="empty-assessment">
+              <span>⚠️</span>
+              <h3>Unable to Load Assessments</h3>
+              <p>{assessmentError}</p>
+              <Link to="/history">Open Assessment History</Link>
+            </div>
+          )}
 
-            <span>📊</span>
+          {!assessmentError && assessments.length === 0 && (
+            <div className="empty-assessment">
+              <span>📊</span>
+              <h3>No Assessments Yet</h3>
+              <p>
+                Your completed and saved heart assessments will appear here.
+              </p>
 
-            <h3>No Assessments Yet</h3>
+              <Link to="/assessment">
+                Take Your First Assessment
+              </Link>
+            </div>
+          )}
 
-            <p>
-              Your completed heart assessments will appear here.
-            </p>
+          {!assessmentError && assessments.length > 0 && (
+            <div>
+              {assessments.map((assessment) => (
+                <div
+                  key={assessment.id}
+                  style={{
+                    padding: "16px",
+                    marginBottom: "12px",
+                    background: "#ffffff",
+                    border: "1px solid #e5e7eb",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      flexWrap: "wrap",
+                      gap: "10px",
+                    }}
+                  >
+                    <strong>Assessment #{assessment.id}</strong>
 
-            <Link to="/assessment">
-              Take Your First Assessment
-            </Link>
+                    <strong
+                      style={{
+                        color:
+                          assessment.prediction === 1
+                            ? "#dc2626"
+                            : "#15803d",
+                      }}
+                    >
+                      {assessment.prediction === 1
+                        ? "Positive model result"
+                        : "Negative model result"}
+                    </strong>
+                  </div>
 
-          </div>
+                  <p>{formatDate(assessment.created_at)}</p>
 
+                  <p>
+                    Model score:{" "}
+                    {(assessment.positive_probability * 100).toFixed(2)}%
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Health Tips */}
         <section className="dashboard-section">
-
           <h2>Heart Health Tips</h2>
 
           <div className="tips-grid">
-
             <div className="tip-card">
               <span>🥗</span>
               <h3>Eat Healthy</h3>
@@ -343,18 +399,14 @@ function PDashboard() {
                 Drink enough water throughout the day.
               </p>
             </div>
-
           </div>
-
         </section>
 
         {/* Footer */}
         <footer className="dashboard-footer">
           © 2026 HeartCare | Your Health, Our Priority
         </footer>
-
       </main>
-
     </div>
   );
 }
