@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://heartguard-ai-backend.onrender.com/api/:path*"
+    }
+  ]
+}
