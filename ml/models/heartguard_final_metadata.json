@@ -1,0 +1,84 @@
+{
+    "project": "HeartGuard AI",
+    "model_name": "Random Forest",
+    "preprocessing_strategy": "missing_indicators",
+    "hyperparameters": {
+        "n_estimators": 200,
+        "max_depth": null,
+        "min_samples_leaf": 2,
+        "class_weight": "balanced",
+        "random_state": 42
+    },
+    "model_selection": {
+        "method": "Leave-One-Site-Out Cross-Validation",
+        "selection_metric": "balanced_accuracy",
+        "mean_selection_balanced_accuracy": 0.7580829942609546
+    },
+    "training": {
+        "training_records": 918,
+        "training_features": 13,
+        "training_hospitals": [
+            "cleveland",
+            "hungarian",
+            "switzerland",
+            "va"
+        ],
+        "hospital_distribution": {
+            "cleveland": 303,
+            "hungarian": 293,
+            "switzerland": 123,
+            "va": 199
+        },
+        "target_distribution": {
+            "0": 410,
+            "1": 508
+        },
+        "trained_at_utc": "2026-11-10T09:08:59.270492+00:00"
+    },
+    "features": {
+        "all": [
+            "age",
+            "trestbps",
+            "chol",
+            "thalach",
+            "oldpeak",
+            "sex",
+            "cp",
+            "fbs",
+            "restecg",
+            "exang",
+            "slope",
+            "ca",
+            "thal"
+        ],
+        "numerical": [
+            "age",
+            "trestbps",
+            "chol",
+            "thalach",
+            "oldpeak"
+        ],
+        "categorical": [
+            "sex",
+            "cp",
+            "fbs",
+            "restecg",
+            "exang",
+            "slope",
+            "ca",
+            "thal"
+        ],
+        "target": "target"
+    },
+    "software": {
+        "scikit_learn": "1.9.1",
+        "pandas": "3.1.1"
+    },
+    "artifact": "heartguard_final_pipeline.joblib",
+    "limitations": [
+        "Educational machine-learning prototype.",
+        "Not clinically validated.",
+        "Not intended for independent medical diagnosis.",
+        "Model-selection score is not an independent performance estimate."
+    ]
+}
