@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     # AI / Gemini configuration
     GEMINI_API_KEY: str | None = None
     GOOGLE_API_KEY: str | None = None
-    GEMINI_MODEL: str = "gemini-1.5-flash"
+    GEMINI_MODEL: str = "gemini-3.5-flash-lite"
 
     # Password reset configuration
     PASSWORD_RESET_TOKEN_EXPIRE_MINUTES: int = 15
