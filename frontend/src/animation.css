@@ -1,29 +1,37 @@
 
 /* =====================================
-   HEARTCARE - GLOBAL FRONTEND ANIMATIONS
+   HEARTGUARD AI - GLOBAL FRONTEND ANIMATIONS
 ===================================== */
 
-/* 1. Page entrance */
+/* 1. Page entrance (Opacity-only to prevent transform containing block on fixed sidebar) */
 @keyframes pageFadeIn {
   from {
     opacity: 0;
-    transform: translateY(14px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 .home-page,
 .login-page,
-.registration-page,
-.assessment-page,
-.emergency-page,
-.dashboard-page,
-.patient-dashboard,
-.dashboard-container {
-  animation: pageFadeIn 0.55s ease both;
+.registration-page {
+  animation: pageFadeIn 0.4s ease;
+}
+
+/* Animate the main content of portal pages so the fixed sidebar shell remains strictly anchored to the viewport */
+.dashboard-main,
+.assessment-page-main,
+.history-main,
+.profile-main,
+.result-page-main,
+.emergency-page-main,
+.awareness-page-main,
+.find-doctors-page-main,
+.resources-page-main,
+.live-health-page-main,
+.heart-chat-main {
+  animation: pageFadeIn 0.35s ease;
 }
 
 /* 2. Card entrance */

@@ -1,6 +1,6 @@
 
 /* ==========================================
-   HEARTCARE - LIVE HEALTH MONITORING
+   HEARTGUARD AI - LIVE HEALTH MONITORING
 ========================================== */
 
 .live-health-page {
@@ -13,12 +13,31 @@
   --live-muted: var(--text-secondary, #71858a);
   --live-border: var(--border, #dce9e7);
 
+  display: flex;
   min-height: 100vh;
   width: 100%;
-  padding: 30px;
+  padding: 0;
   background: var(--live-bg);
   color: var(--live-text);
-  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-family: var(--font-sans, "DM Sans", "Segoe UI", sans-serif);
+  overflow-x: hidden;
+}
+
+.live-health-page-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .live-health-page {
+    flex-direction: column;
+  }
+  .live-health-page-main {
+    padding: 16px;
+  }
 }
 
 /* ==========================================

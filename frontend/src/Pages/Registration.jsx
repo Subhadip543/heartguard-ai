@@ -108,9 +108,9 @@ function Registration() {
     <div className="registration-page">
       <div className="registration-container">
         <div className="registration-header">
-          <h1>HeartCare</h1>
+          <h1>HeartGuard AI</h1>
           <h2>Create Your Account</h2>
-          <p>Join HeartCare and take a step towards better heart health.</p>
+          <p>Join HeartGuard AI and take a step towards better heart health.</p>
         </div>
 
         <form onSubmit={handleSubmit}>

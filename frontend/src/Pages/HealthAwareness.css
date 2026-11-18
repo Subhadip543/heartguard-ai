@@ -1,15 +1,30 @@
 
 /* =========================================
-   HEARTCARE - HEALTH AWARENESS
+   HEARTGUARD AI - HEALTH AWARENESS
    GLOBAL LIGHT AND DARK THEME
 ========================================= */
 
 .awareness-page {
+  display: flex;
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: "Segoe UI", Arial, sans-serif;
-  overflow: hidden;
+  font-family: var(--font-sans, "DM Sans", -apple-system, sans-serif);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.awareness-page-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .awareness-page {
+    flex-direction: column;
+  }
 }
 
 .awareness-page * {

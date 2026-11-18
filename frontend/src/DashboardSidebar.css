@@ -1,0 +1,690 @@
+/* ==========================================================================
+   HEARTGUARD AI — UNIFIED DASHBOARD SIDEBAR & RESPONSIVE NAVIGATION
+   Stationary Viewport Navigation + Accessible Mobile Drawer
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Desktop Stationary Fixed Sidebar (>= 769px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 769px) {
+  .dashboard-sidebar-component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 264px;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    box-shadow: 2px 0 16px rgba(7, 91, 102, 0.05);
+    z-index: 1000;
+    overflow: hidden; /* Shell is completely stationary, never scrolls */
+    transform: translateX(0);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.3s ease,
+                border-color 0.3s ease;
+  }
+
+  .dashboard-sidebar-component.desktop-collapsed {
+    transform: translateX(-100%);
+    pointer-events: none;
+    box-shadow: none;
+  }
+
+  /* Main portal content begins after the sidebar and uses remaining available width */
+  .dashboard-main,
+  .history-main,
+  .profile-main,
+  .assessment-page-main,
+  .find-doctors-page-main,
+  .emergency-page-main,
+  .resources-page-main,
+  .live-health-page-main,
+  .heart-chat-main,
+  .awareness-page-main,
+  .result-page-main {
+    margin-left: 264px;
+    width: calc(100% - 264px);
+    transition: margin-left 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* When collapsed, main portal content expands smoothly to full width */
+  :root[data-sidebar-collapsed="true"] .dashboard-main,
+  :root[data-sidebar-collapsed="true"] .history-main,
+  :root[data-sidebar-collapsed="true"] .profile-main,
+  :root[data-sidebar-collapsed="true"] .assessment-page-main,
+  :root[data-sidebar-collapsed="true"] .find-doctors-page-main,
+  :root[data-sidebar-collapsed="true"] .emergency-page-main,
+  :root[data-sidebar-collapsed="true"] .resources-page-main,
+  :root[data-sidebar-collapsed="true"] .live-health-page-main,
+  :root[data-sidebar-collapsed="true"] .heart-chat-main,
+  :root[data-sidebar-collapsed="true"] .awareness-page-main,
+  :root[data-sidebar-collapsed="true"] .result-page-main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Offset page headers when collapsed so the floating expand button never obstructs titles/logos */
+  :root[data-sidebar-collapsed="true"] .history-header,
+  :root[data-sidebar-collapsed="true"] .profile-header,
+  :root[data-sidebar-collapsed="true"] .assessment-header,
+  :root[data-sidebar-collapsed="true"] .result-header-content,
+  :root[data-sidebar-collapsed="true"] .awareness-header,
+  :root[data-sidebar-collapsed="true"] .emergency-header,
+  :root[data-sidebar-collapsed="true"] .find-doctors-header,
+  :root[data-sidebar-collapsed="true"] .resources-header,
+  :root[data-sidebar-collapsed="true"] .live-health-header,
+  :root[data-sidebar-collapsed="true"] .heart-chat-header {
+    padding-left: 108px !important;
+    transition: padding-left 0.25s ease;
+  }
+
+  /* Floating Expand Button (shown when collapsed on desktop) */
+  .dashboard-desktop-expand-btn {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 1020; /* Higher than sticky headers (100) */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 0.875rem;
+    font-weight: 700;
+    box-shadow: 0 4px 18px rgba(7, 91, 102, 0.14);
+    cursor: pointer;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    animation: fadeInBtn 0.25s ease forwards;
+  }
+
+  .dashboard-desktop-expand-btn:hover {
+    background: var(--surface-hover);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(7, 91, 102, 0.2);
+  }
+
+  [data-theme="dark"] .dashboard-desktop-expand-btn {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  }
+
+  [data-theme="dark"] .dashboard-desktop-expand-btn:hover {
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes fadeInBtn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar Header & Brand (Stationary)
+   -------------------------------------------------------------------------- */
+.dashboard-sidebar-header {
+  flex-shrink: 0;
+  padding: 20px 18px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px solid rgba(8, 127, 140, 0.08);
+}
+
+.dashboard-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text);
+  min-width: 0;
+}
+
+.dashboard-brand-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(8, 127, 140, 0.25);
+  flex-shrink: 0;
+}
+
+.dashboard-brand-text {
+  min-width: 0;
+}
+
+.dashboard-brand-text h2 {
+  font-family: var(--font-heading, "Manrope", sans-serif);
+  font-size: 1.0625rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard-brand-text span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  display: block;
+}
+
+.sidebar-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Desktop Collapse Button */
+.dashboard-sidebar-collapse-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-sidebar-collapse-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--border);
+  color: var(--primary);
+}
+
+.dashboard-drawer-close {
+  display: none;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.dashboard-drawer-close:hover {
+  background: var(--surface-hover);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+/* --------------------------------------------------------------------------
+   Navigation Links & Section Labels (The ONLY region that scrolls internally)
+   -------------------------------------------------------------------------- */
+.dashboard-sidebar-nav {
+  flex: 1 1 auto;
+  min-height: 0; /* Crucial: allows flex child to scroll */
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Custom sleek scrollbar for nav list */
+.dashboard-sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.dashboard-sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dashboard-sidebar-nav::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.nav-section-label {
+  padding: 8px 12px 4px;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.dashboard-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: 11px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.2s ease;
+  min-height: 40px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.nav-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--text-secondary);
+  transition: color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.nav-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard-nav-item:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+  transform: translateX(2px);
+}
+
+.dashboard-nav-item:hover .nav-icon-wrapper {
+  color: var(--primary);
+  transform: scale(1.08);
+}
+
+.dashboard-nav-item.active {
+  background: rgba(8, 127, 140, 0.1);
+  color: var(--primary);
+  font-weight: 700;
+  border: 1px solid rgba(8, 127, 140, 0.22);
+}
+
+[data-theme="dark"] .dashboard-nav-item.active {
+  background: rgba(72, 201, 193, 0.14);
+  color: var(--primary);
+  border-color: rgba(72, 201, 193, 0.32);
+}
+
+.dashboard-nav-item.active .nav-icon-wrapper {
+  color: var(--primary);
+}
+
+.nav-active-pill {
+  position: absolute;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+.dashboard-nav-item.item-danger {
+  color: #dc2626;
+}
+
+.dashboard-nav-item.item-danger .nav-icon-wrapper {
+  color: #dc2626;
+}
+
+.dashboard-nav-item.item-danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #b91c1c;
+}
+
+[data-theme="dark"] .dashboard-nav-item.item-danger {
+  color: #f87171;
+}
+
+[data-theme="dark"] .dashboard-nav-item.item-danger .nav-icon-wrapper {
+  color: #f87171;
+}
+
+.dashboard-nav-item:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar Footer, Redesigned Clean Account Section & Logout (Stationary)
+   -------------------------------------------------------------------------- */
+.dashboard-sidebar-footer {
+  flex-shrink: 0;
+  padding: 12px 12px 18px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: var(--surface);
+}
+
+/* Clickable Patient Identity Row (Integrated into /profile) */
+.dashboard-account-patient-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  min-height: 44px;
+}
+
+.dashboard-account-patient-row:hover {
+  background: var(--surface-hover);
+  border-color: var(--border);
+  transform: translateX(2px);
+}
+
+.dashboard-account-patient-row.active {
+  background: rgba(8, 127, 140, 0.1);
+  border-color: rgba(8, 127, 140, 0.25);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .dashboard-account-patient-row.active {
+  background: rgba(72, 201, 193, 0.14);
+  border-color: rgba(72, 201, 193, 0.32);
+  color: var(--primary);
+}
+
+.account-avatar-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%; /* Clean circular avatar, no square box */
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  box-shadow: 0 2px 8px rgba(8, 127, 140, 0.25);
+  flex-shrink: 0;
+}
+
+.account-patient-meta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+  flex: 1;
+}
+
+.account-patient-name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.account-patient-email {
+  font-size: 0.6875rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.dashboard-account-patient-row:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Logout & Login buttons */
+.dashboard-logout-button,
+.dashboard-login-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 11px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-height: 38px;
+}
+
+.dashboard-logout-button:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+[data-theme="dark"] .dashboard-logout-button:hover {
+  color: #f87171;
+}
+
+.dashboard-login-button:hover {
+  background: var(--surface-hover);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.dashboard-logout-button:focus-visible,
+.dashboard-login-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Header Bar & Drawer (<= 768px)
+   -------------------------------------------------------------------------- */
+.dashboard-mobile-header {
+  display: none;
+}
+
+.dashboard-sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Mobile Top Bar */
+  .dashboard-mobile-header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 58px;
+    background: var(--surface);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 16px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .dashboard-mobile-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    padding: 8px;
+    margin-left: -8px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .dashboard-mobile-toggle:focus-visible {
+    outline: 2px solid var(--primary);
+  }
+
+  .dashboard-mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+    font-family: var(--font-heading, "Manrope", sans-serif);
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+
+  .dashboard-mobile-brand .dashboard-brand-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+  }
+
+  .dashboard-mobile-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(8, 127, 140, 0.25);
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  /* Desktop Expand Button Hidden on Mobile */
+  .dashboard-desktop-expand-btn {
+    display: none !important;
+  }
+
+  /* Desktop collapse button hidden on mobile */
+  .dashboard-sidebar-collapse-btn {
+    display: none !important;
+  }
+
+  /* Backdrop */
+  .dashboard-sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 25, 30, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1040;
+    animation: fadeInBackdrop 0.25s ease forwards;
+  }
+
+  @keyframes fadeInBackdrop {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Sidebar transformed into Mobile Drawer */
+  .dashboard-sidebar-component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 285px;
+    max-width: 86vw;
+    height: 100vh;
+    z-index: 1050;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.3s ease;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+
+  .dashboard-sidebar-component.mobile-open {
+    transform: translateX(0);
+  }
+
+  .dashboard-drawer-close {
+    display: flex;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .dashboard-nav-item {
+    min-height: 44px;
+    padding: 11px 14px;
+    font-size: 0.9375rem;
+  }
+
+  .dashboard-logout-button,
+  .dashboard-login-button {
+    min-height: 44px;
+    padding: 11px 14px;
+    font-size: 0.9375rem;
+  }
+
+  /* Reset margin on mobile */
+  .dashboard-main,
+  .history-main,
+  .profile-main,
+  .assessment-page-main,
+  .find-doctors-page-main,
+  .emergency-page-main,
+  .resources-page-main,
+  .live-health-page-main,
+  .heart-chat-main,
+  .awareness-page-main,
+  .result-page-main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}

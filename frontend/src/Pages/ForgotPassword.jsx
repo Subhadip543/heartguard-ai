@@ -87,7 +87,7 @@ function ForgotPassword() {
               <HeartPulse size={25} />
             </div>
 
-            <span>HeartCare</span>
+            <span>HeartGuard AI</span>
           </Link>
 
           <div className="forgot-brand-content">
@@ -102,7 +102,7 @@ function ForgotPassword() {
             </h1>
 
             <p>
-              Your HeartCare account helps you access your health
+              Your HeartGuard AI account helps you access your health
               information and healthcare support securely.
             </p>
 
@@ -120,7 +120,7 @@ function ForgotPassword() {
           </div>
 
           <div className="forgot-brand-footer">
-            HeartCare · Healthcare support platform
+            HeartGuard AI · Healthcare support platform
           </div>
         </div>
 
@@ -145,7 +145,7 @@ function ForgotPassword() {
                 <h2>Forgot Password?</h2>
 
                 <p className="forgot-description">
-                  Enter the email address associated with your HeartCare account
+                  Enter the email address associated with your HeartGuard AI account
                   to receive a secure password reset link.
                 </p>
 
@@ -305,11 +305,11 @@ function ForgotPassword() {
 
           <div className="forgot-form-footer">
             <p>
-              Need help? Contact the HeartCare support team.
+              Need help? Contact the HeartGuard AI support team.
             </p>
 
             <span>
-              © 2026 HeartCare. All rights reserved.
+              © 2026 HeartGuard AI. All rights reserved.
             </span>
           </div>
         </div>

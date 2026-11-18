@@ -1,5 +1,9 @@
 
+from pathlib import Path
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+_BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 class Settings(BaseSettings):
@@ -43,7 +47,7 @@ class Settings(BaseSettings):
         return self.GEMINI_API_KEY or self.GOOGLE_API_KEY
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=(".env", str(_BASE_DIR / ".env")),
         env_file_encoding="utf-8",
         case_sensitive=True,
         extra="ignore",

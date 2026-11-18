@@ -10,12 +10,26 @@
 }
 
 .resources-page {
+  display: flex;
   min-height: 100vh;
   background: var(--bg, #f5faf9);
   color: var(--text, #183b3b);
-  font-family: 'Inter', sans-serif;
-  overflow: hidden;
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  overflow-x: hidden;
   transition: background 0.3s ease, color 0.3s ease;
+}
+
+.resources-page-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .resources-page {
+    flex-direction: column;
+  }
 }
 
 .resources-page button,
@@ -972,6 +986,12 @@
 [data-theme="dark"] .resources-demo-badge {
   background: #352f20;
   color: #f2d28e;
+}
+
+[data-theme="dark"] .resources-float-icon {
+  background: var(--surface, #192a33);
+  color: var(--primary, #48c9c1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* =====================================

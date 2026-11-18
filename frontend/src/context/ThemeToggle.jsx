@@ -10,16 +10,18 @@ function ThemeToggle() {
       type="button"
       className="global-theme-toggle"
       onClick={toggleTheme}
+      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+      title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
     >
       {theme === "light" ? (
         <>
-          <Moon size={19} />
-          <span>Dark Mode</span>
+          <Moon size={18} />
+          <span className="global-theme-label">Dark Mode</span>
         </>
       ) : (
         <>
-          <Sun size={19} />
-          <span>Light Mode</span>
+          <Sun size={18} />
+          <span className="global-theme-label">Light Mode</span>
         </>
       )}
     </button>

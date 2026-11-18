@@ -1,14 +1,29 @@
 
 
 /* =====================================
-   HEARTCARE - FIND DOCTORS PAGE
+   HEARTGUARD AI - FIND DOCTORS PAGE
 ===================================== */
 
 .find-doctors-page {
+  display: flex;
   min-height: 100vh;
-  background: var(--bg,#f5faf9);
-  color:var(--text,#1e293b);
-  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg, #f5faf9);
+  color: var(--text, #1e293b);
+  font-family: var(--font-sans, "Segoe UI", Arial, sans-serif);
+  overflow-x: hidden;
+}
+
+.find-doctors-page-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .find-doctors-page {
+    flex-direction: column;
+  }
 }
 
 /* HEADER */
@@ -622,7 +637,7 @@
   }
 }
 /* =====================================
-   HEARTCARE - GLOBAL THEME SUPPORT
+   HEARTGUARD AI - GLOBAL THEME SUPPORT
 ===================================== */
 
 /* PAGE AND CARDS */

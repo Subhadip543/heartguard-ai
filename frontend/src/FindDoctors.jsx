@@ -1,6 +1,6 @@
 import { useTheme } from "./context/useTheme";
-import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { useMemo, useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Search,
   Stethoscope,
@@ -10,6 +10,7 @@ import {
   X,
   UserRound
 } from "lucide-react";
+import DashboardSidebar from "./DashboardSidebar";
 
 import "./FindDoctors.css";
 
@@ -213,16 +214,31 @@ const translations = {
 };
 
 function FindDoctors() {
+  const navigate = useNavigate();
   const { language } = useTheme();
   const t = translations[language] || translations.English;
 
   const [searchTerm, setSearchTerm] = useState("");
   const [specialization, setSpecialization] = useState("All");
   const [selectedDoctor, setSelectedDoctor] = useState(null);
-  const [patientName, setPatientName] = useState("");
+  const [patientName, setPatientName] = useState(() => {
+    try {
+      const cached = sessionStorage.getItem("heartcarePatient");
+      return cached ? JSON.parse(cached).name || "" : "";
+    } catch {
+      return "";
+    }
+  });
   const [appointmentDate, setAppointmentDate] = useState("");
   const [appointmentTime, setAppointmentTime] = useState("");
   const [confirmation, setConfirmation] = useState("");
+
+  useEffect(() => {
+    const token = sessionStorage.getItem("heartcareToken");
+    if (!token) {
+      navigate("/login", { replace: true });
+    }
+  }, [navigate]);
 
   const now = new Date();
   const currentYear = now.getFullYear();
@@ -230,11 +246,11 @@ function FindDoctors() {
   const currentDay = String(now.getDate()).padStart(2, "0");
   const today = `${currentYear}-${currentMonth}-${currentDay}`;
 
-  const specializationLabels = {
+  const specializationLabels = useMemo(() => ({
     Cardiologist: t.cardiologist,
     "Cardiac Surgeon": t.cardiacSurgeon,
     "General Physician": t.generalPhysician
-  };
+  }), [t]);
 
   const filteredDoctors = useMemo(() => {
     return doctors.filter((doctor) => {
@@ -251,7 +267,7 @@ function FindDoctors() {
 
       return matchesSearch && matchesSpecialization;
     });
-  }, [searchTerm, specialization, language]);
+  }, [searchTerm, specialization, specializationLabels]);
 
   function openBooking(doctor) {
     setSelectedDoctor(doctor);
@@ -337,24 +353,27 @@ function FindDoctors() {
 
   return (
     <div className="find-doctors-page">
-      <header className="find-doctors-header">
-        <div className="find-doctors-brand">
-          <div className="find-doctors-brand-icon">
-            <Stethoscope size={25} />
-          </div>
-          <div>
-            <h2>HeartCare</h2>
-            <p>{t.directory}</p>
-          </div>
-        </div>
+      <DashboardSidebar activeKey="/find-doctors" />
 
-        <Link to="/dashboard" className="back-dashboard-link">
-          <ArrowLeft size={17} />
-          {t.dashboard}
-        </Link>
-      </header>
+      <div className="find-doctors-page-main">
+        <header className="find-doctors-header">
+          <div className="find-doctors-brand">
+            <div className="find-doctors-brand-icon">
+              <Stethoscope size={25} />
+            </div>
+            <div>
+              <h2>HeartGuard AI</h2>
+              <p>{t.directory}</p>
+            </div>
+          </div>
 
-      <main className="find-doctors-main">
+          <Link to="/dashboard" className="back-dashboard-link">
+            <ArrowLeft size={17} />
+            {t.dashboard}
+          </Link>
+        </header>
+
+        <main className="find-doctors-main">
         <section className="doctors-intro">
           <span className="doctors-eyebrow">{t.eyebrow}</span>
           <h1>{t.heading}</h1>
@@ -560,6 +579,7 @@ function FindDoctors() {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 }

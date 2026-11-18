@@ -1,7 +1,7 @@
-
-/* ================================
-   LOGIN PAGE
-================================ */
+/* ==========================================================================
+   HEARTGUARD AI — LOGIN PAGE
+   Complete Light & Dark Mode + Design System Alignment
+   ========================================================================== */
 
 .login-page {
   min-height: 100vh;
@@ -9,114 +9,149 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
-  background: linear-gradient(135deg, #e8f5f5, #f4f9fa, #eaf3f5);
-  font-family: "Segoe UI", Arial, sans-serif;
-  box-sizing: border-box;
+  padding: 40px 20px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans, "DM Sans", -apple-system, sans-serif);
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ================================
+/* Background decorative ambient orbs */
+.login-page::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  left: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(19, 184, 166, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.login-page::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  right: -100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(8, 127, 140, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
    LOGIN CARD
-================================ */
+   ========================================================================== */
 
 .login-card {
   width: 100%;
   max-width: 440px;
-  background: #ffffff;
-  padding: 40px 38px;
-  border-radius: 18px;
-  box-shadow: 0 12px 40px rgba(25, 75, 85, 0.12);
-  border: 1px solid #e5eeee;
-  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--text);
+  padding: 42px 36px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ================================
-   LOGO
-================================ */
+/* ==========================================================================
+   LOGO & BRANDING
+   ========================================================================== */
 
 .login-logo {
   text-align: center;
-  font-size: 27px;
-  font-weight: 750;
-  color: #087f8c;
-  margin-bottom: 25px;
+  font-family: var(--font-heading, "Manrope", sans-serif);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 24px;
   letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .login-logo span {
-  color: #e45c68;
-  font-size: 30px;
-  margin-right: 5px;
+  color: #ef4444;
+  font-size: 1.85rem;
 }
 
-/* ================================
-   HEADING
-================================ */
+/* ==========================================================================
+   HEADINGS
+   ========================================================================== */
 
 .login-card h2 {
   text-align: center;
-  color: #173f46;
-  font-size: 29px;
-  font-weight: 700;
+  color: var(--text);
+  font-family: var(--font-heading, "Manrope", sans-serif);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
   margin: 0 0 10px;
 }
 
 .login-subtitle {
   text-align: center;
-  color: #71858a;
-  font-size: 14px;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
   line-height: 1.6;
-  margin: 0 0 30px;
+  margin: 0 0 28px;
 }
 
-/* ================================
-   FORM
-================================ */
+/* ==========================================================================
+   FORM CONTROLS
+   ========================================================================== */
 
 .login-card form {
   width: 100%;
 }
 
 .form-group {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
   display: block;
-  color: #294c52;
-  font-size: 14px;
+  color: var(--text);
+  font-size: 0.875rem;
   font-weight: 600;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .form-group input {
   width: 100%;
   height: 48px;
-  padding: 0 14px;
-  border: 1px solid #d6e2e4;
-  border-radius: 9px;
+  padding: 0 15px;
+  border: 1px solid var(--input-border, var(--border));
+  border-radius: 10px;
   outline: none;
-  background: #fbfdfd;
-  color: #23434b;
-  font-size: 14px;
-  box-sizing: border-box;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--input-bg, var(--surface));
+  color: var(--text);
+  font-size: 0.9375rem;
+  transition: border-color 0.25s, box-shadow 0.25s, background-color 0.25s;
 }
 
 .form-group input::placeholder {
-  color: #a0afb2;
+  color: var(--text-muted);
 }
 
 .form-group input:focus {
-  border-color: #078c98;
-  box-shadow: 0 0 0 3px rgba(7, 140, 152, 0.12);
-  background: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(19, 184, 166, 0.15);
+  background: var(--input-bg, var(--surface));
 }
 
-/* ================================
-   PASSWORD FIELD
-================================ */
-
+/* Password reveal */
 .password-field {
   position: relative;
   display: flex;
@@ -124,7 +159,7 @@
 }
 
 .password-field input {
-  padding-right: 65px;
+  padding-right: 70px;
 }
 
 .show-password {
@@ -132,91 +167,97 @@
   right: 12px;
   border: none;
   background: transparent;
-  color: #07838e;
-  font-size: 13px;
-  font-weight: 650;
+  color: var(--primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
   cursor: pointer;
-  padding: 7px 4px;
+  padding: 8px 6px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
 }
 
 .show-password:hover {
-  color: #075e68;
+  background: var(--surface-hover);
+  color: var(--primary-dark, var(--primary));
 }
 
-/* ================================
-   LOGIN OPTIONS
-================================ */
+/* ==========================================================================
+   OPTIONS (REMEMBER ME & FORGOT PASSWORD)
+   ========================================================================== */
 
 .login-options {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  margin: 5px 0 22px;
-  font-size: 13px;
+  margin: 6px 0 24px;
+  font-size: 0.875rem;
 }
 
 .remember-me {
   display: flex;
   align-items: center;
-  gap: 7px;
-  color: #61777c;
+  gap: 8px;
+  color: var(--text-secondary);
   cursor: pointer;
+  user-select: none;
 }
 
 .remember-me input {
-  accent-color: #078c98;
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
   cursor: pointer;
 }
 
 .login-options a {
-  color: #07838e;
+  color: var(--primary);
   font-weight: 600;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .login-options a:hover {
-  color: #075e68;
   text-decoration: underline;
 }
 
-/* ================================
+/* ==========================================================================
    ERROR MESSAGE
-================================ */
+   ========================================================================== */
 
 .error-message {
-  color: #b42318;
-  background: #fff1f0;
-  border: 1px solid #ffd5d2;
-  padding: 11px 13px;
-  border-radius: 8px;
-  font-size: 13px;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 0.875rem;
   line-height: 1.5;
-  margin: 0 0 17px;
+  margin: 0 0 18px;
 }
 
-/* ================================
-   LOGIN BUTTON
-================================ */
+/* ==========================================================================
+   SUBMIT BUTTON
+   ========================================================================== */
 
 .login-submit {
   width: 100%;
-  height: 49px;
+  height: 48px;
   border: none;
-  border-radius: 9px;
-  background: linear-gradient(135deg, #078c98, #087783);
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: #ffffff;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: 0.3px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 6px 18px rgba(19, 184, 166, 0.28);
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
 }
 
 .login-submit:hover:not(:disabled) {
-  background: linear-gradient(135deg, #067783, #075e68);
   transform: translateY(-2px);
-  box-shadow: 0 7px 17px rgba(7, 131, 142, 0.22);
+  box-shadow: 0 10px 24px rgba(19, 184, 166, 0.38);
 }
 
 .login-submit:active:not(:disabled) {
@@ -228,66 +269,69 @@
   cursor: not-allowed;
 }
 
-
+/* ==========================================================================
+   FOOTER LINKS
+   ========================================================================== */
 
 .register-link {
   text-align: center;
-  color: #71858a;
-  font-size: 14px;
-  margin-top: 25px;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 24px;
 }
 
 .register-link a {
-  color: #07838e;
+  color: var(--primary);
   font-weight: 700;
   text-decoration: none;
-  margin-left: 3px;
+  margin-left: 4px;
+  transition: color 0.2s ease;
 }
 
 .register-link a:hover {
   text-decoration: underline;
 }
 
-
-
 .back-home {
   display: block;
   width: fit-content;
-  margin: 23px auto 0;
-  color: #637c81;
-  font-size: 13px;
+  margin: 20px auto 0;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 .back-home:hover {
-  color: #07838e;
+  color: var(--primary);
 }
 
-/* ================================
-   RESPONSIVE DESIGN
-================================ */
+/* ==========================================================================
+   RESPONSIVE DESIGN (375px - 480px)
+   ========================================================================== */
 
 @media (max-width: 480px) {
   .login-page {
-    padding: 20px 14px;
+    padding: 24px 16px;
   }
 
   .login-card {
-    padding: 32px 23px;
-    border-radius: 14px;
+    padding: 30px 22px;
+    border-radius: 16px;
   }
 
   .login-card h2 {
-    font-size: 25px;
+    font-size: 1.5rem;
   }
 
   .login-logo {
-    font-size: 24px;
+    font-size: 1.45rem;
   }
 
   .login-options {
-    font-size: 12px;
+    font-size: 0.8125rem;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 }

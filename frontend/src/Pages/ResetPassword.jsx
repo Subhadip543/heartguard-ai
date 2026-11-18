@@ -86,7 +86,7 @@ function ResetPassword() {
               <HeartPulse size={25} />
             </div>
 
-            <span>HeartCare</span>
+            <span>HeartGuard AI</span>
           </Link>
 
           <div className="forgot-brand-content">
@@ -102,7 +102,7 @@ function ResetPassword() {
 
             <p>
               Choose a strong, unique password with at least 8 characters
-              to ensure your HeartCare health records remain protected.
+              to ensure your HeartGuard AI health records remain protected.
             </p>
 
             <div className="forgot-security-points">
@@ -119,7 +119,7 @@ function ResetPassword() {
           </div>
 
           <div className="forgot-brand-footer">
-            HeartCare · Healthcare support platform
+            HeartGuard AI · Healthcare support platform
           </div>
         </div>
 
@@ -285,8 +285,8 @@ function ResetPassword() {
           </div>
 
           <div className="forgot-form-footer">
-            <p>Need help? Contact the HeartCare support team.</p>
-            <span>© 2026 HeartCare. All rights reserved.</span>
+            <p>Need help? Contact the HeartGuard AI support team.</p>
+            <span>© 2026 HeartGuard AI. All rights reserved.</span>
           </div>
         </div>
       </div>

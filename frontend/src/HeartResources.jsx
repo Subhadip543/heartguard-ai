@@ -1,7 +1,8 @@
 
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTheme } from "./context/useTheme";
+import DashboardSidebar from "./DashboardSidebar";
 
 import {
   HeartPulse,
@@ -28,7 +29,7 @@ const translations = {
     home: "Home",
     emergency: "Emergency",
     dashboard: "Dashboard",
-    lifeline: "HEARTCARE LIFELINE",
+    lifeline: "HEARTGUARD AI LIFELINE",
     heroTitle: "Essential Healthcare",
     heroHighlight: "Resources Across India",
     heroDescription: "Find information about important heart medicines, emergency medical equipment, blood banks and oxygen services across India.",
@@ -56,7 +57,7 @@ const translations = {
     provider: "Provider",
     updated: "Updated",
     footerDescription: "Healthcare resource discovery concept for India. Always confirm availability directly with a verified provider.",
-    copyright: "© 2026 HeartCare. All rights reserved.",
+    copyright: "© 2026 HeartGuard AI. All rights reserved.",
     allResources: "All Resources",
     medicines: "Heart Medicines",
     injections: "Emergency Injections",
@@ -102,7 +103,7 @@ const translations = {
     provider: "प्रदाता",
     updated: "अपडेट",
     footerDescription: "भारत के लिए स्वास्थ्य संसाधन खोजने की अवधारणा। उपलब्धता की पुष्टि हमेशा सत्यापित प्रदाता से करें।",
-    copyright: "© 2026 HeartCare. सर्वाधिकार सुरक्षित।",
+    copyright: "© 2026 HeartGuard AI. सर्वाधिकार सुरक्षित।",
     allResources: "सभी संसाधन",
     medicines: "हृदय की दवाएँ",
     injections: "आपातकालीन इंजेक्शन",
@@ -148,7 +149,7 @@ const translations = {
     provider: "পরিষেবা প্রদানকারী",
     updated: "আপডেট",
     footerDescription: "ভারতের জন্য স্বাস্থ্য সংস্থান খোঁজার একটি ধারণা। প্রাপ্যতা যাচাইকৃত প্রদানকারীর কাছ থেকে নিশ্চিত করুন।",
-    copyright: "© ২০২৬ HeartCare. সর্বস্বত্ব সংরক্ষিত।",
+    copyright: "© ২০২৬ HeartGuard AI. সর্বস্বত্ব সংরক্ষিত।",
     allResources: "সব সংস্থান",
     medicines: "হার্টের ওষুধ",
     injections: "জরুরি ইনজেকশন",
@@ -297,6 +298,7 @@ const resourceTranslations = {
 };
 
 function HeartResources() {
+  const navigate = useNavigate();
   const { language } = useTheme();
   const t = translations[language] || translations.English;
 
@@ -307,8 +309,13 @@ function HeartResources() {
   const [selectedResource, setSelectedResource] = useState(null);
 
   useEffect(() => {
+    const token = sessionStorage.getItem("heartcareToken");
+    if (!token) {
+      navigate("/login", { replace: true });
+      return;
+    }
     window.scrollTo(0, 0);
-  }, []);
+  }, [navigate]);
 
   useEffect(() => {
     if (!selectedResource) return;
@@ -390,14 +397,16 @@ function HeartResources() {
 
   return (
     <div className="resources-page">
+      <DashboardSidebar activeKey="/heart-resources" />
 
-      {/* Navigation */}
-      <nav className="resources-navbar">
+      <div className="resources-page-main">
+        {/* Navigation */}
+        <nav className="resources-navbar">
         <Link to="/" className="resources-logo">
           <span className="resources-logo-icon">
             <HeartPulse size={25} />
           </span>
-          <span>HeartCare</span>
+          <span>HeartGuard AI</span>
         </Link>
 
         <div className="resources-nav-links">
@@ -716,13 +725,14 @@ function HeartResources() {
       <footer className="resources-footer">
         <div className="resources-logo">
           <HeartPulse size={23} />
-          HeartCare Lifeline
+          HeartGuard AI Lifeline
         </div>
 
         <p>{t.footerDescription}</p>
 
         <span>{t.copyright}</span>
       </footer>
+      </div>
     </div>
   );
 }

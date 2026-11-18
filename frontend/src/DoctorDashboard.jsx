@@ -1008,7 +1008,7 @@ function DoctorDashboard() {
             <Activity size={25} />
           </div>
           <div>
-            <h2>HeartCare</h2>
+            <h2>HeartGuard AI</h2>
             <span>Doctor Portal</span>
           </div>
         </div>
@@ -1067,7 +1067,7 @@ function DoctorDashboard() {
           </button>
 
           <div className="doctor-sidebar-footer">
-            <span>HeartCare</span>
+            <span>HeartGuard AI</span>
             <small>Doctor Portal · Frontend Demo</small>
           </div>
         </div>
@@ -1085,7 +1085,7 @@ function DoctorDashboard() {
             </button>
 
             <div>
-              <span className="doctor-breadcrumb">HeartCare /</span>
+              <span className="doctor-breadcrumb">HeartGuard AI /</span>
               <strong>{activePage}</strong>
             </div>
           </div>
@@ -1113,7 +1113,7 @@ function DoctorDashboard() {
           {renderPage()}
 
           <footer className="doctor-footer">
-            <span>© {new Date().getFullYear()} HeartCare</span>
+            <span>© {new Date().getFullYear()} HeartGuard AI</span>
             <span>Doctor Portal</span>
           </footer>
         </div>

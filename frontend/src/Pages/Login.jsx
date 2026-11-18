@@ -69,13 +69,13 @@ function Login() {
     <div className="login-page">
       <div className="login-card">
         <div className="login-logo">
-          <span>♥</span> HeartCare
+          <span>♥</span> HeartGuard AI
         </div>
 
         <h2>Welcome Back!</h2>
 
         <p className="login-subtitle">
-          Login to access your HeartCare account.
+          Login to access your HeartGuard AI account.
         </p>
 
         <form onSubmit={handleLogin}>

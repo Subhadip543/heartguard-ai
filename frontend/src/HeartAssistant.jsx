@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -10,13 +9,12 @@ import {
   Plus,
   Trash2,
   HeartPulse,
-  MessageCircle,
-  ArrowLeft,
   ShieldAlert,
   RotateCcw,
 } from "lucide-react";
 
 import { useTheme } from "./context/useTheme";
+import DashboardSidebar from "./DashboardSidebar";
 import "./HeartAssistant.css";
 
 // ========================================
@@ -333,38 +331,8 @@ function HeartAssistant() {
 
   return (
     <div className="heart-chat-page">
-      {/* Sidebar */}
-      <aside className="heart-chat-sidebar">
-        <div className="chat-brand">
-          <div className="chat-brand-icon">
-            <HeartPulse size={27} />
-          </div>
-          <div>
-            <h2>{t.brand}</h2>
-            <span>{t.assistant}</span>
-          </div>
-        </div>
-
-        <button className="new-chat-btn" onClick={clearChat}>
-          <Plus size={19} />
-          {t.newConversation}
-        </button>
-
-        <div className="chat-sidebar-info">
-          <MessageCircle size={20} />
-          <div>
-            <h4>{t.supportTitle}</h4>
-            <p>{t.supportDescription}</p>
-          </div>
-        </div>
-
-        <div className="chat-sidebar-bottom">
-          <Link to="/dashboard" className="back-dashboard">
-            <ArrowLeft size={18} />
-            {t.backDashboard}
-          </Link>
-        </div>
-      </aside>
+      {/* Unified Dashboard Sidebar */}
+      <DashboardSidebar activeKey="/heart-assistant" />
 
       {/* Main Chat */}
       <main className="heart-chat-main">
@@ -386,14 +354,25 @@ function HeartAssistant() {
             </div>
           </div>
 
-          <button
-            className="clear-chat-btn"
-            onClick={clearChat}
-            title={t.clearTitle}
-          >
-            <Trash2 size={19} />
-            <span>{t.clearChat}</span>
-          </button>
+          <div className="chat-header-actions">
+            <button
+              className="chat-action-btn new-chat-btn"
+              onClick={clearChat}
+              title={t.newConversation}
+            >
+              <Plus size={17} />
+              <span>{t.newConversation}</span>
+            </button>
+
+            <button
+              className="chat-action-btn clear-chat-btn"
+              onClick={clearChat}
+              title={t.clearTitle}
+            >
+              <Trash2 size={17} />
+              <span>{t.clearChat}</span>
+            </button>
+          </div>
         </header>
 
         {/* Messages */}

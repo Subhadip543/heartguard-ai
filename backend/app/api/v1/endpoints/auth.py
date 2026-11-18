@@ -2,7 +2,7 @@
 from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, status
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
@@ -44,10 +44,10 @@ def register_patient(
     patient_data: PatientRegister,
     db: Session = Depends(get_db),
 ):
-    email = str(patient_data.email).lower()
+    email = str(patient_data.email).lower().strip()
 
     existing_patient = db.scalar(
-        select(Patient).where(Patient.email == email)
+        select(Patient).where(func.lower(Patient.email) == email)
     )
 
     if existing_patient:
@@ -89,10 +89,10 @@ def login_patient(
     login_data: PatientLogin,
     db: Session = Depends(get_db),
 ):
-    email = str(login_data.email).lower()
+    email = str(login_data.email).lower().strip()
 
     patient = db.scalar(
-        select(Patient).where(Patient.email == email)
+        select(Patient).where(func.lower(Patient.email) == email)
     )
 
     if not patient or not verify_password(
@@ -147,7 +147,7 @@ def request_password_reset(
     )
 
     patient = db.scalar(
-        select(Patient).where(Patient.email == email)
+        select(Patient).where(func.lower(Patient.email) == email)
     )
 
     debug_token: str | None = None

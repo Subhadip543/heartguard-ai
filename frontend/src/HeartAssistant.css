@@ -1,5 +1,5 @@
 /* =========================================
-   HEARTCARE AI ASSISTANT (CHAT)
+   HEARTGUARD AI AI ASSISTANT (CHAT)
    Theme-aware CSS (Light & Dark Support)
 ========================================= */
 
@@ -24,6 +24,13 @@
   color: var(--chat-text);
   font-family: inherit;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .heart-chat-page {
+    flex-direction: column;
+  }
 }
 
 [data-theme="dark"] .heart-chat-page {
@@ -208,6 +215,44 @@
 .chat-header-left span {
   font-size: 12px;
   color: var(--chat-muted);
+}
+
+.chat-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--chat-surface);
+  border: 1px solid var(--chat-border);
+  border-radius: 9px;
+  padding: 8px 14px;
+  color: var(--chat-muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chat-action-btn:hover {
+  background: var(--chat-primary-soft);
+  color: var(--chat-primary);
+  border-color: var(--chat-primary);
+}
+
+.new-chat-btn {
+  background: var(--chat-primary-soft);
+  color: var(--chat-primary);
+  border-color: rgba(8, 127, 140, 0.25);
+}
+
+.new-chat-btn:hover {
+  background: var(--chat-primary);
+  color: #ffffff;
 }
 
 .clear-chat-btn {

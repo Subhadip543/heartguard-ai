@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 // Theme and Settings imports
 import ThemeProvider from "./context/ThemeProvider";
@@ -33,8 +33,10 @@ function App() {
     <BrowserRouter>
       <ThemeProvider>
         {/* Global Theme Toggle & Settings Drawer */}
-        <ThemeToggle />
-        <SettingsPanel />
+        <div className="global-floating-controls" aria-label="Page controls">
+          <ThemeToggle />
+          <SettingsPanel />
+        </div>
 
         <Routes>
           {/* Home Page */}
@@ -99,10 +101,10 @@ function App() {
           <Route
             path="*"
             element={
-              <div style={{ padding: "50px", textAlign: "center" }}>
+              <div style={{ padding: "50px", textAlign: "center", color: "var(--text)" }}>
                 <h1>404</h1>
                 <h2>Page Not Found</h2>
-                <a href="/">Go to Home</a>
+                <Link to="/" style={{ color: "var(--primary)", textDecoration: "underline" }}>Go to Home</Link>
               </div>
             }
           />

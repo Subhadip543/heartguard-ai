@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -51,9 +52,9 @@ const readSetting = (key, fallback) => {
 const translations = {
   English: {
     title: "Settings",
-    subtitle: "Personalize your HeartCare experience",
+    subtitle: "Personalize your HeartGuard AI experience",
     appearance: "Appearance",
-    appearanceDesc: "Choose how HeartCare looks",
+    appearanceDesc: "Choose how HeartGuard AI looks",
     light: "Light Mode",
     dark: "Dark Mode",
     notifications: "Notifications",
@@ -64,7 +65,7 @@ const translations = {
     appointmentAlerts: "Appointment Alerts",
     appointmentAlertsDesc: "Get appointment reminders",
     accessibility: "Accessibility",
-    accessibilityDesc: "Make HeartCare easier to use",
+    accessibilityDesc: "Make HeartGuard AI easier to use",
     fontSize: "Font Size",
     small: "Small",
     normal: "Normal",
@@ -83,8 +84,8 @@ const translations = {
     remindersDesc: "Set a daily health reminder",
     enableReminders: "Enable Daily Reminder",
     reminderTime: "Reminder Time",
-    about: "About HeartCare",
-    aboutDesc: "Your health matters. HeartCare provides health information and risk-assessment support. It does not replace professional medical advice or emergency care.",
+    about: "About HeartGuard AI",
+    aboutDesc: "Your health matters. HeartGuard AI provides health information and risk-assessment support. It does not replace professional medical advice or emergency care.",
     reset: "Reset Preferences",
     resetDesc: "Restore default settings",
     close: "Close settings",
@@ -93,14 +94,14 @@ const translations = {
     permissionDenied: "Notification permission was not granted.",
     unsupported: "Your browser does not support notifications.",
     permissionNeeded: "Please allow notifications in your browser.",
-    footer: "HeartCare • Version 1.0.0"
+    footer: "HeartGuard AI • Version 1.0.0"
   },
 
   Hindi: {
     title: "सेटिंग्स",
-    subtitle: "अपने HeartCare अनुभव को व्यक्तिगत बनाएं",
+    subtitle: "अपने HeartGuard AI अनुभव को व्यक्तिगत बनाएं",
     appearance: "दिखावट",
-    appearanceDesc: "HeartCare की थीम चुनें",
+    appearanceDesc: "HeartGuard AI की थीम चुनें",
     light: "लाइट मोड",
     dark: "डार्क मोड",
     notifications: "सूचनाएं",
@@ -111,7 +112,7 @@ const translations = {
     appointmentAlerts: "अपॉइंटमेंट अलर्ट",
     appointmentAlertsDesc: "अपॉइंटमेंट रिमाइंडर प्राप्त करें",
     accessibility: "सुगम्यता",
-    accessibilityDesc: "HeartCare को उपयोग में आसान बनाएं",
+    accessibilityDesc: "HeartGuard AI को उपयोग में आसान बनाएं",
     fontSize: "फ़ॉन्ट आकार",
     small: "छोटा",
     normal: "सामान्य",
@@ -130,8 +131,8 @@ const translations = {
     remindersDesc: "दैनिक स्वास्थ्य रिमाइंडर सेट करें",
     enableReminders: "दैनिक रिमाइंडर चालू करें",
     reminderTime: "रिमाइंडर का समय",
-    about: "HeartCare के बारे में",
-    aboutDesc: "आपका स्वास्थ्य महत्वपूर्ण है। HeartCare स्वास्थ्य जानकारी और जोखिम आकलन में सहायता करता है। यह डॉक्टर की सलाह या आपातकालीन देखभाल का विकल्प नहीं है।",
+    about: "HeartGuard AI के बारे में",
+    aboutDesc: "आपका स्वास्थ्य महत्वपूर्ण है। HeartGuard AI स्वास्थ्य जानकारी और जोखिम आकलन में सहायता करता है। यह डॉक्टर की सलाह या आपातकालीन देखभाल का विकल्प नहीं है।",
     reset: "सेटिंग्स रीसेट करें",
     resetDesc: "डिफ़ॉल्ट सेटिंग्स वापस लाएं",
     close: "सेटिंग्स बंद करें",
@@ -140,14 +141,14 @@ const translations = {
     permissionDenied: "नोटिफिकेशन की अनुमति नहीं मिली।",
     unsupported: "आपका ब्राउज़र नोटिफिकेशन सपोर्ट नहीं करता।",
     permissionNeeded: "कृपया ब्राउज़र में नोटिफिकेशन की अनुमति दें।",
-    footer: "HeartCare • संस्करण 1.0.0"
+    footer: "HeartGuard AI • संस्करण 1.0.0"
   },
 
   Bengali: {
     title: "সেটিংস",
-    subtitle: "আপনার HeartCare অভিজ্ঞতা নিজের মতো সাজান",
+    subtitle: "আপনার HeartGuard AI অভিজ্ঞতা নিজের মতো সাজান",
     appearance: "চেহারা",
-    appearanceDesc: "HeartCare-এর থিম নির্বাচন করুন",
+    appearanceDesc: "HeartGuard AI-এর থিম নির্বাচন করুন",
     light: "লাইট মোড",
     dark: "ডার্ক মোড",
     notifications: "নোটিফিকেশন",
@@ -158,7 +159,7 @@ const translations = {
     appointmentAlerts: "অ্যাপয়েন্টমেন্ট সতর্কতা",
     appointmentAlertsDesc: "অ্যাপয়েন্টমেন্টের রিমাইন্ডার পান",
     accessibility: "অ্যাক্সেসিবিলিটি",
-    accessibilityDesc: "HeartCare ব্যবহার আরও সহজ করুন",
+    accessibilityDesc: "HeartGuard AI ব্যবহার আরও সহজ করুন",
     fontSize: "ফন্টের আকার",
     small: "ছোট",
     normal: "স্বাভাবিক",
@@ -177,8 +178,8 @@ const translations = {
     remindersDesc: "প্রতিদিনের স্বাস্থ্য রিমাইন্ডার সেট করুন",
     enableReminders: "দৈনিক রিমাইন্ডার চালু করুন",
     reminderTime: "রিমাইন্ডারের সময়",
-    about: "HeartCare সম্পর্কে",
-    aboutDesc: "আপনার স্বাস্থ্য গুরুত্বপূর্ণ। HeartCare স্বাস্থ্য সম্পর্কিত তথ্য এবং ঝুঁকি মূল্যায়নে সহায়তা করে। এটি চিকিৎসকের পরামর্শ বা জরুরি চিকিৎসার বিকল্প নয়।",
+    about: "HeartGuard AI সম্পর্কে",
+    aboutDesc: "আপনার স্বাস্থ্য গুরুত্বপূর্ণ। HeartGuard AI স্বাস্থ্য সম্পর্কিত তথ্য এবং ঝুঁকি মূল্যায়নে সহায়তা করে। এটি চিকিৎসকের পরামর্শ বা জরুরি চিকিৎসার বিকল্প নয়।",
     reset: "সেটিংস রিসেট করুন",
     resetDesc: "ডিফল্ট সেটিংসে ফিরে যান",
     close: "সেটিংস বন্ধ করুন",
@@ -187,7 +188,7 @@ const translations = {
     permissionDenied: "নোটিফিকেশনের অনুমতি পাওয়া যায়নি।",
     unsupported: "আপনার ব্রাউজার নোটিফিকেশন সমর্থন করে না।",
     permissionNeeded: "অনুগ্রহ করে ব্রাউজারে নোটিফিকেশনের অনুমতি দিন।",
-    footer: "HeartCare • সংস্করণ 1.0.0"
+    footer: "HeartGuard AI • সংস্করণ 1.0.0"
   }
 };
 
@@ -374,7 +375,7 @@ export default function SettingsPanel() {
       }
 
       try {
-        new Notification(detail.title || "HeartCare", {
+        new Notification(detail.title || "HeartGuard AI", {
           body: detail.body || "You have a new update.",
           icon: "/favicon.ico"
         });
@@ -427,7 +428,7 @@ export default function SettingsPanel() {
         Notification.permission === "granted"
       ) {
         try {
-          new Notification("HeartCare Health Reminder", {
+          new Notification("HeartGuard AI Health Reminder", {
             body: "Take a moment to check your health and stay active.",
             icon: "/favicon.ico"
           });
@@ -453,7 +454,7 @@ export default function SettingsPanel() {
     preferences.reminderTime
   ]);
 
-  // Close drawer with Escape key
+  // Close drawer with Escape key and listen for custom open events
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === "Escape") {
@@ -461,10 +462,16 @@ export default function SettingsPanel() {
       }
     };
 
+    const handleCustomOpen = () => {
+      setIsOpen(true);
+    };
+
     window.addEventListener("keydown", handleEscape);
+    window.addEventListener("heartguard-open-settings", handleCustomOpen);
 
     return () => {
       window.removeEventListener("keydown", handleEscape);
+      window.removeEventListener("heartguard-open-settings", handleCustomOpen);
     };
   }, []);
 
@@ -501,22 +508,24 @@ export default function SettingsPanel() {
           type="button"
           className="hc-settings-trigger"
           onClick={() => setIsOpen(true)}
-          aria-label="Open settings"
-          title="Settings"
+          aria-label={t.title}
+          title={t.title}
         >
-          <Settings size={20} />
+          <Settings size={18} />
+          <span className="hc-settings-label">{t.title}</span>
         </button>
       )}
 
-      {isOpen && (
-        <div
-          className="hc-settings-overlay"
-          onMouseDown={(event) => {
-            if (event.target === event.currentTarget) {
-              setIsOpen(false);
-            }
-          }}
-        >
+      {isOpen &&
+        createPortal(
+          <div
+            className="hc-settings-overlay"
+            onMouseDown={(event) => {
+              if (event.target === event.currentTarget) {
+                setIsOpen(false);
+              }
+            }}
+          >
           <aside
             className="hc-settings-drawer"
             data-font-size={fontSize}
@@ -839,7 +848,8 @@ export default function SettingsPanel() {
               {t.footer}
             </div>
           </aside>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

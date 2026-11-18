@@ -1,9 +1,7 @@
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ==========================================================================
+   HEARTGUARD AI — REGISTRATION PAGE
+   Complete Light & Dark Mode + Design System Alignment
+   ========================================================================== */
 
 .registration-page {
   min-height: 100vh;
@@ -11,43 +9,89 @@
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #eaf7f7, #f5f9fc);
-  font-family: Arial, sans-serif;
-  color: #24434a;
+  background: var(--bg);
+  font-family: var(--font-sans, "DM Sans", -apple-system, sans-serif);
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Background decorative orbs */
+.registration-page::before {
+  content: "";
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  top: -140px;
+  right: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(19, 184, 166, 0.14), transparent 70%);
+  pointer-events: none;
+}
+
+.registration-page::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  bottom: -100px;
+  left: -100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(8, 127, 140, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   CONTAINER / CARD
+   ========================================================================== */
 
 .registration-container {
   width: 100%;
   max-width: 520px;
-  padding: 40px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 12px 40px rgba(29, 79, 87, 0.12);
+  padding: 42px 38px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .registration-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .registration-header h1 {
-  color: #087f8c;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 18px;
+  font-family: var(--font-heading, "Manrope", sans-serif);
+  color: var(--primary);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
 }
 
 .registration-header h2 {
-  font-size: 25px;
-  color: #23434b;
-  margin-bottom: 10px;
+  font-family: var(--font-heading, "Manrope", sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
 }
 
 .registration-header p {
-  color: #71858a;
-  font-size: 14px;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
   line-height: 1.6;
 }
+
+/* ==========================================================================
+   FORM CONTROLS
+   ========================================================================== */
 
 .registration-container form {
   display: flex;
@@ -62,108 +106,134 @@
 }
 
 .form-group label {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
-  color: #34545b;
+  color: var(--text);
 }
 
 .form-group input {
   width: 100%;
-  padding: 13px 15px;
-  border: 1px solid #d6e3e5;
-  border-radius: 9px;
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid var(--input-border, var(--border));
+  border-radius: 10px;
   outline: none;
-  font-size: 14px;
-  color: #263f45;
-  background: #fbfdfd;
-  transition: 0.3s ease;
+  font-size: 0.9375rem;
+  color: var(--text);
+  background: var(--input-bg, var(--surface));
+  transition: border-color 0.25s, box-shadow 0.25s, background-color 0.25s;
 }
 
 .form-group input:focus {
-  border-color: #078b96;
-  background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(8, 139, 150, 0.10);
+  border-color: var(--primary);
+  background: var(--input-bg, var(--surface));
+  box-shadow: 0 0 0 3px rgba(19, 184, 166, 0.15);
 }
 
 .form-group input::placeholder {
-  color: #a0b0b4;
+  color: var(--text-muted);
 }
+
+/* ==========================================================================
+   SUBMIT BUTTON
+   ========================================================================== */
 
 .registration-container form button {
   width: 100%;
-  padding: 14px;
+  height: 48px;
   margin-top: 8px;
-  background: #078b96;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: #ffffff;
   border: none;
-  border-radius: 9px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(19, 184, 166, 0.28);
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
 }
 
-.registration-container form button:hover {
-  background: #066d77;
+.registration-container form button:hover:not(:disabled) {
   transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(19, 184, 166, 0.38);
+}
+
+.registration-container form button:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 .registration-container form button:disabled {
-  background: #91bfc2;
+  opacity: 0.65;
   cursor: not-allowed;
   transform: none;
 }
 
+/* ==========================================================================
+   MESSAGES
+   ========================================================================== */
+
 .error-message {
-  color: #d93025;
-  background: #fff0ef;
-  border-radius: 7px;
-  padding: 11px;
-  font-size: 13px;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 9px;
+  padding: 12px 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
 .success-message {
-  color: #167447;
-  background: #eaf8f0;
-  border-radius: 7px;
-  padding: 11px;
-  font-size: 13px;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 9px;
+  padding: 12px 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
+/* ==========================================================================
+   FOOTER & BACK
+   ========================================================================== */
+
 .registration-footer {
   text-align: center;
-  margin-top: 25px;
-  font-size: 14px;
-  color: #71858a;
+  margin-top: 24px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
 }
 
 .registration-footer a {
-  color: #078b96;
-  font-weight: 600;
+  color: var(--primary);
+  font-weight: 700;
   text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.2s ease;
 }
 
 .registration-footer a:hover {
   text-decoration: underline;
 }
 
-/* Mobile responsive design */
+/* ==========================================================================
+   RESPONSIVE DESIGN (375px - 600px)
+   ========================================================================== */
+
 @media (max-width: 600px) {
   .registration-page {
-    padding: 20px 14px;
+    padding: 24px 16px;
   }
 
   .registration-container {
-    padding: 28px 20px;
+    padding: 30px 22px;
+    border-radius: 16px;
   }
 
   .registration-header h1 {
-    font-size: 26px;
+    font-size: 1.5rem;
   }
 
   .registration-header h2 {
-    font-size: 22px;
+    font-size: 1.3rem;
   }
 }

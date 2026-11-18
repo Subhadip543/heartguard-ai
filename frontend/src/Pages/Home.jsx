@@ -15,10 +15,13 @@ import "./Home.css";
 const translations = {
   English: {
     nav: ["Home", "About", "Features", "Lifeline", "Login", "Get Started"],
+    dashboard: "Dashboard",
+    profile: "Profile",
+    logout: "Logout",
     heroBadge: "Your Partner in Heart Health",
     heroTitle: "Take Care of Your Heart.",
     heroTitle2: "Live a Healthier Life.",
-    heroDescription: "HeartCare brings together heart-health awareness, intelligent assessment tools, healthcare resources and emergency support to help you make informed decisions about your health.",
+    heroDescription: "HeartGuard AI brings together heart-health awareness, intelligent assessment tools, healthcare resources and emergency support to help you make informed decisions about your health.",
     startAssessment: "Start Assessment",
     liveMonitoring: "Live Health Monitoring (Simulated)",
     explorePlatform: "Explore Platform",
@@ -28,34 +31,34 @@ const translations = {
     stayInformed: "Stay Informed",
     informedDecisions: "Make informed decisions",
     trust: ["Health Awareness", "AI Assistance", "Heart Monitoring", "Healthcare Resources"],
-    aboutLabel: "ABOUT HEARTCARE",
+    aboutLabel: "ABOUT HEARTGUARD AI",
     aboutTitle: "Bringing Heart Health",
     aboutTitle2: "Closer to Everyone",
-    aboutP1: "HeartCare is a healthcare-focused platform designed to make heart-health information, assessment tools and essential healthcare resources easier to access.",
+    aboutP1: "HeartGuard AI is a healthcare-focused platform designed to make heart-health information, assessment tools and essential healthcare resources easier to access.",
     aboutP2: "Our goal is to combine technology and healthcare awareness to help people understand potential risks, learn preventive practices and find relevant support.",
     aboutPoints: ["Accessible heart-health information", "Technology-assisted assessment", "Healthcare resource information"],
-    exploreHeartCare: "Explore HeartCare",
+    exploreHeartGuardAI: "Explore HeartGuard AI",
     aiLabel: "HEARTWISE AI — PREVIEW",
     aiTitle: "Your Intelligent Heart Health Companion",
     aiDescription: "HeartWise AI is a frontend preview companion designed to showcase educational cardiovascular guidance. The backend chat service is not active on this system.",
     exploreAI: "Explore HeartWise AI (Preview)",
     aiDisclaimer: "AI guidance is informational and does not replace professional medical diagnosis or emergency care.",
-    lifelineLabel: "HEARTCARE LIFELINE",
+    lifelineLabel: "HEARTGUARD AI LIFELINE",
     lifelineTitle: "Essential Healthcare",
     lifelineTitle2: "Resources in One Place",
     lifelineDescription: "Find information about important heart-related medicines, emergency injections, medical equipment, blood resources and oxygen support across India.",
     lifelineCategories: ["Heart Medicines", "Emergency Injections", "Medical Equipment", "Blood Resources", "Oxygen Supply", "Healthcare Support"],
-    lifelineButton: "Explore HeartCare Lifeline",
+    lifelineButton: "Explore HeartGuard AI Lifeline",
     lifelineNote: "Resource information is for reference. Verify availability directly with providers before travelling or purchasing.",
     lifelineCaption: "Care when it matters.",
     lifelineSubcaption: "Healthcare resource information in one place",
     services: "OUR SERVICES",
     featuresTitle: "Everything You Need for",
     featuresTitle2: "Better Heart Health",
-    featuresDescription: "Explore the tools and services available through the HeartCare platform.",
+    featuresDescription: "Explore the tools and services available through the HeartGuard AI platform.",
     featureTitles: [
       "Heart Risk Assessment", "HeartWise AI (Preview)", "Health Awareness",
-      "HeartCare Lifeline (Demo)", "Find Doctors (Demo)", "Emergency Support",
+      "HeartGuard AI Lifeline (Demo)", "Find Doctors (Demo)", "Emergency Support",
       "Patient Dashboard", "Doctor Portal (Demo)"
     ],
     featureDescriptions: [
@@ -79,7 +82,7 @@ const translations = {
     emergencyButton: "Access Emergency Support",
     bottomLabel: "YOUR HEALTH MATTERS",
     bottomTitle: "Start Your Heart Health Journey Today",
-    bottomDescription: "Explore HeartCare and take a more informed approach to understanding and caring for your heart.",
+    bottomDescription: "Explore HeartGuard AI and take a more informed approach to understanding and caring for your heart.",
     footerDescription: "Technology-assisted heart-health awareness, assessment and healthcare resource information.",
     quickLinks: "Quick Links",
     aboutUs: "About Us",
@@ -88,16 +91,19 @@ const translations = {
     account: "Account",
     register: "Register",
     patientDashboard: "Patient Dashboard",
-    footerDisclaimer: "HeartCare provides informational support and is not a substitute for professional medical advice.",
+    footerDisclaimer: "HeartGuard AI provides informational support and is not a substitute for professional medical advice.",
     rights: "All Rights Reserved."
   },
 
   Bengali: {
     nav: ["হোম", "আমাদের সম্পর্কে", "বৈশিষ্ট্য", "লাইফলাইন", "লগইন", "শুরু করুন"],
+    dashboard: "ড্যাশবোর্ড",
+    profile: "প্রোফাইল",
+    logout: "লগআউট",
     heroBadge: "আপনার হৃদ্‌স্বাস্থ্যের সঙ্গী",
     heroTitle: "আপনার হৃদয়ের যত্ন নিন।",
     heroTitle2: "সুস্থ জীবনযাপন করুন।",
-    heroDescription: "HeartCare হৃদ্‌স্বাস্থ্য সচেতনতা, স্বাস্থ্য মূল্যায়ন, চিকিৎসা সংক্রান্ত তথ্য এবং জরুরি সহায়তা একসঙ্গে প্রদান করে, যাতে আপনি নিজের স্বাস্থ্য সম্পর্কে সচেতন সিদ্ধান্ত নিতে পারেন।",
+    heroDescription: "HeartGuard AI হৃদ্‌স্বাস্থ্য সচেতনতা, স্বাস্থ্য মূল্যায়ন, চিকিৎসা সংক্রান্ত তথ্য এবং জরুরি সহায়তা একসঙ্গে প্রদান করে, যাতে আপনি নিজের স্বাস্থ্য সম্পর্কে সচেতন সিদ্ধান্ত নিতে পারেন।",
     startAssessment: "মূল্যায়ন শুরু করুন",
     liveMonitoring: "লাইভ স্বাস্থ্য পর্যবেক্ষণ (সিমুলেটেড)",
     explorePlatform: "প্ল্যাটফর্ম দেখুন",
@@ -107,32 +113,32 @@ const translations = {
     stayInformed: "সচেতন থাকুন",
     informedDecisions: "সঠিক সিদ্ধান্ত নিন",
     trust: ["স্বাস্থ্য সচেতনতা", "AI সহায়তা", "হৃদ্‌স্বাস্থ্য পর্যবেক্ষণ", "চিকিৎসা সংক্রান্ত তথ্য"],
-    aboutLabel: "HEARTCARE সম্পর্কে",
+    aboutLabel: "HEARTGUARD AI সম্পর্কে",
     aboutTitle: "হৃদ্‌স্বাস্থ্যকে",
     aboutTitle2: "সবার আরও কাছে নিয়ে আসা",
-    aboutP1: "HeartCare একটি স্বাস্থ্যভিত্তিক প্ল্যাটফর্ম, যা হৃদ্‌স্বাস্থ্য সম্পর্কিত তথ্য, স্বাস্থ্য মূল্যায়ন এবং প্রয়োজনীয় চিকিৎসা সংক্রান্ত তথ্য সহজে পেতে সাহায্য করে।",
+    aboutP1: "HeartGuard AI একটি স্বাস্থ্যভিত্তিক প্ল্যাটফর্ম, যা হৃদ্‌স্বাস্থ্য সম্পর্কিত তথ্য, স্বাস্থ্য মূল্যায়ন এবং প্রয়োজনীয় চিকিৎসা সংক্রান্ত তথ্য সহজে পেতে সাহায্য করে।",
     aboutP2: "প্রযুক্তি ও স্বাস্থ্য সচেতনতার সমন্বয়ে সম্ভাব্য ঝুঁকি বোঝা, প্রতিরোধমূলক অভ্যাস শেখা এবং প্রয়োজনীয় সহায়তা খুঁজে পেতে সাহায্য করাই আমাদের লক্ষ্য।",
     aboutPoints: ["সহজে হৃদ্‌স্বাস্থ্য সংক্রান্ত তথ্য", "প্রযুক্তিনির্ভর স্বাস্থ্য মূল্যায়ন", "চিকিৎসা সংক্রান্ত তথ্য"],
-    exploreHeartCare: "HeartCare দেখুন",
+    exploreHeartGuardAI: "HeartGuard AI দেখুন",
     aiLabel: "HEARTWISE AI — প্রিভিউ",
     aiTitle: "আপনার বুদ্ধিমান হৃদ্‌স্বাস্থ্য সহায়ক",
     aiDescription: "HeartWise AI একটি ফ্রন্টএন্ড প্রিভিউ সহায়ক যা হৃদ্‌স্বাস্থ্য শিক্ষা প্রদর্শনের জন্য তৈরি। এই সিস্টেমে ব্যাকএন্ড চ্যাট পরিষেবা সক্রিয় নয়।",
     exploreAI: "HeartWise AI দেখুন (প্রিভিউ)",
     aiDisclaimer: "AI-এর তথ্য শুধুমাত্র শিক্ষামূলক। এটি চিকিৎসকের রোগ নির্ণয় বা জরুরি চিকিৎসার বিকল্প নয়।",
-    lifelineLabel: "HEARTCARE লাইফলাইন",
+    lifelineLabel: "HEARTGUARD AI লাইফলাইন",
     lifelineTitle: "প্রয়োজনীয় চিকিৎসা",
     lifelineTitle2: "সংক্রান্ত তথ্য এক জায়গায়",
     lifelineDescription: "ভারতজুড়ে হৃদ্‌রোগের ওষুধ, জরুরি ইনজেকশন, চিকিৎসা সরঞ্জাম, রক্ত এবং অক্সিজেন সহায়তা সম্পর্কে তথ্য খুঁজুন।",
     lifelineCategories: ["হৃদ্‌রোগের ওষুধ", "জরুরি ইনজেকশন", "চিকিৎসা সরঞ্জাম", "রক্তের তথ্য", "অক্সিজেন সরবরাহ", "চিকিৎসা সহায়তা"],
-    lifelineButton: "HeartCare লাইফলাইন দেখুন",
+    lifelineButton: "HeartGuard AI লাইফলাইন দেখুন",
     lifelineNote: "এই তথ্য শুধুমাত্র রেফারেন্সের জন্য। যাওয়ার আগে বা কেনার আগে সরবরাহকারীর সঙ্গে যোগাযোগ করে প্রাপ্যতা যাচাই করুন।",
     lifelineCaption: "প্রয়োজনের সময় সহায়তা।",
     lifelineSubcaption: "চিকিৎসা সংক্রান্ত তথ্য এক জায়গায়",
     services: "আমাদের পরিষেবা",
     featuresTitle: "হৃদ্‌স্বাস্থ্যের জন্য",
     featuresTitle2: "আপনার প্রয়োজনীয় সবকিছু",
-    featuresDescription: "HeartCare প্ল্যাটফর্মে উপলব্ধ পরিষেবা ও সরঞ্জামগুলি দেখুন।",
-    featureTitles: ["হৃদ্‌রোগের ঝুঁকি মূল্যায়ন", "HeartWise AI (প্রিভিউ)", "স্বাস্থ্য সচেতনতা", "HeartCare লাইফলাইন (ডেমো)", "চিকিৎসক খুঁজুন (ডেমো)", "জরুরি সহায়তা", "রোগীর ড্যাশবোর্ড", "চিকিৎসক পোর্টাল (ডেমো)"],
+    featuresDescription: "HeartGuard AI প্ল্যাটফর্মে উপলব্ধ পরিষেবা ও সরঞ্জামগুলি দেখুন।",
+    featureTitles: ["হৃদ্‌রোগের ঝুঁকি মূল্যায়ন", "HeartWise AI (প্রিভিউ)", "স্বাস্থ্য সচেতনতা", "HeartGuard AI লাইফলাইন (ডেমো)", "চিকিৎসক খুঁজুন (ডেমো)", "জরুরি সহায়তা", "রোগীর ড্যাশবোর্ড", "চিকিৎসক পোর্টাল (ডেমো)"],
     featureDescriptions: [
       "প্রশিক্ষিত র্যান্ডম ফরেস্ট মডেল ব্যবহার করে গুরুত্বপূর্ণ পরামিতি মূল্যায়নের মাধ্যমে সম্ভাব্য হৃদ্‌রোগের ঝুঁকি জানুন।",
       "হৃদ্‌স্বাস্থ্য বিষয়ক শিক্ষামূলক নির্দেশনার জন্য একটি নমুনা AI সহায়কের ইন্টারফেস দেখুন (ফ্রন্টএন্ড প্রিভিউ)।",
@@ -151,7 +157,7 @@ const translations = {
     emergencyButton: "জরুরি সহায়তা নিন",
     bottomLabel: "আপনার স্বাস্থ্য গুরুত্বপূর্ণ",
     bottomTitle: "আজই হৃদ্‌স্বাস্থ্যের যত্ন শুরু করুন",
-    bottomDescription: "HeartCare ব্যবহার করে নিজের হৃদ্‌স্বাস্থ্য সম্পর্কে আরও সচেতন হোন।",
+    bottomDescription: "HeartGuard AI ব্যবহার করে নিজের হৃদ্‌স্বাস্থ্য সম্পর্কে আরও সচেতন হোন।",
     footerDescription: "প্রযুক্তিনির্ভর হৃদ্‌স্বাস্থ্য সচেতনতা, মূল্যায়ন এবং চিকিৎসা সংক্রান্ত তথ্য।",
     quickLinks: "দ্রুত লিঙ্ক",
     aboutUs: "আমাদের সম্পর্কে",
@@ -160,16 +166,19 @@ const translations = {
     account: "অ্যাকাউন্ট",
     register: "নিবন্ধন",
     patientDashboard: "রোগীর ড্যাশবোর্ড",
-    footerDisclaimer: "HeartCare তথ্যভিত্তিক সহায়তা প্রদান করে। এটি পেশাদার চিকিৎসকের পরামর্শের বিকল্প নয়।",
+    footerDisclaimer: "HeartGuard AI তথ্যভিত্তিক সহায়তা প্রদান করে। এটি পেশাদার চিকিৎসকের পরামর্শের বিকল্প নয়।",
     rights: "সর্বস্বত্ব সংরক্ষিত।"
   },
 
   Hindi: {
     nav: ["होम", "हमारे बारे में", "विशेषताएँ", "लाइफलाइन", "लॉगिन", "शुरू करें"],
+    dashboard: "डैशबोर्ड",
+    profile: "प्रोफ़ाइल",
+    logout: "लॉगआउट",
     heroBadge: "आपके हृदय स्वास्थ्य का साथी",
     heroTitle: "अपने दिल का ख्याल रखें।",
     heroTitle2: "स्वस्थ जीवन जिएँ।",
-    heroDescription: "HeartCare हृदय स्वास्थ्य जागरूकता, मूल्यांकन उपकरण, स्वास्थ्य सेवाओं की जानकारी और आपातकालीन सहायता को एक साथ लाता है, ताकि आप अपने स्वास्थ्य के बारे में सही निर्णय ले सकें।",
+    heroDescription: "HeartGuard AI हृदय स्वास्थ्य जागरूकता, मूल्यांकन उपकरण, स्वास्थ्य सेवाओं की जानकारी और आपातकालीन सहायता को एक साथ लाता है, ताकि आप अपने स्वास्थ्य के बारे में सही निर्णय ले सकें।",
     startAssessment: "मूल्यांकन शुरू करें",
     liveMonitoring: "लाइव स्वास्थ्य निगरानी (सिम्युलेटेड)",
     explorePlatform: "प्लेटफ़ॉर्म देखें",
@@ -179,32 +188,32 @@ const translations = {
     stayInformed: "जानकारी रखें",
     informedDecisions: "सोच-समझकर निर्णय लें",
     trust: ["स्वास्थ्य जागरूकता", "AI सहायता", "हृदय निगरानी", "स्वास्थ्य सेवाओं की जानकारी"],
-    aboutLabel: "HEARTCARE के बारे में",
+    aboutLabel: "HEARTGUARD AI के बारे में",
     aboutTitle: "हृदय स्वास्थ्य को",
     aboutTitle2: "हर किसी के करीब लाना",
-    aboutP1: "HeartCare एक स्वास्थ्य-केंद्रित प्लेटफ़ॉर्म है, जो हृदय स्वास्थ्य की जानकारी, मूल्यांकन उपकरण और आवश्यक स्वास्थ्य सेवाओं की जानकारी को आसानी से उपलब्ध कराने के लिए बनाया गया है।",
+    aboutP1: "HeartGuard AI एक स्वास्थ्य-केंद्रित प्लेटफ़ॉर्म है, जो हृदय स्वास्थ्य की जानकारी, मूल्यांकन उपकरण और आवश्यक स्वास्थ्य सेवाओं की जानकारी को आसानी से उपलब्ध कराने के लिए बनाया गया है।",
     aboutP2: "हमारा उद्देश्य तकनीक और स्वास्थ्य जागरूकता को जोड़कर लोगों को संभावित जोखिम समझने, बचाव के तरीके सीखने और सही सहायता खोजने में मदद करना है।",
     aboutPoints: ["आसानी से उपलब्ध हृदय स्वास्थ्य जानकारी", "तकनीक-सहायता प्राप्त मूल्यांकन", "स्वास्थ्य सेवाओं की जानकारी"],
-    exploreHeartCare: "HeartCare देखें",
+    exploreHeartGuardAI: "HeartGuard AI देखें",
     aiLabel: "HEARTWISE AI — पूर्वावलोकन (Preview)",
     aiTitle: "आपका बुद्धिमान हृदय स्वास्थ्य साथी",
     aiDescription: "HeartWise AI एक फ़्रंटएंड पूर्वावलोकन सहायक है जो हृदय स्वास्थ्य मार्गदर्शन प्रदर्शित करने के लिए बनाया गया है। इस सिस्टम पर चैट बैकएंड सेवा सक्रिय नहीं है।",
     exploreAI: "HeartWise AI देखें (Preview)",
     aiDisclaimer: "AI की जानकारी केवल शैक्षिक उद्देश्य के लिए है। यह डॉक्टर की जाँच या आपातकालीन चिकित्सा का विकल्प नहीं है।",
-    lifelineLabel: "HEARTCARE लाइफलाइन",
+    lifelineLabel: "HEARTGUARD AI लाइफलाइन",
     lifelineTitle: "आवश्यक स्वास्थ्य सेवाओं की",
     lifelineTitle2: "जानकारी एक ही जगह",
     lifelineDescription: "भारत में हृदय संबंधी दवाओं, आपातकालीन इंजेक्शन, चिकित्सा उपकरण, रक्त और ऑक्सीजन सहायता की जानकारी प्राप्त करें।",
     lifelineCategories: ["हृदय की दवाएँ", "आपातकालीन इंजेक्शन", "चिकित्सा उपकरण", "रक्त संसाधन", "ऑक्सीजन आपूर्ति", "स्वास्थ्य सहायता"],
-    lifelineButton: "HeartCare लाइफलाइन देखें",
+    lifelineButton: "HeartGuard AI लाइफलाइन देखें",
     lifelineNote: "यह जानकारी केवल संदर्भ के लिए है। यात्रा करने या खरीदने से पहले प्रदाता से उपलब्धता की पुष्टि करें।",
     lifelineCaption: "ज़रूरत के समय सहायता।",
     lifelineSubcaption: "स्वास्थ्य सेवाओं की जानकारी एक ही जगह",
     services: "हमारी सेवाएँ",
     featuresTitle: "बेहतर हृदय स्वास्थ्य के लिए",
     featuresTitle2: "आपकी ज़रूरत की हर सुविधा",
-    featuresDescription: "HeartCare प्लेटफ़ॉर्म पर उपलब्ध सुविधाओं और सेवाओं को देखें।",
-    featureTitles: ["हृदय जोखिम मूल्यांकन", "HeartWise AI (Preview)", "स्वास्थ्य जागरूकता", "HeartCare लाइफलाइन (डेमो)", "डॉक्टर खोजें (डेमो)", "आपातकालीन सहायता", "रोगी डैशबोर्ड", "डॉक्टर पोर्टल (डेमो)"],
+    featuresDescription: "HeartGuard AI प्लेटफ़ॉर्म पर उपलब्ध सुविधाओं और सेवाओं को देखें।",
+    featureTitles: ["हृदय जोखिम मूल्यांकन", "HeartWise AI (Preview)", "स्वास्थ्य जागरूकता", "HeartGuard AI लाइफलाइन (डेमो)", "डॉक्टर खोजें (डेमो)", "आपातकालीन सहायता", "रोगी डैशबोर्ड", "डॉक्टर पोर्टल (डेमो)"],
     featureDescriptions: [
       "प्रशिक्षित रैंडम फ़ॉरेस्ट मॉडल द्वारा महत्वपूर्ण मापदंडों का मूल्यांकन करके संभावित जोखिम समझें।",
       "हृदय स्वास्थ्य मार्गदर्शन के लिए एक वैचारिक AI साथी इंटरफ़ेस का पूर्वावलोकन करें (फ़्रंटएंड मोड)।",
@@ -223,7 +232,7 @@ const translations = {
     emergencyButton: "आपातकालीन सहायता प्राप्त करें",
     bottomLabel: "आपका स्वास्थ्य महत्वपूर्ण है",
     bottomTitle: "आज ही अपने हृदय स्वास्थ्य की यात्रा शुरू करें",
-    bottomDescription: "HeartCare देखें और अपने हृदय की देखभाल के बारे में अधिक जानकारी प्राप्त करें।",
+    bottomDescription: "HeartGuard AI देखें और अपने हृदय की देखभाल के बारे में अधिक जानकारी प्राप्त करें।",
     footerDescription: "तकनीक-सहायता प्राप्त हृदय स्वास्थ्य जागरूकता, मूल्यांकन और स्वास्थ्य सेवाओं की जानकारी।",
     quickLinks: "त्वरित लिंक",
     aboutUs: "हमारे बारे में",
@@ -232,16 +241,33 @@ const translations = {
     account: "खाता",
     register: "रजिस्टर करें",
     patientDashboard: "रोगी डैशबोर्ड",
-    footerDisclaimer: "HeartCare जानकारी और सहायता प्रदान करता है। यह पेशेवर चिकित्सा सलाह का विकल्प नहीं है।",
+    footerDisclaimer: "HeartGuard AI जानकारी और सहायता प्रदान करता है। यह पेशेवर चिकित्सा सलाह का विकल्प नहीं है।",
     rights: "सर्वाधिकार सुरक्षित।"
   }
 };
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const [isAuthenticated, setIsAuthenticated] = useState(() =>
+    Boolean(sessionStorage.getItem("heartcareToken"))
+  );
+
   const { language } = useTheme();
 
   const t = translations[language] || translations.English;
+
+  useEffect(() => {
+    const checkAuth = () => {
+      setIsAuthenticated(Boolean(sessionStorage.getItem("heartcareToken")));
+    };
+    window.addEventListener("storage", checkAuth);
+    window.addEventListener("focus", checkAuth);
+    return () => {
+      window.removeEventListener("storage", checkAuth);
+      window.removeEventListener("focus", checkAuth);
+    };
+  }, []);
 
   useEffect(() => {
     const elements = document.querySelectorAll(".home-page .reveal");
@@ -267,7 +293,13 @@ function Home() {
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
+  const handleLogout = () => {
+    sessionStorage.removeItem("heartcareToken");
+    sessionStorage.removeItem("heartcarePatient");
 
+    setIsAuthenticated(false);
+    setMenuOpen(false);
+  };
   const features = [
     { icon: Activity, link: "/assessment" },
     { icon: BrainCircuit, link: "/heart-assistant" },
@@ -292,7 +324,7 @@ function Home() {
       <nav className="navbar">
         <Link to="/" className="logo" onClick={closeMenu}>
           <HeartPulse size={31} strokeWidth={2.5} />
-          <span>HeartCare</span>
+          <span>HeartGuard AI</span>
         </Link>
 
         <button
@@ -309,15 +341,52 @@ function Home() {
           <a href="#about" onClick={closeMenu}>{t.nav[1]}</a>
           <a href="#features" onClick={closeMenu}>{t.nav[2]}</a>
           <a href="#lifeline" onClick={closeMenu}>{t.nav[3]}</a>
+          {isAuthenticated ? (
+            <>
+              <Link
+                to="/dashboard"
+                className="nav-login"
+                onClick={closeMenu}
+              >
+                {t.dashboard}
+              </Link>
 
-          <Link to="/login" className="nav-login" onClick={closeMenu}>
-            {t.nav[4]}
-          </Link>
+              <Link
+                to="/profile"
+                className="nav-login"
+                onClick={closeMenu}
+              >
+                {t.profile}
+              </Link>
 
-          <Link to="/register" className="nav-register" onClick={closeMenu}>
-            {t.nav[5]}
-            <ArrowRight size={16} />
-          </Link>
+              <button
+                type="button"
+                className="nav-register"
+                onClick={handleLogout}
+              >
+                {t.logout}
+              </button>
+            </>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="nav-login"
+                onClick={closeMenu}
+              >
+                {t.nav[4]}
+              </Link>
+
+              <Link
+                to="/register"
+                className="nav-register"
+                onClick={closeMenu}
+              >
+                {t.nav[5]}
+                <ArrowRight size={16} />
+              </Link>
+            </>
+          )}
         </div>
       </nav>
 
@@ -365,7 +434,7 @@ function Home() {
         </div>
 
         <div className="hero-image">
-          <img src="/heart.jpg" alt="Heart health and medical care" />
+          <img src="/images/heart.png" alt="Heart health and medical care" />
 
           <div className="hero-float-card one">
             <div className="float-icon"><Activity size={23} /></div>
@@ -398,12 +467,11 @@ function Home() {
       {/* ABOUT */}
       <section className="about-section" id="about">
         <div className="about-image reveal reveal-left">
-          <img src="/heart.jpg" alt="HeartCare healthcare awareness" />
-
+          <img src="/images/heart.png" alt="HeartGuard AI healthcare awareness" />
           <div className="about-image-badge">
             <HeartPulse size={25} />
             <div>
-              <strong>HeartCare</strong>
+              <strong>HeartGuard AI</strong>
               <span>Care. Awareness. Support.</span>
             </div>
           </div>
@@ -433,7 +501,7 @@ function Home() {
           </div>
 
           <Link to="/health-awareness" className="primary-btn">
-            {t.exploreHeartCare}
+            {t.exploreHeartGuardAI}
             <ArrowRight size={17} />
           </Link>
         </div>
@@ -498,7 +566,7 @@ function Home() {
             </div>
 
             <div className="lifeline-panel-caption">
-              <span>HEARTCARE LIFELINE</span>
+              <span>HEARTGUARD AI LIFELINE</span>
               <strong>{t.lifelineCaption}</strong>
               <small>{t.lifelineSubcaption}</small>
             </div>
@@ -511,14 +579,12 @@ function Home() {
         </div>
       </section>
 
-      {/* FEATURES */}
+      {/* FEATURES / SERVICES */}
       <section className="features-section" id="features">
         <div className="section-heading reveal reveal-up">
-          <span>{t.services}</span>
+          <span className="section-label">{t.services}</span>
           <h2>
-            {t.featuresTitle}
-            <br />
-            {t.featuresTitle2}
+            {t.featuresTitle} {t.featuresTitle2}
           </h2>
           <p>{t.featuresDescription}</p>
         </div>
@@ -528,19 +594,17 @@ function Home() {
             const Icon = feature.icon;
 
             return (
-              <div
+              <Link
+                to={feature.link}
                 className="feature-card reveal reveal-card"
                 key={feature.link}
                 style={{ "--delay": `${index * 100}ms` }}
+                aria-label={t.featureTitles[index]}
               >
-                <div className="feature-icon"><Icon size={27} /></div>
+                <div className="feature-icon" aria-hidden="true"><Icon size={27} /></div>
                 <h3>{t.featureTitles[index]}</h3>
                 <p>{t.featureDescriptions[index]}</p>
-                <Link to={feature.link}>
-                  {t.featureLabels[index]}
-                  <ArrowRight size={15} />
-                </Link>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -568,16 +632,18 @@ function Home() {
       </section>
 
       {/* BOTTOM CTA */}
-      <section className="bottom-cta reveal reveal-up">
-        <span className="section-label">{t.bottomLabel}</span>
-        <h2>{t.bottomTitle}</h2>
-        <p>{t.bottomDescription}</p>
+      {!isAuthenticated && (
+        <section className="bottom-cta reveal reveal-up">
+          <span className="section-label">{t.bottomLabel}</span>
+          <h2>{t.bottomTitle}</h2>
+          <p>{t.bottomDescription}</p>
 
-        <Link to="/register" className="primary-btn">
-          {t.nav[5]}
-          <ArrowRight size={18} />
-        </Link>
-      </section>
+          <Link to="/register" className="primary-btn">
+            {t.nav[5]}
+            <ArrowRight size={18} />
+          </Link>
+        </section>
+      )}
 
       {/* FOOTER */}
       <footer className="footer">
@@ -585,7 +651,7 @@ function Home() {
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
               <HeartPulse size={29} />
-              HeartCare
+              HeartGuard AI
             </Link>
 
             <p>{t.footerDescription}</p>
@@ -609,8 +675,23 @@ function Home() {
 
           <div>
             <h4>{t.account}</h4>
-            <Link to="/login">{t.nav[4]}</Link>
-            <Link to="/register">{t.register}</Link>
+            {!isAuthenticated ? (
+              <>
+                <Link to="/login">{t.nav[4]}</Link>
+                <Link to="/register">{t.register}</Link>
+              </>
+            ) : (
+              <>
+                <Link to="/profile">{t.profile}</Link>
+                <button
+                  type="button"
+                  className="footer-link-btn"
+                  onClick={handleLogout}
+                >
+                  {t.logout}
+                </button>
+              </>
+            )}
             <Link to="/dashboard">{t.patientDashboard}</Link>
             <Link to="/emergency">{t.emergencyLabel}</Link>
           </div>
@@ -618,7 +699,7 @@ function Home() {
 
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} HeartCare. {t.rights}
+            © {new Date().getFullYear()} HeartGuard AI. {t.rights}
           </p>
           <p>{t.footerDisclaimer}</p>
         </div>

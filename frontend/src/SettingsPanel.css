@@ -1,48 +1,14 @@
 
 /* =========================================
-   HEARTCARE - SETTINGS PANEL
+   HEARTGUARD AI - SETTINGS PANEL
    Updated floating settings button
    Global accessibility and responsive design
 ========================================= */
 
-/* SETTINGS FLOATING BUTTON */
+/* SETTINGS FLOATING BUTTON — coordinates with ThemeToggle in theme.css */
 
-.hc-settings-trigger {
-  position: fixed;
-  right: 25px;
-  bottom: 25px;
-  z-index: 9990;
-
-  width: 52px;
-  height: 52px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--border, #dce8e6);
-  border-radius: 50%;
-
-  background: var(--primary, #087f8c);
-  color: #ffffff;
-
-  box-shadow: 0 5px 18px rgba(0, 70, 75, .22);
-
-  cursor: pointer;
-  transition: transform .2s ease, background .2s ease,
-    box-shadow .2s ease;
-}
-
-.hc-settings-trigger:hover {
-  background: var(--primary-dark, #066b76);
-  color: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0, 70, 75, .28);
-}
-
-.hc-settings-trigger:focus-visible {
-  outline: 3px solid rgba(8, 127, 140, .35);
-  outline-offset: 4px;
+.hc-settings-trigger .hc-settings-label {
+  display: inline-block;
 }
 
 /* SETTINGS OVERLAY */
@@ -603,20 +569,36 @@
 
 /* GLOBAL TEXT SIZE (font-size scaling without zoom) */
 
+html[data-hc-font-size="small"] {
+  font-size: 14px;
+}
+
+html[data-hc-font-size="normal"] {
+  font-size: 16px;
+}
+
+html[data-hc-font-size="large"] {
+  font-size: 18px;
+}
+
+html[data-hc-font-size="extra-large"] {
+  font-size: 20px;
+}
+
 html[data-hc-font-size="small"] body {
-  font-size: 0.92rem;
+  font-size: 14px;
 }
 
 html[data-hc-font-size="normal"] body {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 html[data-hc-font-size="large"] body {
-  font-size: 1.1rem;
+  font-size: 18px;
 }
 
 html[data-hc-font-size="extra-large"] body {
-  font-size: 1.22rem;
+  font-size: 20px;
 }
 
 /* HIGH CONTRAST */
@@ -652,13 +634,6 @@ html[data-hc-reduced-motion="true"] *::after {
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 520px) {
-  .hc-settings-trigger {
-    width: 48px;
-    height: 48px;
-    right: 17px;
-    bottom: 17px;
-  }
-
   .hc-settings-drawer {
     width: 100%;
   }
@@ -683,21 +658,4 @@ html[data-hc-reduced-motion="true"] *::after {
     transition-duration: .01ms !important;
     scroll-behavior: auto !important;
   }
-}
-/* FORCE SETTINGS BUTTON POSITION */
-
-button.hc-settings-trigger {
-  position: fixed !important;
-
-  top: auto !important;
-  left: auto !important;
-
-  right: 25px !important;
-  bottom: 90px !important;
-
-  width: 48px;
-  height: 48px;
-
-  z-index: 10000;
-  border-radius: 50%;
 }

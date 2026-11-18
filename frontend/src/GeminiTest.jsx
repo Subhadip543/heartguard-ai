@@ -56,7 +56,7 @@ function GeminiTest() {
       fontFamily: "Arial, sans-serif"
     }}>
 
-      <h1>HeartCare - Gemini AI Test</h1>
+      <h1>HeartGuard AI - Gemini AI Test</h1>
 
       <p>
         Test whether Gemini can analyse sample heart-health

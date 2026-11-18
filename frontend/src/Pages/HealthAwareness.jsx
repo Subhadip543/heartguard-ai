@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 
 import HeartExplorer from "./HeartExplorer";
+import DashboardSidebar from "../DashboardSidebar";
 import "./HealthAwareness.css";
 
 const translations = {
@@ -119,7 +120,7 @@ const translations = {
     lipidText: "Measures different types of cholesterol and triglycerides in your blood.",
     ecg: "ECG / EKG",
     ecgText: "Records the electrical activity of the heart and can help clinicians investigate certain heart rhythm problems.",
-    smart: "HEARTCARE SMART ASSESSMENT",
+    smart: "HEARTGUARD AI SMART ASSESSMENT",
     firstStep: "Take the First Step Towards Understanding Your Heart",
     assessmentText: "Answer questions about your health history, lifestyle and relevant health measurements to receive an informational cardiovascular risk assessment.",
     questionnaire: "Health questionnaire",
@@ -128,9 +129,9 @@ const translations = {
     start: "Start Heart Assessment",
     screening: "This is a screening and educational feature, not a medical diagnosis.",
     disclaimer: "Medical Disclaimer",
-    disclaimerText: "This page provides general health education only. It does not diagnose, prevent or treat any disease. HeartCare's online assessment cannot replace a clinical examination. Consult a qualified healthcare professional for personal medical advice.",
+    disclaimerText: "This page provides general health education only. It does not diagnose, prevent or treat any disease. HeartGuard AI's online assessment cannot replace a clinical examination. Consult a qualified healthcare professional for personal medical advice.",
     footerText: "Learn about your heart. Make informed health decisions.",
-    copyright: "© 2026 HeartCare | Your Health, Our Priority"
+    copyright: "© 2026 HeartGuard AI | Your Health, Our Priority"
   },
 
   Bengali: {
@@ -393,19 +394,22 @@ function HealthAwareness() {
 
   return (
     <div className="awareness-page">
-      <header className="awareness-header">
-        <Link to="/" className="awareness-brand">
-          <span className="awareness-brand-icon">
-            <HeartPulse size={25} />
-          </span>
-          <span>HeartCare</span>
-        </Link>
+      <DashboardSidebar activeKey="/health-awareness" />
 
-        <Link to="/" className="awareness-back">
-          <ArrowLeft size={18} />
-          {t.back}
-        </Link>
-      </header>
+      <div className="awareness-page-main">
+        <header className="awareness-header">
+          <Link to="/" className="awareness-brand">
+            <span className="awareness-brand-icon">
+              <HeartPulse size={25} />
+            </span>
+            <span>HeartGuard AI</span>
+          </Link>
+
+          <Link to="/" className="awareness-back">
+            <ArrowLeft size={18} />
+            {t.back}
+          </Link>
+        </header>
 
       <main className="awareness-container">
         <section className="awareness-hero">
@@ -606,15 +610,16 @@ function HealthAwareness() {
         </section>
       </main>
 
-      <footer className="awareness-footer">
-        <div className="awareness-footer-brand">
-          <HeartPulse size={23} />
-          HeartCare
-        </div>
+        <footer className="awareness-footer">
+          <div className="awareness-footer-brand">
+            <HeartPulse size={23} />
+            HeartGuard AI
+          </div>
 
-        <p>{t.footerText}</p>
-        <span>{t.copyright}</span>
-      </footer>
+          <p>{t.footerText}</p>
+          <span>{t.copyright}</span>
+        </footer>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTheme } from "../context/useTheme";
+import DashboardSidebar from "../DashboardSidebar";
 
 import {
   Activity,
@@ -290,6 +291,7 @@ const devices = [
 // ==========================================
 
 export default function LiveHealthMonitoring() {
+  const navigate = useNavigate();
   const { language } = useTheme();
 
   const selectedLanguage =
@@ -303,6 +305,13 @@ export default function LiveHealthMonitoring() {
   const [connected, setConnected] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [refreshing, setRefreshing] = useState(false);
+
+  useEffect(() => {
+    const token = sessionStorage.getItem("heartcareToken");
+    if (!token) {
+      navigate("/login", { replace: true });
+    }
+  }, [navigate]);
 
   // Generate new demo readings
   const updateDemoData = () => {
@@ -442,9 +451,11 @@ export default function LiveHealthMonitoring() {
 
   return (
     <div className="live-health-page">
+      <DashboardSidebar activeKey="/live-health" />
 
-      {/* TOPBAR */}
-      <div className="live-health-topbar">
+      <div className="live-health-page-main">
+        {/* TOPBAR */}
+        <div className="live-health-topbar">
         <Link to="/dashboard" className="live-back-link">
           <ArrowLeft size={18} />
           {t.back}
@@ -887,6 +898,7 @@ export default function LiveHealthMonitoring() {
           <p>{t.privacyDescription}</p>
         </div>
       </section>
+      </div>
 
     </div>
   );

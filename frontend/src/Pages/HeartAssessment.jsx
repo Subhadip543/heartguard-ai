@@ -1,6 +1,13 @@
 
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  User,
+  Activity,
+  Stethoscope,
+  ShieldAlert,
+} from "lucide-react";
+import DashboardSidebar from "../DashboardSidebar";
 import "./HeartAssessment.css";
 
 const categoricalFields = [
@@ -218,12 +225,15 @@ function HeartAssessment() {
 
   return (
     <div className="assessment-page">
-      <header className="assessment-header">
-        <h1>HeartCare</h1>
-        <Link to="/dashboard">Back to Dashboard</Link>
-      </header>
+      <DashboardSidebar activeKey="/assessment" />
 
-      <main className="assessment-container">
+      <div className="assessment-page-main">
+        <header className="assessment-header">
+          <h1>HeartGuard AI</h1>
+          <Link to="/dashboard">Back to Dashboard</Link>
+        </header>
+
+        <main className="assessment-container">
         <section className="assessment-heading">
           <h2>Heart Health Assessment</h2>
           <p>
@@ -233,14 +243,37 @@ function HeartAssessment() {
           </p>
         </section>
 
+        {/* Step Progress Indicator */}
+        <div className="assessment-steps-indicator" aria-label="Assessment progress">
+          <div className="step-badge active">
+            <span className="step-circle">1</span>
+            <span className="step-title">Personal Info</span>
+          </div>
+          <div className="step-connector" />
+          <div className="step-badge active">
+            <span className="step-circle">2</span>
+            <span className="step-title">Measurements</span>
+          </div>
+          <div className="step-connector" />
+          <div className="step-badge active">
+            <span className="step-circle">3</span>
+            <span className="step-title">Diagnostics</span>
+          </div>
+        </div>
+
         <div className="emergency-warning">
-          <strong>Important Emergency Notice</strong>
-          <p>
-            If you currently have severe or new chest pain,
-            serious difficulty breathing, or fainting, seek
-            emergency medical help immediately. Do not wait
-            to complete this questionnaire.
-          </p>
+          <div className="emergency-warning-icon">
+            <ShieldAlert size={20} />
+          </div>
+          <div>
+            <strong>Important Emergency Notice</strong>
+            <p>
+              If you currently have severe or new chest pain,
+              serious difficulty breathing, or fainting, seek
+              emergency medical help immediately. Do not wait
+              to complete this questionnaire.
+            </p>
+          </div>
         </div>
 
         <form
@@ -248,7 +281,12 @@ function HeartAssessment() {
           onSubmit={handleSubmit}
         >
           <section className="assessment-section">
-            <h3>1. Personal Information</h3>
+            <div className="section-title-wrap">
+              <div className="section-icon-badge">
+                <User size={18} />
+              </div>
+              <h3>1. Personal Information</h3>
+            </div>
 
             <div className="assessment-grid">
               <div className="form-group">
@@ -280,12 +318,18 @@ function HeartAssessment() {
           </section>
 
           <section className="assessment-section">
-            <h3>2. Clinical Measurements</h3>
-
-            <p className="section-description">
-              Enter measurements from clinical examinations.
-              Leave a field empty if the measurement is unavailable.
-            </p>
+            <div className="section-title-wrap">
+              <div className="section-icon-badge">
+                <Activity size={18} />
+              </div>
+              <div>
+                <h3>2. Clinical Measurements</h3>
+                <p className="section-description">
+                  Enter measurements from clinical examinations.
+                  Leave a field empty if unavailable.
+                </p>
+              </div>
+            </div>
 
             <div className="assessment-grid">
               {numericalFields.map((field) => (
@@ -313,12 +357,18 @@ function HeartAssessment() {
           </section>
 
           <section className="assessment-section">
-            <h3>3. Clinical Examination Results</h3>
-
-            <p className="section-description">
-              Select the recorded examination result where
-              available. Do not guess values.
-            </p>
+            <div className="section-title-wrap">
+              <div className="section-icon-badge">
+                <Stethoscope size={18} />
+              </div>
+              <div>
+                <h3>3. Clinical Examination Results</h3>
+                <p className="section-description">
+                  Select recorded examination results where
+                  available. Do not guess values.
+                </p>
+              </div>
+            </div>
 
             <div className="assessment-grid">
               {categoricalFields.map((field) => (
@@ -400,6 +450,7 @@ function HeartAssessment() {
           </button>
         </form>
       </main>
+      </div>
     </div>
   );
 }
